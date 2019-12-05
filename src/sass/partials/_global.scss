@@ -1,0 +1,40 @@
+body {
+	height: 100%;
+	background: #fff;
+    font-family: 'Rajdhani', sans-serif;
+	overflow-x: hidden;
+	@media (max-width: 1200px) {
+		margin-bottom: 0 !important;;
+    }
+}
+
+ul, ol, li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+} 
+
+a, a:active, a:hover {
+	text-decoration: none;
+}
+
+::-webkit-scrollbar { width:8px;}
+
+::-webkit-scrollbar-thumb { background: $mainColor; border-radius: 10px  }
+
+::-webkit-scrollbar-track { background: #fff; }
+
+::-webkit-selection {
+	background-color: $mainColor;
+	color: #fff;
+}
+
+::-moz-selection{
+	background-color: $mainColor;
+	color: #fff;
+}
+
+::selection{
+	background-color: $mainColor;
+	color: #fff;
+}

@@ -1,39 +1,34 @@
 body {
 	height: 100%;
-	background: #fff;
-    font-family: 'Rajdhani', sans-serif;
+	background: $darkColor;
+    font-family: $textFont;
 	overflow-x: hidden;
-	@media (max-width: 1200px) {
-		margin-bottom: 0 !important;;
-    }
 }
-
+h1, h2, h3, h4, h5, h6 {
+	font-family: $mainFont;
+}
 ul, ol, li {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 } 
-
 a, a:active, a:hover {
 	text-decoration: none;
 }
-
-::-webkit-scrollbar { width:8px;}
-
-::-webkit-scrollbar-thumb { background: $mainColor; border-radius: 10px  }
-
-::-webkit-scrollbar-track { background: #fff; }
-
+:focus {
+	outline: none !important;
+}
+::-webkit-scrollbar { width:5px;}
+::-webkit-scrollbar-thumb { background: #000; border: 1px solid #999; border-radius: 5px  }
+::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-selection {
 	background-color: $mainColor;
 	color: #fff;
 }
-
 ::-moz-selection{
 	background-color: $mainColor;
 	color: #fff;
 }
-
 ::selection{
 	background-color: $mainColor;
 	color: #fff;

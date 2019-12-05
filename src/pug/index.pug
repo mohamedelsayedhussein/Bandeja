@@ -3,8 +3,26 @@ doctype
 html
     head
         include partials/head
-        include partials/style
     body
+        include partials/header
+        .banner
+            .container-fluid
+                .row
+                    .col-md-8
+                        .slider-wrapper
+                            .slider
+                                .slider--item
+                                    img(src='img/homeSlider/slide01.jpg' class='img-fluid')
+                                .slider--item
+                                    img(src='img/homeSlider/slide02.jpg' class='img-fluid')
+                                .slider--item
+                                    img(src='img/homeSlider/slide03.jpg' class='img-fluid')
+                                .slider--item
+                                    img(src='img/homeSlider/slide04.jpeg' class='img-fluid')
+                                .slider--item
+                                    img(src='img/homeSlider/slide05.jpg' class='img-fluid')
+                    .col-md-4
+
 
         include partials/footer
         include partials/footerScripts

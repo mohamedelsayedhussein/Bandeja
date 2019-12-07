@@ -1,4 +1,22 @@
 
+
+// TOGGLE HAMBURGER MENU
+
+var $hamburger = $('header .bars');
+var $navbar = $('header ul.links')
+
+$hamburger.click(function() {
+  $(this).toggleClass('toggle');
+  $navbar.toggleClass('mobile-navbar')
+});
+
+$(document).keydown(function(e){
+  if (e.keyCode == 27) {
+    $hamburger.removeClass('toggle');
+  }
+});
+
+// HOME SLIDER
 var $imageSlider = $('.image-slider');
 var $textSlider = $('.text-slider');
 var slideDuration = 900;
@@ -77,8 +95,7 @@ var $formCorner = $('.login-corner');
 var $header = $('header.header');
 var $banner = $('section.banner');
 
-tl1.from($header, .8, {y:-100, autoAlpha:0, ease:Power1.easeInOut})
-    .from($banner, .5, {y:100, autoAlpha:0, ease:Power1.easeInOut})
+tl1.from($banner, .5, {y:100, autoAlpha:0, ease:Power1.easeInOut})
     .from($formCorner, .5, {autoAlpha:0, y:200,ease:Quad.easeIn});
 
 // AOS INIT
@@ -94,4 +111,31 @@ $('.sponsers-slider').slick({
   slidesToScroll: 1,
   pauseOnHover: false,
   cssEase: 'cubic-bezier(0.84, 0, 0.08, 0.99)',
+  responsive: [
+    {
+      // breakpoint: 1500,
+      // settings: 'unslick'
+    },
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      }
+    }
+  ]
 })

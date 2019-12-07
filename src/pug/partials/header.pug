@@ -7,12 +7,25 @@ header.header
             nav.nav
                 ul.links.d-flex.align-items-center
                     li.item
-                        a.link(href="#" class='text-uppercase') Home
+                        a.link(href="#" class='text-uppercase')
+                            i.fas.fa-home
+                            | Home
                     li.item
-                        a.link(href="#" class='text-uppercase') leaderboard
+                        a.link(href="#" class='text-uppercase')
+                            i.fas.fa-chalkboard
+                            | leaderboard
                     li.item
-                        a.link(href="#" class='text-uppercase') challenges
+                        a.link(href="#" class='text-uppercase')
+                            i.fas.fa-chess-board
+                            | challenges
                     li.item
-                        a.link(href="#" class='text-uppercase') my profile
+                        a.link(href="#" class='text-uppercase')
+                            i.far.fa-user
+                            | my profile
                     li.item
-                        a.link(href="#" class='text-uppercase') login
+                        a.link(href="#" class='text-uppercase')
+                            i.fas.fa-sign-in-alt
+                            | login
+            .bars.d-lg-none
+                - for(var i = 0; i <= 2; i++)
+                    span.line

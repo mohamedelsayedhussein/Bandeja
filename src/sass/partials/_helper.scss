@@ -19,8 +19,8 @@
     }
 }
 // GLOBAL STYLE FOR BUTTONS WHICH HAS .global-btn-style
-button.global-btn-style {
-    display: block;
+.global-btn-style {
+    display: inline-block;
     background: transparent;
     outline: none;
     border: none;
@@ -61,7 +61,7 @@ button.global-btn-style {
                     z-index 0.15s ease-in-out;
     }
     &:hover {
-        color: #fff;
+        color: #fff !important;
         transition: color 0.2s ease-in-out 0.25s;
         &:after {
         z-index: -1;

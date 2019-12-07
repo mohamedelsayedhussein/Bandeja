@@ -1,0 +1,316 @@
+.banner {
+  margin-top: 2.5rem;
+.inner-banner {
+    padding: 3rem 0;
+    //SLIDER STUFF
+    .slider-wrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      .image-slider {
+        padding: 1rem;
+        background: #fff;
+        border: 1px solid #e1e1e1;    
+        .slider--item {
+          width: 100%;
+          height: 400px;
+          overflow: hidden;
+          position: relative;
+          img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+          }
+          &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,.5);
+            z-index: 1;
+          }
+        }
+        .slick-slide {
+          position: relative;
+          outline: none;
+          z-index: 1;  
+          &.slick-current {
+            z-index: 2;
+          }
+        }
+        .slick-track, .slick-list {
+          will-change: transform;
+        }
+        // SLICK ARROW
+        .slick-arrow {
+          position: absolute;
+          top: 0;
+          width: 150px;
+          height: 100%;
+          border: none;
+          outline: none;
+          background-color: rgba(255,255,255,0);
+          text-indent: -999999px;
+          z-index: 2;
+          cursor: pointer;
+          &:before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 25px;
+            height: 25px;
+            top: 50%;
+            margin-top: -12.2px;
+            transition: all 0.3s cubic-bezier(.55,0,.1,1);
+          }
+          &:after {
+            content: "";
+            position: absolute;
+            display: block;
+            height: 2px;
+            width: 160px;
+            top: 50%;
+            background-color: rgba(255,255,255,1);
+            transition: all 0.4s 0.1s cubic-bezier(.55,0,.1,1);
+            opacity: 0;
+          }  
+          &.slick-prev {
+            left: 0;
+            &:before {
+              border-top: 2px solid rgba(255,255,255,1);
+              border-left: 2px solid rgba(255,255,255,1);
+              left: 30px;
+              transform: rotate(-45deg);
+            }
+            &:after {
+              left: 110px;
+            }
+            &:hover {
+              &:before {
+                left: 120px;
+              }
+              &:after {
+                left: 117px;
+                opacity: 1;
+                width: 50px;
+              }
+            }
+          }
+          &.slick-next {
+            right: 0;
+            &:before {
+              border-bottom: 2px solid rgba(255,255,255,1);
+              border-right: 2px solid rgba(255,255,255,1);
+              right: 30px;
+              transform: rotate(-45deg);
+            }
+            &:after {
+              right: 110px;
+            }
+            &:hover {
+              &:before {
+                right: 120px;
+              }
+              &:after {
+                right: 117px;
+                opacity: 1;
+                width: 50px;
+              }
+            }
+          }
+        }
+        //SLICK DOTS
+        .slick-dots {
+          padding: 0;
+          margin: 0;
+          width: 100%;
+          position: absolute;
+          top: 30px;
+          left: 8%;
+          z-index: 3;
+          li {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 2px;
+            &.slick-active {
+              button {
+                background-color: $mainColor;
+                border-color: $mainColor;
+                width: 30px;
+              }
+            }    
+            button {
+              display: block;
+              outline: none;
+              border: none;
+              width: 18px;
+              height: 2px;
+              background-color: #fff;
+              text-indent: -999999px;
+              cursor: pointer;
+              transition: all 0.2s cubic-bezier(0.84, 0, 0.08, 0.99);
+            }
+          }
+        }
+      }
+      .text-slider {
+        position:relative;
+        z-index: 1;
+        transition: all .2s linear;
+        &:hover {
+        z-index: 3;
+        }
+        .text--slide {
+          display: block !important;
+          h1 {
+            font-size: 1.7rem;
+            animation: fadeOut .2s both;
+            span {
+              padding-right: .3rem;
+            }
+          }
+          p {
+            color: $textColor;
+            font: 400 .9rem/1.8 $mainFont; 
+            animation: fadeOut .2s both;
+            background: $lightColor;
+            padding-bottom: 2rem;
+            position: relative;
+            &:before{
+                content:'';
+                position:absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(to bottom, transparent 0%, $lightColor 50%);
+                background-size: 100% 100%;
+                background-position: 100% 100%;
+                background-repeat: no-repeat;
+                transition: all .3s linear;
+                @media (max-width: 992px) {
+                  content: none;
+                }
+            }
+          }
+        }
+        &:hover .text--slide p:before{
+          transition: all .3s linear;
+          background-size: 100% 0;
+        }
+        .slick-active h1 {
+          animation: fadeInUp .3s both .8s;
+        }
+        
+        .slick-active p {
+            animation: fadeInUp .3s both 1s;
+            mix-blend-mode:screen;
+        }
+      }
+      .login-corner {
+        position: absolute;
+        bottom: 0;
+        right: 10px;
+        width: calc(50% - 120px);
+        background: #fff;
+        border: 1px solid #e1e1e1;
+        padding: 1.5rem 1rem;
+        z-index: 2;
+        .form-control {
+          border-bottom: 1px solid $mainColor !important;
+          font-size: .8rem;
+          color: #a0a0a0;
+          caret-color: $mainColor;
+          &::placeholder {
+            color: #a0a0a0;
+            letter-spacing: 1px;
+            font-weight: 300;
+          }
+          &:placeholder-shown {
+            border-color: rgba(0,0,0,.2) !important;
+          }
+        }
+        &:hover {
+          z-index: 4;
+        }
+        @media (max-width: 992px) {
+          position: relative;
+          bottom: initial;
+          right: initial;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+// THIS CLASS ADDED BY JAVASCRIPT EVENT
+
+.do-transition {
+  animation: 
+    motion-blur 0.1s linear forwards,
+    motion-blur 0.4s linear reverse forwards 0.1s;
+}
+@keyframes motion-blur {
+  0% {
+    filter: blur(0px);
+  }
+  15% {
+    filter: blur(2px);
+  }
+  30% {
+    filter: blur(3px);
+  }
+  45% {
+    filter: blur(5px);
+  }
+  60% {
+    filter: blur(7px);
+  }
+  75%,
+  100% {
+    filter: blur(8px);
+  }
+}
+
+// TEXT SECTION STYLE
+.text-section {
+  h2.text-title {
+    @media (max-width: 850px) {
+      font-size: 1.5rem;
+    }
+  }
+  p.description {
+    color: $textColor;
+    @media (max-width: 850px) {
+      font-size: .9rem;
+    }
+  }
+}
+
+// SPONSERS STYLE
+
+.sponsers .container {
+  background: transparent;
+  .sponsers-slider {
+    .item {
+      width: 120px !important;
+      display: block !important;
+      margin: auto;
+      height: 120px !important;
+      border-radius: 100%;
+      overflow: hidden;
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

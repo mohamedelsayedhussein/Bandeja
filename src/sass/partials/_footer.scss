@@ -1,0 +1,16 @@
+footer {
+    .container {
+        background: #222;
+        padding: 0;
+        .text-inner {
+            padding: 1rem 0;
+            p {
+                font-size: .95rem;
+                font-family: $mainFont;
+                a {
+                    color: $mainColor;
+                }
+            }
+        }
+    }
+}

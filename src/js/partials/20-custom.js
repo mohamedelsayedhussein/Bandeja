@@ -1,18 +1,29 @@
 
 
 // TOGGLE HAMBURGER MENU
+var $header = $('header.header');
+var $hamburger = $header.find('.bars');
+var $navbar = $header.find('ul.links')
 
-var $hamburger = $('header .bars');
-var $navbar = $('header ul.links')
-
-$hamburger.click(function() {
+$hamburger.click(function(e) {
+  e.stopPropagation();
   $(this).toggleClass('toggle');
   $navbar.toggleClass('mobile-navbar')
 });
 
+$navbar.click(function(e) {
+  e.stopPropagation();
+})
+
+$(document).click(function() {
+  $hamburger.removeClass('toggle');
+  $navbar.removeClass('mobile-navbar'); 
+})
+
 $(document).keydown(function(e){
   if (e.keyCode == 27) {
     $hamburger.removeClass('toggle');
+    $navbar.removeClass('mobile-navbar')
   }
 });
 
@@ -92,11 +103,10 @@ $('.slick-next').on('mouseleave', function(){
 
 var tl1 = new TimelineMax();
 var $formCorner = $('.login-corner');
-var $header = $('header.header');
 var $banner = $('section.banner');
 
-tl1.from($banner, .5, {y:100, autoAlpha:0, ease:Power1.easeInOut})
-    .from($formCorner, .5, {autoAlpha:0, y:200,ease:Quad.easeIn});
+tl1.from($banner, 2, {autoAlpha:0, ease:Quad.easeInOut})
+    .from($formCorner, .2, {autoAlpha:0, y:200,ease:Power1.easeInOut});
 
 // AOS INIT
 AOS.init();

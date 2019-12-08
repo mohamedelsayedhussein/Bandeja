@@ -24,9 +24,6 @@ header.header {
                     }
                 }
             }
-            .toggle-fullscreen {
-                cursor: pointer;
-            }
             nav.nav {
                 ul.links {
                     li.item {
@@ -130,7 +127,11 @@ header.header {
                         }
                     }
                 }
-            }                
+            }
+            .toggle-fullscreen {
+                color: #eee;
+                cursor: pointer;
+            }    
             .bars {
                 position: relative;
                 z-index: 55;

@@ -6,67 +6,79 @@ html
     body
         include partials/header
         section.log-page
-            .form
-                .form-toggle
-                .form-panel.one
-                    .form-header
-                        h1 Account Login
-                    .form-content
-                        form
-                            .form-group.text-capitalize
-                                label(for='username') Username
-                                input(type='text'
-                                    id='username'
-                                    name='username'
-                                    )
-                            .form-group.text-capitalize
-                                label(for='password') Password
-                                input(type='password'
-                                    id='password'
-                                    name='password'
-                                    )
-                            .form-group.text-capitalize
-                                label.form-remember(for='custom-check')
-                                    input(type='checkbox' id='custom-check')
-                                    | Remember Me
-                                a.form-recovery(href='#') Forgot Password?
-                            .form-group.text-capitalize
-                                button(type='submit') Log In
-                .form-panel.two
-                    .form-header
-                        h1 Register Account
-                    .form-content
-                        form
-                            .form-group.text-capitalize
-                                label(for='firstname') First name
-                                input(type='text' id='firstname')
-                            .form-group.text-capitalize
-                                label(for='lastname') last name
-                                input(type='text' id='lastname')
-                            .form-group.text-capitalize
-                                label(for='username') username
-                                input(type='text' id='username')
-                            .form-group.text-capitalize
-                                label(for='password') Password
-                                input(type='password' id='password')
-                            .form-group.text-capitalize
-                                label(for='cpassword') Confirm Password
-                                input(type='password' id='cpassword')
-                            .form-group.text-capitalize
-                                label(for='email') Email Address
-                                input(type='email' id='email')
-                            .form-group.text-capitalize
-                                label(for='tel') tel. number
-                                input(type='email' id='tel')
-                            .form-group.text-capitalize
-                                label(for='position') player position
-                                input(type='text' id='position')
-                            .form-group.text-capitalize
-                                label(for='birth') birthdate
-                                input(type='text' id='birth')
-                            .form-group.text-capitalize
-                                button(type='submit') Register
-
+            .container
+                .row.py-5
+                    .col-lg-6
+                        .form
+                            .form-toggle
+                            .form-panel.one
+                                .form-header
+                                    h1 Account Login
+                                .form-facebook-log.mb-3
+                                    button
+                                        i.fab.fa-facebook-square.fa-lg
+                                        span.text-capitalize log in with facebook account
+                                .form-separated.my-4
+                                    span    
+                                    span OR
+                                    span
+                                .form-content
+                                    form
+                                        .form-group.text-capitalize
+                                            label(for='log-username') Username
+                                            input(type='text' id='log-username')
+                                        .form-group.text-capitalize
+                                            label(for='log-password') Password
+                                            input(type='password' id='log-password')
+                                        .form-group.text-capitalize
+                                            input(type='checkbox' id='custom-check')
+                                            label.form-remember.text-capitalize(for='custom-check')
+                                                | Remember Me
+                                            a.form-recovery(href='#') Forgot Password?
+                                        .form-group.text-capitalize
+                                            button(type='submit') Log In
+                            .form-panel.two
+                                .form-header
+                                    h1 Register Account
+                                .form-content
+                                    form
+                                        .form-group.text-capitalize
+                                            label.text-white(for='firstname') First name
+                                            input(type='text' id='firstname')
+                                        .form-group.text-capitalize
+                                            label.text-white(for='lastname') last name
+                                            input(type='text' id='lastname')
+                                        .form-group.text-capitalize
+                                            label.text-white(for='reg-username') username
+                                            input(type='text' id='reg-username')
+                                        .form-group.text-capitalize
+                                            label.text-white(for='reg-password') Password
+                                            input(type='password' id='reg-password')
+                                        .form-group.text-capitalize
+                                            label.text-white(for='cpassword') Confirm Password
+                                            input(type='password' id='cpassword')
+                                        .form-group.text-capitalize
+                                            label.text-white(for='email') Email Address
+                                            input(type='email' id='email')
+                                        .form-group.text-capitalize
+                                            label.text-white(for='tel') tel. number
+                                            input(type='email' id='tel')
+                                        .form-group.text-capitalize
+                                            label.text-white(for='position') player position
+                                            ul.position-of-player
+                                                li 
+                                                    i.fa.fa-angle-right
+                                            ul.submenu
+                                                li.text-capitalize right
+                                                li.text-capitalize  left
+                                                li.text-capitalize  both
+                                        .form-group.text-capitalize
+                                            label.text-white(for='birth') birthdate
+                                            input(type='text' id='birth')
+                                        .form-group.text-capitalize
+                                            button.bg-light.text-secondary(type='submit') Register
+                    .col-lg-6.d-lg-block.d-none
+                        .bg-form
         include partials/footer
         include partials/footerScripts
         

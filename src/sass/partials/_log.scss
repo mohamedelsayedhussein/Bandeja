@@ -1,254 +1,344 @@
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: none;
-    background: rgba(0,0,0, 0.4);
-    width: 100%;
-    height: 100%;
-}
-
-.form {
-    position: relative;
-    z-index: 15;
-    background: #fff;
-    width: 50%;
-    border-radius: 4px;
-    box-shadow: 0 0 30px rgba(0,0,0, .1);
-    margin: 4rem auto;
-    overflow: hidden;
-    .darkmode--activated & {
-        background: #383838;
-    }
-    @media(max-width: 992px) {
-        width: 75%;
-    }
-    @media(max-width: 768px) {
-        width: 98%;
-        border-radius: 0;
-    }
-    @media(max-width: 575px) {
-        margin: .3rem auto;
-    }
-    // Toggle
-    &-toggle {
-        position: absolute;
-        z-index: 10;
-        top: 60px;
-        right: 60px;
-        background: #fff;
-        width: 60px;
-        height: 60px;
-        border-radius: 100%;
-        transform-origin: center;
-        transform: translate(0, -25%) scale(0);
-        opacity: 0;
-        cursor: pointer;
-        transition: all 0.3s ease;
-
-        &:before,
-        &:after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 30px;
-        height: 4px;
-        background: $mainColor;
-        transform: translate(-50%, -50%);
-        }
-        &:before {
-            transform: translate(-50%, -50%) rotate(45deg);
-        }
-        &:after {
-            transform: translate(-50%, -50%) rotate(-45deg);
-        }
-        &.visible {
-            transform: translate(0, -25%) scale(1);
-            opacity: 1;
-        }
-    }
-
-    &-group {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin: 0 0 20px;
-        &:last-child {
-        margin: 0;
-        }
-        label {
-            display: block;
-            margin: 0 0 10px;
-            color: #707070;
-            font-size: 12px;
-            font-weight: 600;
-            line-height: 1;
-            text-transform: uppercase;
-            letter-spacing: .2em;
-
-        .two & {
-            color: #fff;
-            }
-        }
-        input {
-            outline: none;
-            display: block;
-            background: rgba(0,0,0, 0.1);
-            width: 100%;
-            border: 0;
-            border-radius: 4px;
-            box-sizing: border-box;
-            padding: 12px 20px;
-            color: #acacac;
-            transition: 0.3s ease;
-            &:focus {
-                color: #494949;
-            }
-
-        .two & {
-            color: #fff;
-
-            &:focus {
-            color: #fff;
-            }
-        }
-    }
-
-        button {
-        outline: none;
-        background: $mainColor;
-        width: 100%;
-        border: 0;
-        border-radius: 4px;
-        padding: 12px 20px;
-        color: #fff;
-        font-family: inherit;
-        font-size: inherit;
-        font-weight: 600;
-        line-height: inherit;
-        text-transform: uppercase;
-        cursor: pointer;
-
-        .two & {
-            background: #fff;
-            color: $mainColor;
-            }
-        }
-        .form-remember {
-            font-size: 12px;
-            font-weight: 400;
-            letter-spacing: 0;
-            text-transform: none;
-            cursor: pointer;
-            input[type='checkbox'] {
-                display: inline-block;
-                vertical-align: middle;
-                width: auto;
-                margin: 0 10px 0 0;
-                }
-            }
-
-        .form-recovery {
-            color: $mainColor;
-            font-size: 12px;
-            text-decoration: none;
-        }
-    }
-
-    // Panel
-    &-panel {
-        padding: 60px calc(5% + 60px) 60px 60px;
-        box-sizing: border-box;
-
-    // Panel One
-    &.one {
-        &:before {
-        @extend .overlay;
-
-        content: '';
-        display: block;
-        opacity: 0;
-        visibility: hidden;
-        transition: 0.3s ease;
-        }
-        &.hidden {
-            &:before {
-                display: block;
-                opacity: 1;
-                visibility: visible;
-            }
-        }
-    }
-
-    // Panel Two
-        &.two {
-            z-index: 5;
+.log-page {
+    .container {
+        position: relative;
+        .overlay {
             position: absolute;
             top: 0;
-            left: 95%;
-            background: $mainColor;
+            left: 0;
+            display: none;
+            background: rgba(0,0,0, 0.4);
             width: 100%;
-            min-height: 100%;
-            padding: 60px calc(10% + 60px) 60px 60px;
-            transition: 0.3s ease;
-            cursor: pointer;
-            &:before,
-            &:after {
+            height: 100%;
+        }
+        
+        .form {
+            position: relative;
+            z-index: 15;
+            background: #fff;
+            border-radius: 4px;
+            box-shadow: 0 0 30px rgba(0,0,0, .1);
+            overflow: hidden;
+            .darkmode--activated & {
+                background: #383838;
+            }
+            // Toggle
+            &-toggle {
+                position: absolute;
+                z-index: 10;
+                top: 60px;
+                right: 60px;
+                background: #fff;
+                width: 30px;
+                height: 30px;
+                border-radius: 100%;
+                transform-origin: center;
+                transform: translate(0, -25%) scale(0);
+                opacity: 0;
+                cursor: pointer;
+                transition: all 0.3s ease;
+        
+                &:before,
+                &:after {
                 content: '';
                 display: block;
                 position: absolute;
-                top: 60px;
-                left: 1.5%;
-                background: rgba(#fff, 0.2);
-                height: 30px;
-                width: 2px;
-                transition: 0.3s ease;
-            }
-
-            &:after {
-                left: 3%;
-            }
-
-            &:hover {
-                left: 93%;
-                box-shadow: 0 0 10px rgba(0,0,0, 0.2);
-                &:before,
+                top: 50%;
+                left: 50%;
+                width: 15px;
+                height: 4px;
+                background: $mainColor;
+                transform: translate(-50%, -50%);
+                }
+                &:before {
+                    transform: translate(-50%, -50%) rotate(45deg);
+                }
                 &:after {
-                opacity: 0;
+                    transform: translate(-50%, -50%) rotate(-45deg);
+                }
+                &.visible {
+                    transform: translate(0, -25%) scale(1);
+                    opacity: 1;
                 }
             }
-
-        &.active {
-            left: 10%;
-            box-shadow: 0 0 10px rgba(0,0,0, 0.2);
-            cursor: default;
-            &:before,
-            &:after {
+        
+            &-group {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin: 0 0 20px;
+                &:last-child {
+                margin: 0;
+                }
+                label {
+                    display: block;
+                    margin: 0 0 10px;
+                    color: #707070;
+                    font-size: 12px;
+                    font-weight: 600;
+                    line-height: 1;
+                    text-transform: uppercase;
+                    letter-spacing: .2em;
+        
+                .two & {
+                    color: #fff;
+                    }
+                }
+                input {
+                    outline: none;
+                    display: block;
+                    background: rgba(0,0,0, 0.1);
+                    width: 100%;
+                    border: 0;
+                    border-radius: 4px;
+                    padding: 12px 20px;
+                    color: #acacac;
+                    transition: 0.3s ease;
+                    &:focus {
+                        color: #494949;
+                    }
+        
+                .two & {
+                    color: #fff;
+        
+                    &:focus {
+                    color: #fff;
+                    }
+                }
+            }
+        
+                button {
+                outline: none;
+                background: $mainColor;
+                width: 100%;
+                border: 0;
+                border-radius: 4px;
+                padding: 12px 20px;
+                color: #fff;
+                font-family: inherit;
+                font-size: inherit;
+                font-weight: 600;
+                line-height: inherit;
+                text-transform: uppercase;
+                cursor: pointer;
+        
+                .two & {
+                    background: #fff;
+                    color: $mainColor;
+                    }
+                }
+                input[type='checkbox'] {
+                    display: none;
+                    &:checked + label.form-remember:before {
+                        opacity: 1 !important;
+                    }
+                }
+                .form-remember {
+                    position: relative;
+                    font-size: 12px;
+                    color: #707070;
+                    letter-spacing: 0;
+                    text-decoration: none;
+                    padding-left: 1.6rem;
+                    cursor: pointer;
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        transform: translateY(-50%);
+                        width: 17px;
+                        height: 17px;
+                        background: $mainColor;
+                    }
+                    &:before {
+                        content: '\2714';
+                        position: absolute;
+                        top: 50%;
+                        left: 4px;
+                        transform: translateY(-50%);
+                        font-family: 'Font Awesome  5 Free';
+                        font-weight: 400;
+                        color: #eee;
+                        opacity: 0;
+                        transition: all .1s linear;
+                        z-index: 2;
+                    }
+                }
+        
+                .form-recovery {
+                    color: $mainColor;
+                    font-size: 12px;
+                    text-decoration: none;
+                }
+                .position-of-player {
+                    position: relative;
+                    background: rgba(0,0,0, 0.1);
+                    width: 100%;
+                    height: 48px;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    transition: 0.3s ease;
+                    i {
+                        position: absolute;
+                        top: 50%;
+                        right: 10px;
+                        transform: translateY(-50%);
+                        color: #fff;
+                        font-size: 1.2rem;
+                        transform-origin: 0% 0%;
+                        transition: all .2s linear;
+                        &.rotate-angle {
+                            transform: rotate(90deg);
+                        }
+                    }
+                }
+                .submenu {
+                    width: 100%;
+                    margin: .5rem 0;
+                    color: #eee;
+                    background: rgba(0,0,0, 0.1);
+                    display: none;
+                    li {
+                        padding: 1rem;
+                        cursor: pointer;
+                        border-bottom: 1px solid rgba(0,0,0,.2);
+                        transition: all .2s linear;
+                        &:last-child {
+                            border-bottom: 0;
+                        }
+                        &:hover {
+                            background: rgba(0,0,0, 0.2);
+                        }
+                    }
+                    &.show {
+                        display: block;
+                    }
+                }
+            }
+        
+            // Panel
+            &-panel {
+                padding: 60px calc(5% + 60px) 60px 60px;
+                box-sizing: border-box;
+        
+            // Panel One
+            &.one {
+                &:before {
+                @extend .overlay;
+        
+                content: '';
+                display: block;
                 opacity: 0;
+                visibility: hidden;
+                transition: 0.3s ease;
+                }
+                &.hidden {
+                    &:before {
+                        display: block;
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+        
+            // Panel Two
+                &.two {
+                    z-index: 5;
+                    position: absolute;
+                    top: 0;
+                    left: 92%;
+                    background: $mainColor;
+                    width: 100%;
+                    min-height: 100%;
+                    padding: 60px calc(10% + 60px) 60px 60px;
+                    transition: 0.4s linear;
+                    cursor: pointer;
+                    &:after {
+                        content: 'Register From Here';
+                        display: block;
+                        position: absolute;
+                        top: 60px;
+                        left: 2%;
+                        writing-mode: vertical-lr;
+                        color: #fff;
+                        transition: 0.3s ease;
+                    }
+                    &:hover {
+                        left: 90%;
+                        box-shadow: 0 0 10px rgba(0,0,0, 0.2);
+                    }
+        
+                &.active {
+                    left: 10%;
+                    box-shadow: 0 0 10px rgba(0,0,0, 0.2);
+                    cursor: default;
+                    &:after {
+                        opacity: 0;
+                        }
+                    }
+                }
+            }
+        
+            // Header
+            &-header {
+                margin: 0 0 40px;
+        
+                h1 {
+                    padding: 4px 0;
+                    color: $mainColor;
+                    font-size: 24px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+        
+                    .two & {
+                    position: relative;
+                    z-index: 40;
+                    color: #fff;
+                    }
+                }
+            }
+            &-facebook-log{
+                button {
+                    display: block;
+                    width: 100%;
+                    background: #fff;
+                    padding: .5rem .7rem;
+                    border: 1px solid #aaa;
+                    i {
+                        display: inline-block;
+                        vertical-align: middle;
+                        color: #4267B2;
+                        margin-right: .4rem;
+                    }
+                    span {
+                        display: inline-block;
+                        vertical-align: middle;
+                        font-size: .8rem;
+                        color: #747474;
+                    }
+                }
+            }
+            &-separated {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                span:nth-child(1), span:nth-child(3) {
+                    width: 50%;
+                    height: 1px;
+                    background: #c4c4c4;
+                }
+                span:nth-child(2) {
+                    margin: 0 .8rem;
+                    color: #747474;
                 }
             }
         }
-    }
-
-    // Header
-    &-header {
-        margin: 0 0 40px;
-
-        h1 {
-            padding: 4px 0;
-            color: $mainColor;
-            font-size: 24px;
-            font-weight: 700;
-            text-transform: uppercase;
-
-            .two & {
-            position: relative;
-            z-index: 40;
-            color: #fff;
-            }
+        .bg-form {
+            background: url('../img/homeSlider/slide04.jpeg') center no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
         }
     }
 }

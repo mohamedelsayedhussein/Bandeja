@@ -232,4 +232,11 @@ $(document).ready(function(){
         }, 200);
       });
 
+      // PLAYER POSITION SCRIPT
+
+      $('.position-of-player').on('click', function() {
+        $(this).find('i').toggleClass('rotate-angle')
+        $('.submenu').toggleClass('show')
+      })
+
 })

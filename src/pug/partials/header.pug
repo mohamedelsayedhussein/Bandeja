@@ -1,10 +1,9 @@
 header.header
     .container
-        .nav--bar.d-flex.justify-content-between.align-items-center
+        .nav--bar.d-flex.align-items-center
             .logo
                 a(href='index.html')
                     img(src='img/logo.svg' class='img-fluid' draggable='false')
-            i.fas.fa-expand.toggle-fullscreen.text-white.fa-lg
             nav.nav
                 ul.links.d-flex.align-items-center
                     li.item
@@ -27,6 +26,7 @@ header.header
                         a.link(href="#" class='text-uppercase')
                             i.fas.fa-sign-in-alt
                             | login
+            i.fas.fa-expand.toggle-fullscreen.text-white.fa-lg.d-lg-block.d-none
             .bars.d-lg-none
                 - for(var i = 0; i <= 2; i++)
                     span.line

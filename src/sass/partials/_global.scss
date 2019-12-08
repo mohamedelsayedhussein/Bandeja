@@ -1,11 +1,14 @@
 body {
 	height: 100%;
-	background: $darkColor;
+	// background: $darkColor;
     font-family: $textFont;
 	overflow-x: hidden;
 }
 .container {
 	background: $lightColor;
+}
+.darkmode--activated .container {
+	background: $darkColor !important;
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family: $mainFont;
@@ -35,4 +38,7 @@ a, a:active, a:hover {
 ::selection{
 	background-color: $mainColor;
 	color: #fff;
+}
+.darkmode-toggle {
+	z-index: 60;
 }

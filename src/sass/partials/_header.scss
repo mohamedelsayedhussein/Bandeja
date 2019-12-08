@@ -1,17 +1,21 @@
 header.header {
     .container {
         position: relative;
-        z-index: 9;
+        z-index: 50;
         background: #222;
         padding: 0;
         .nav--bar {
+            justify-content: space-around;
             @media (max-width: 991px) {
                 padding: 1rem 0;
+            }
+            @media (max-width: 767px) {
+                justify-content: space-between;
+                padding: 1rem;
             }
             .logo {
                 width: 170px;
                 overflow: hidden;
-                margin-left: 1rem;
                 a {
                     display: block;
                     img {
@@ -19,6 +23,9 @@ header.header {
                         height: 100%;
                     }
                 }
+            }
+            .toggle-fullscreen {
+                cursor: pointer;
             }
             nav.nav {
                 ul.links {
@@ -57,9 +64,8 @@ header.header {
                         a.link {
                             display: inline-block;
                             color: #fff;
-                            font-size: .9rem;
-                            font-family: $mainFont;
-                            padding: .6rem 1rem .6rem 0;
+                            font: 600 .9rem $mainFont;
+                            padding: 1rem 1rem 1rem 0;
                             @media (max-width: 991px) {
                                 display: block;
                             }
@@ -87,11 +93,10 @@ header.header {
                     }
                     @media (max-width: 991px) {
                         position: absolute;
-                        top: 0;
+                        top: 100%;
                         left: 0;
                         width: 100%;
                         height: auto;
-                        padding: 4.5rem 0;
                         flex-direction: column;
                         align-items: flex-start !important;
                         background: transparent;
@@ -128,7 +133,7 @@ header.header {
             }                
             .bars {
                 position: relative;
-                z-index: 10;
+                z-index: 55;
                 width: 30px;
                 height: 30px;
                 margin-right: 1rem;

@@ -1,6 +1,7 @@
 footer {
     .container {
         background: #222;
+        isolation: isolate;
         padding: 0;
         .text-inner {
             padding: 1rem 0;
@@ -9,6 +10,8 @@ footer {
                 font-family: $mainFont;
                 strong {
                     color: $mainColor;
+                    display: inline-block;
+                    isolation: isolate;
                 }
             }
         }

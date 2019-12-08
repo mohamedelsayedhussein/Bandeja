@@ -1,0 +1,72 @@
+- var PageTitle = 'Padel';
+doctype
+html
+    head
+        include partials/head
+    body
+        include partials/header
+        section.log-page
+            .form
+                .form-toggle
+                .form-panel.one
+                    .form-header
+                        h1 Account Login
+                    .form-content
+                        form
+                            .form-group.text-capitalize
+                                label(for='username') Username
+                                input(type='text'
+                                    id='username'
+                                    name='username'
+                                    )
+                            .form-group.text-capitalize
+                                label(for='password') Password
+                                input(type='password'
+                                    id='password'
+                                    name='password'
+                                    )
+                            .form-group.text-capitalize
+                                label.form-remember(for='custom-check')
+                                    input(type='checkbox' id='custom-check')
+                                    | Remember Me
+                                a.form-recovery(href='#') Forgot Password?
+                            .form-group.text-capitalize
+                                button(type='submit') Log In
+                .form-panel.two
+                    .form-header
+                        h1 Register Account
+                    .form-content
+                        form
+                            .form-group.text-capitalize
+                                label(for='firstname') First name
+                                input(type='text' id='firstname')
+                            .form-group.text-capitalize
+                                label(for='lastname') last name
+                                input(type='text' id='lastname')
+                            .form-group.text-capitalize
+                                label(for='username') username
+                                input(type='text' id='username')
+                            .form-group.text-capitalize
+                                label(for='password') Password
+                                input(type='password' id='password')
+                            .form-group.text-capitalize
+                                label(for='cpassword') Confirm Password
+                                input(type='password' id='cpassword')
+                            .form-group.text-capitalize
+                                label(for='email') Email Address
+                                input(type='email' id='email')
+                            .form-group.text-capitalize
+                                label(for='tel') tel. number
+                                input(type='email' id='tel')
+                            .form-group.text-capitalize
+                                label(for='position') player position
+                                input(type='text' id='position')
+                            .form-group.text-capitalize
+                                label(for='birth') birthdate
+                                input(type='text' id='birth')
+                            .form-group.text-capitalize
+                                button(type='submit') Register
+
+        include partials/footer
+        include partials/footerScripts
+        

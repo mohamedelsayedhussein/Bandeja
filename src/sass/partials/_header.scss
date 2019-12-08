@@ -1,5 +1,7 @@
 header.header {
     .container {
+        position: relative;
+        z-index: 9;
         background: #222;
         padding: 0;
         .nav--bar {
@@ -66,11 +68,19 @@ header.header {
                             width: 100%;
                             border-right: 0;
                             border-bottom-width: 1px !important;
+                            border-bottom-color: #222 !important;
+                            background: $darkColor;
                             opacity: 0;
+                            transform: translateY(-100%);
                             transition: all .2s linear;
+                            &:first-child {
+                                padding-top: 2.5rem;
+                            }
+                            &:last-child {
+                                padding-bottom: 2.5rem;
+                            }
                             a.link {
-                                padding: .8rem 0;
-                                font-weight: 600;
+                                padding: .9rem 1rem;
                                 font-size: 1rem;
                             }
                         }
@@ -79,13 +89,14 @@ header.header {
                         position: absolute;
                         top: 0;
                         left: 0;
-                        z-index: 9;
                         width: 100%;
                         height: auto;
-                        padding: 5rem 2rem;
+                        padding: 4.5rem 0;
                         flex-direction: column;
                         align-items: flex-start !important;
-                        background: $darkColor;
+                        background: transparent;
+                        border: 1px solid #222;
+                        border-bottom: 0;
                         opacity: 0;
                         visibility: hidden;
                         transition: all .3s linear;
@@ -95,6 +106,7 @@ header.header {
                         visibility: visible;
                         li.item {
                             opacity: 1;
+                            transform: translateY(0);
                             &:nth-child(1) {
                                 transition-delay: .4s;
                             }

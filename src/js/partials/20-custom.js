@@ -203,50 +203,56 @@ $(document).ready(function(){
       }
     ]
   })
-  
-  // LOG SCRIPT
-  
-  
-    // log in script
-      var panelOne = $('.form-panel.two').height(),
-        panelTwo = $('.form-panel.two')[0].scrollHeight;
     
-      $('.form-panel.two').not('.form-panel.two.active').on('click', function(e) {
-        e.preventDefault();
-    
-        $('.form-toggle').addClass('visible');
-        $('.form-panel.one').addClass('hidden');
-        $('.form-panel.two').addClass('active');
-        $('.form').animate({
-          'height': panelTwo
-        }, 200);
-      });
-    
-      $('.form-toggle').on('click', function(e) {
-        e.preventDefault();
-        $(this).removeClass('visible');
-        $('.form-panel.one').removeClass('hidden');
-        $('.form-panel.two').removeClass('active');
-        $('.form').animate({
-          'height': panelOne
-        }, 200);
-      });
+  // log in script
+    var panelOne = $('.form-panel.two').height(),
+        panelTwo = $('.form-panel.two')[0].scrollHeight + 200;
+  
+    $('.form-panel.two').not('.form-panel.two.active').on('click', function(e) {
+      e.preventDefault();
+      
+      $('.form-toggle').addClass('visible');
+      $('.form-panel.one').addClass('hidden');
+      $('.form-panel.two').addClass('active');
+      $('.form').animate({
+        'height': panelTwo
+      }, 200);
+    });
+  
+    $('.form-toggle').on('click', function(e) {
+      e.preventDefault();
+      $(this).removeClass('visible');
+      $('.form-panel.one').removeClass('hidden');
+      $('.form-panel.two').removeClass('active');
+      $('.form').animate({
+        'height': panelOne
+      }, 200);
+    });
 
-      // PLAYER POSITION SCRIPT
+    // PLAYER POSITION SCRIPT
 
-      var $playerPosition = $('.position-of-player');
-      var $positionSubmenu = $('.position-submenu');
+    var $playerPosition = $('.position-of-player');
+    var $positionSubmenu = $('.position-submenu');
 
-      $playerPosition.on('click', function() {
-        $(this).find('i').toggleClass('rotate-angle')
-        $positionSubmenu.toggleClass('show')
+    $playerPosition.on('click', function() {
+      $(this).find('i').toggleClass('rotate-angle')
+      $positionSubmenu.slideToggle();
+    })
+    $positionSubmenu.find('li').each(function() {
+      $(this).on('click',function() {
+        $playerPosition.find('.text-placeholder').text($(this).text());
+        $positionSubmenu.slideUp();
+        $playerPosition.find('i').removeClass('rotate-angle');
       })
-      $positionSubmenu.find('li').each(function() {
-        $(this).on('click',function() {
-          $playerPosition.find('.text-placeholder').text($(this).text());
-          $positionSubmenu.removeClass('show');
-          $playerPosition.find('i').removeClass('rotate-angle');
-        })
-      })
+    })
 
-})
+    // BIRTHDATE INPUT INIT 
+      $( "#datepicker" ).dateDropper({
+        large: true,
+        // lang: 'ar',
+        largeDefault: true,
+      });
+
+
+
+});

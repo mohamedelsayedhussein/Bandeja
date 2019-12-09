@@ -67,19 +67,21 @@ html
                                             label.text-white(for='position') player position
                                             ul.position-of-player
                                                 li 
-                                                    i.fa.fa-angle-right
+                                                    i
                                                 li.text-placeholder
                                             ul.position-submenu
                                                 li.text-capitalize right
                                                 li.text-capitalize  left
                                                 li.text-capitalize  both
-                                        .form-group.text-capitalize
+                                        .form-group.birthdate-calendar.text-capitalize
+                                            i.far.fa-calendar-alt.birthdate-icon
                                             label.text-white(for='birth') birthdate
-                                            input(type='text' id='birth')
+                                            input#datepicker(type='text' data-dd-large-default)
                                         .form-group.text-capitalize
-                                            button.bg-light.text-secondary(type='submit') Register
+                                            button.bg-light(type='submit') Register
                     .col-lg-6.d-lg-block.d-none
                         .bg-form
+
         include partials/footer
         include partials/footerScripts
         

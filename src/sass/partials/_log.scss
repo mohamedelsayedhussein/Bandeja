@@ -67,6 +67,7 @@
                 flex-wrap: wrap;
                 justify-content: space-between;
                 margin: 0 0 20px;
+                position: relative;
                 &:last-child {
                 margin: 0;
                 }
@@ -96,17 +97,14 @@
                     transition: 0.3s ease;
                     &:focus {
                         color: #494949;
-                    }
-        
-                .two & {
-                    color: #fff;
-        
-                    &:focus {
-                    color: #fff;
+                    }   
+                }
+                input[type='checkbox'] {
+                    display: none;
+                    &:checked + label.form-remember:before {
+                        opacity: 1 !important;
                     }
                 }
-            }
-        
                 button {
                 outline: none;
                 background: $mainColor;
@@ -121,17 +119,6 @@
                 line-height: inherit;
                 text-transform: uppercase;
                 cursor: pointer;
-        
-                .two & {
-                    background: #fff;
-                    color: $mainColor;
-                    }
-                }
-                input[type='checkbox'] {
-                    display: none;
-                    &:checked + label.form-remember:before {
-                        opacity: 1 !important;
-                    }
                 }
                 .form-remember {
                     position: relative;
@@ -178,36 +165,50 @@
                     height: 48px;
                     padding: 1rem;
                     color: #fff;
+                    backdrop-filter: blur(15px);
                     border-radius: 4px;
                     cursor: pointer;
                     transition: 0.3s ease;
                     i {
                         position: absolute;
                         top: 50%;
-                        right: 10px;
+                        right: 20px;
                         transform: translateY(-50%);
-                        color: #fff;
-                        font-size: 1.2rem;
-                        transform-origin: top right;
+                        transform-origin: top center;
                         transform-box: fill-box;
-                        transition: all .2s linear;
+                        transition: all .3s linear;
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            right: 0;
+                            width: 12px;
+                            height: 12px;
+                            border-width: 2px;
+                            border-style: solid;
+                            border-color: #fff #fff transparent transparent;
+                            transform: translateY(-50%) rotate(45deg);
+                        }
                         &.rotate-angle {
                             transform: rotate(90deg);
-                            top: 60%;
                         }
                     }
                 }
                 .position-submenu {
                     width: 100%;
-                    margin: .5rem 0;
-                    color: #242424;
-                    background: rgba(255,255,255, 0.8);
+                    color: #eee;
+                    background: rgba(0,0,0, 0.1);
                     display: none;
                     li {
-                        padding: 1rem;
+                        padding: .6rem 1rem .6rem 2rem;
+                        font-size: .8rem;
+                        letter-spacing: 1px;
                         cursor: pointer;
-                        border-bottom: 1px solid rgba(255,255,255,.5);
+                        border-bottom: 1px solid rgba(255,255,255,.1);
                         transition: all .2s linear;
+                        &:first-child {
+                            border-top: 1px solid rgba(255,255,255,.1);
+                        }
                         &:last-child {
                             border-bottom: 0;
                         }
@@ -215,9 +216,14 @@
                             background: rgba(0,0,0, 0.2);
                         }
                     }
-                    &.show {
-                        display: block;
-                    }
+                }
+                i.birthdate-icon {
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    right: 20px;
+                    font-size: 1.2rem;
+                    color: #eee;
                 }
             }
         
@@ -280,6 +286,16 @@
                     &:after {
                         opacity: 0;
                         }
+                    }
+                    input {
+                        color: #eee !important;        
+                        &:focus {
+                        color: #fff !important;
+                        }
+                    }
+                    button[type='submit'] {
+                        background: #fff !important;
+                        color: $mainColor !important;
                     }
                 }
             }
@@ -345,4 +361,21 @@
             height: 100%;
         }
     }
+}
+// ovrride input datepicker background
+#dd-w-0 .dd-c .dd-s, #dd-w-0 .dd-s-b-s, #dd-w-0 .dd-sub-y  {
+    background: $mainColor !important;
+}
+.dd-w .dd-c .dd-d span, .dd-w .dd-c .dd-d strong,
+#dd-w-0 .dd-s-b-ul li.dd-on, #dd-w-0 .dd-sun {
+    color: $mainColor !important ;
+}
+#dd-w-0 .dd-c:after, #dd-w-0 .dd-w-c {
+    border-color: transparent !important;
+}
+#dd-w-0 .dd-w-c {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .31) !important;
+}
+#dd-w-0 .dd-n {
+    color: #ddd !important;
 }

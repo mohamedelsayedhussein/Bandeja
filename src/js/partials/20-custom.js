@@ -234,9 +234,19 @@ $(document).ready(function(){
 
       // PLAYER POSITION SCRIPT
 
-      $('.position-of-player').on('click', function() {
+      var $playerPosition = $('.position-of-player');
+      var $positionSubmenu = $('.position-submenu');
+
+      $playerPosition.on('click', function() {
         $(this).find('i').toggleClass('rotate-angle')
-        $('.submenu').toggleClass('show')
+        $positionSubmenu.toggleClass('show')
+      })
+      $positionSubmenu.find('li').each(function() {
+        $(this).on('click',function() {
+          $playerPosition.find('.text-placeholder').text($(this).text());
+          $positionSubmenu.removeClass('show');
+          $playerPosition.find('i').removeClass('rotate-angle');
+        })
       })
 
 })

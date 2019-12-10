@@ -4,7 +4,7 @@ html
     head
         include partials/head
     body
-        include partials/header
+        include components/header
         section.leaderboard.my-5
             .container.p-5
                 table#leaderboard-table.table.table-striped.table-bordered(cellspacing='0' width='100%')
@@ -20,24 +20,8 @@ html
                                 each val in ['1','player name','2','5','5','9']
                                     td=val
 
-        section.sponsers.my-5
-            .container
-                .sponsers-slider
-                    .item
-                        img(src='img/sponsersSlider/slide01.png' class='img-fluid')
-                    .item
-                        img(src='img/sponsersSlider/slide02.png' class='img-fluid')
-                    .item
-                        img(src='img/sponsersSlider/slide03.png' class='img-fluid')
-                    .item
-                        img(src='img/sponsersSlider/slide04.jpg' class='img-fluid')
-                    .item
-                        img(src='img/sponsersSlider/slide02.png' class='img-fluid')
-                    .item
-                        img(src='img/sponsersSlider/slide05.jpg' class='img-fluid')
-                    .item
-                        img(src='img/sponsersSlider/slide01.png' class='img-fluid')
 
-        include partials/footer
+        include components/sponsors
+        include components/footer
         include partials/footerScripts
 

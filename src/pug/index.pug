@@ -4,7 +4,7 @@ html
     head
         include partials/head
     body
-        include partials/header
+        include components/header
         section.banner
             .container
                 .inner-banner.px-md-3
@@ -65,24 +65,9 @@ html
                     p.description
                         | Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ut, enim saepe eveniet nemo tempora dolorem, architecto maxime ab neque quam ducimus facere mollitia! Aliquam sequi cumque quod alias quidem.
 
-        section.sponsers.my-5(data-aos='fade' data-aos-duration="2000")
-            .container
-                .sponsers-slider
-                    .item
-                        img(src='img/sponsersSlider/slide01.png' class='img-fluid')
-                    .item
-                        img(src='img/sponsersSlider/slide02.png' class='img-fluid')
-                    .item
-                        img(src='img/sponsersSlider/slide03.png' class='img-fluid')
-                    .item
-                        img(src='img/sponsersSlider/slide04.jpg' class='img-fluid')
-                    .item
-                        img(src='img/sponsersSlider/slide02.png' class='img-fluid')
-                    .item
-                        img(src='img/sponsersSlider/slide05.jpg' class='img-fluid')
-                    .item
-                        img(src='img/sponsersSlider/slide01.png' class='img-fluid')
+        
 
-        include partials/footer
+        include components/sponsors
+        include components/footer
         include partials/footerScripts
         

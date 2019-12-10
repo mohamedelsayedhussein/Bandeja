@@ -165,9 +165,9 @@ $(document).ready(function(){
   // AOS INIT
   AOS.init();
   
-  // sponsers slider
+  // sponsors slider
   
-  $('.sponsers-slider').slick({
+  $('.sponsors-slider').slick({
     autoplay: true,
     arrows: false,
     dots: false,

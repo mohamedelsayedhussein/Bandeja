@@ -34,19 +34,19 @@ header.header {
                             }
                         }
                         &:first-child {
-                            border-bottom: 2px solid #f53b57;
+                            border-bottom: 4px solid #f53b57;
                         }
                         &:nth-child(2) {
-                            border-bottom: 2px solid #ffd32a;
+                            border-bottom: 4px solid #ffd32a;
                         }
                         &:nth-child(3) {
-                            border-bottom: 2px solid #0be881;
+                            border-bottom: 4px solid #0be881;
                         }
                         &:nth-child(4) {
-                            border-bottom: 2px solid #3c40c6;
+                            border-bottom: 4px solid #3c40c6;
                         }
                         &:nth-child(5) {
-                            border-bottom: 2px solid #00a8ff;
+                            border-bottom: 4px solid #00a8ff;
                         }
                         &:last-child {
                             border-right: none;
@@ -128,7 +128,6 @@ header.header {
                 }
             }
             .toggle-fullscreen {
-                color: #eee;
                 cursor: pointer;
             }    
             .bars {

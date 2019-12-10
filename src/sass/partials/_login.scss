@@ -366,24 +366,3 @@
         }
     }
 }
-// override datepicker theme
-#dd-w-0 .dd-c .dd-s, #dd-w-0 .dd-s-b-s, #dd-w-0 .dd-sub-y  {
-    background: $mainColor !important;
-}
-.dd-w .dd-c .dd-d span, .dd-w .dd-c .dd-d strong,
-#dd-w-0 .dd-s-b-ul li.dd-on, #dd-w-0 .dd-sun {
-    color: $mainColor !important ;
-}
-#dd-w-0 .dd-c:after, #dd-w-0 .dd-w-c {
-    border-color: transparent !important;
-}
-#dd-w-0 .dd-w-c {
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .31) !important;
-    border-color: transparent !important;
-}
-#dd-w-0 .dd-n {
-    color: #ddd !important;
-}
-.dd-w .dd-c .dd-d {
-    border-color: rgba(142, 169, 70,.5) !important;
-}

@@ -69,7 +69,7 @@ $(document).ready(function(){
     bottom: '64px',
     right: 'unset',
     left: '32px',
-    time: '0.9s',
+    time: '1s',
     mixColor: '#fff',
     backgroundColor: '#fff',
     buttonColorDark: '#242424',

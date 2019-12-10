@@ -1,7 +1,6 @@
 .banner {
   margin-top: 2.5rem;
   .container {
-    opacity: .99;
     .darkmode--activated & {
       background: $darkColor !important;
     }
@@ -344,7 +343,6 @@
 // SPONSERS STYLE
 .sponsers {
   .container {
-    background: $lightColor;
     padding: 2rem 0;
     .sponsers-slider {
       display: flex;

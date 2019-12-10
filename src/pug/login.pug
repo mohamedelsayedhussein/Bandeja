@@ -1,11 +1,11 @@
-- var PageTitle = 'Padel';
+- var PageTitle = 'Banjeda - Login';
 doctype
 html
     head
         include partials/head
     body
         include partials/header
-        section.log-page
+        section.log-page(data-aos='fade-up' data-aos-offset='0' data-aos-duration="700")
             .container
                 .row.py-5
                     .col-lg-6
@@ -76,12 +76,52 @@ html
                                         .form-group.birthdate-calendar.text-capitalize
                                             i.far.fa-calendar-alt.birthdate-icon
                                             label.text-white(for='birth') birthdate
-                                            input#datepicker(type='text' data-dd-large-default)
+                                            input#datepicker(type='text' placeholder="d-m-Y" data-large-mode="true" data-lock="to" data-translate-mode='true')
                                         .form-group.text-capitalize
                                             button.bg-light(type='submit') Register
                     .col-lg-6.d-lg-block.d-none
                         .bg-form
 
+        section.sponsers.my-5(data-aos='fade' data-aos-offset='0' data-aos-duration="2000")
+            .container
+                .sponsers-slider
+                    .item
+                        img(src='img/sponsersSlider/slide01.png' class='img-fluid')
+                    .item
+                        img(src='img/sponsersSlider/slide02.png' class='img-fluid')
+                    .item
+                        img(src='img/sponsersSlider/slide03.png' class='img-fluid')
+                    .item
+                        img(src='img/sponsersSlider/slide04.jpg' class='img-fluid')
+                    .item
+                        img(src='img/sponsersSlider/slide02.png' class='img-fluid')
+                    .item
+                        img(src='img/sponsersSlider/slide05.jpg' class='img-fluid')
+                    .item
+                        img(src='img/sponsersSlider/slide01.png' class='img-fluid')
+
         include partials/footer
         include partials/footerScripts
-        
+        script(type="text/javascript").
+            var panelOne = $('.form-panel.two').height(),
+                panelTwo = $('.form-panel.two')[0].scrollHeight + 200;
+
+                $('.form-panel.two').not('.form-panel.two.active').on('click', function(e) {
+                    e.preventDefault();
+
+                    $('.form-toggle').addClass('visible');
+                    $('.form-panel.one').addClass('hidden');
+                    $('.form-panel.two').addClass('active');
+                    $('.form').animate({
+                        'height': panelTwo
+                    }, 200);
+                });
+                $('.form-toggle').on('click', function(e) {
+                    e.preventDefault();
+                    $(this).removeClass('visible');
+                    $('.form-panel.one').removeClass('hidden');
+                    $('.form-panel.two').removeClass('active');
+                    $('.form').animate({
+                        'height': panelOne
+                    }, 200);
+            });

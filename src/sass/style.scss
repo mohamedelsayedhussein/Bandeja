@@ -4,6 +4,7 @@
 @import "vendors/pace-theme-minimal";
 @import "vendors/animate";
 @import "vendors/aos";
+@import "vendors/datedropper";
 
 // partials files
 
@@ -12,5 +13,6 @@
 @import "partials/helper";
 @import "partials/header";
 @import "partials/homePage";
-@import "partials/log";
+@import "partials/login";
+@import "partials/leaderboard";
 @import "partials/footer";

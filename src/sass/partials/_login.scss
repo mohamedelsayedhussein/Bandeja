@@ -1,7 +1,6 @@
 
 .log-page {
     .container {
-        position: relative;
         .overlay {
             position: absolute;
             top: 0;
@@ -218,7 +217,7 @@
                 }
                 &.birthdate-calendar {
                     input#datepicker {
-                        cursor: pointer;
+                        cursor: pointer !important;
                     }
                     i.birthdate-icon {
                         display: block;
@@ -367,7 +366,7 @@
         }
     }
 }
-// ovrride input datepicker background
+// override datepicker theme
 #dd-w-0 .dd-c .dd-s, #dd-w-0 .dd-s-b-s, #dd-w-0 .dd-sub-y  {
     background: $mainColor !important;
 }
@@ -380,7 +379,11 @@
 }
 #dd-w-0 .dd-w-c {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, .31) !important;
+    border-color: transparent !important;
 }
 #dd-w-0 .dd-n {
     color: #ddd !important;
+}
+.dd-w .dd-c .dd-d {
+    border-color: rgba(142, 169, 70,.5) !important;
 }

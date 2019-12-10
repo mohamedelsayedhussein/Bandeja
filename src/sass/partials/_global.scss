@@ -1,11 +1,11 @@
 body {
 	height: 100%;
-	// background: $darkColor;
     font-family: $textFont;
 	overflow-x: hidden;
 }
 .container {
 	background: $lightColor;
+	position: relative;
 }
 .darkmode--activated .container {
 	background: $darkColor !important;

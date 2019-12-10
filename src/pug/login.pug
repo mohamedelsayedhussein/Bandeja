@@ -74,7 +74,13 @@ html
                                                 li.text-capitalize  left
                                                 li.text-capitalize  both
                                         .form-group.birthdate-calendar.text-capitalize
-                                            i.far.fa-calendar-alt.birthdate-icon
+                                            i.birthdate-icon
+                                                svg(width="25" height="25" viewBox="0 0 53 56" fill="none")
+                                                    path(d="M48 7H5C2.79086 7 1 8.79086 1 11V51C1 53.2091 2.79086 55 5 55H48C50.2091 55 52 53.2091 52 51V11C52 8.79086 50.2091 7 48 7Z" stroke="white" stroke-width="3")
+                                                    path(d="M0 21H52" stroke="white" stroke-width="3")
+                                                    path(d="M15 0V12" stroke="white" stroke-width="4")
+                                                    path(d="M39 0V12" stroke="white" stroke-width="4")
+                                                    path(d="M15 36L22.5 43.5L39 27" stroke="white" stroke-width="3")
                                             label.text-white(for='birth') birthdate
                                             input#datepicker(type='text' placeholder="d-m-Y" data-large-mode="true" data-lock="to" data-translate-mode='true')
                                         .form-group.text-capitalize

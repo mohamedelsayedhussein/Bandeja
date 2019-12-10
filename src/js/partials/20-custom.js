@@ -248,7 +248,7 @@ $(document).ready(function(){
 
     // BIRTHDATE INPUT INIT 
       $( "#datepicker" ).dateDropper({
-        large: true,
+        // large: true,
         // lang: 'ar',
         largeDefault: true,
       });

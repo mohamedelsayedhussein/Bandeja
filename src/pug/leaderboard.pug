@@ -9,17 +9,40 @@ html
             .container.p-5
                 table#leaderboard-table.table.table-striped.table-bordered(cellspacing='0' width='100%')
                     thead
-                        - var leaderboardHead = ['Rank','Player','Rating','Sete Won','Games Won','Games Lost']
-                        each val in leaderboardHead
-                            th=val
+                        th Rank
+                        th Player
+                        th Rating
+                        th Sete Won
+                        th Games Won
+                        th Games Lost
                     tbody
-                        - var n = 0;
-                        while n<15
-                            - n++
-                            tr
-                                each val in ['1','player name','2','5','5','9']
-                                    td=val
-
+                        tr
+                            td 1
+                            td
+                                img(src='https://placehold.it/35x35' alt='').mr-2.img-fluid.rounded-circle.d-inline-block
+                                h6.m-0.d-inline-block.text-capitalize player name
+                            td 5
+                            td 6
+                            td 8
+                            td 2
+                        tr
+                            td 1
+                            td
+                                img(src='https://placehold.it/35x35' alt='').mr-2.img-fluid.rounded-circle.d-inline-block
+                                h6.m-0.d-inline-block.text-capitalize player name
+                            td 5
+                            td 6
+                            td 8
+                            td 2
+                        tr
+                            td 1
+                            td
+                                img(src='https://placehold.it/35x35' alt='').mr-2.img-fluid.rounded-circle.d-inline-block
+                                h6.m-0.d-inline-block.text-capitalize player name
+                            td 5
+                            td 6
+                            td 8
+                            td 2
 
         include components/sponsors
         include components/footer

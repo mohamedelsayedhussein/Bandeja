@@ -1,9 +1,13 @@
 section.leaderboard {
     .container {
         .table {
+            th {
+                vertical-align: middle;
+            }
             tbody {
                 td {
                     font-size: .9rem;
+                    vertical-align: middle;
                 }
             }
         }

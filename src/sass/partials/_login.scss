@@ -198,19 +198,43 @@
                     background: rgba(0,0,0, 0.1);
                     display: none;
                     li {
-                        list-style-type: circle;
-                        list-style-position: inside;
-                        padding: .6rem 1rem .6rem 2rem;
+                        position: relative;
+                        padding: .6rem 1rem .6rem 3rem;
                         font-size: .8rem;
                         letter-spacing: 1px;
                         cursor: pointer;
                         border-bottom: 1px solid rgba(255,255,255,.1);
                         transition: all .2s linear;
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            top: 53%;
+                            left: .8rem;
+                            transform: translateY(-50%);
+                            width: 22px;
+                            height: 16px;
+                            display: block;
+                            background-size: contain !important;
+                            background-repeat: no-repeat !important;
+                            background-position: center center !important;
+                        }
                         &:first-child {
                             border-top: 1px solid rgba(255,255,255,.1);
+                            &:after {
+                                background: url('../img/positionList/right.png');
+                            }
+                        }
+                        &:nth-child(2) {
+                            &:after {
+                                background: url('../img/positionList/left.png');
+                            }
                         }
                         &:last-child {
                             border-bottom: 0;
+                            &:after {
+                                background: url('../img/positionList/both.png');
+                                width: 28px;
+                            }
                         }
                         &:hover {
                             background: rgba(0,0,0, 0.2);

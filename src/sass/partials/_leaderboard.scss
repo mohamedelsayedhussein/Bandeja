@@ -8,6 +8,16 @@ section.leaderboard {
                 td {
                     font-size: .9rem;
                     vertical-align: middle;
+                    &.player-info {
+                        img {
+                            width: 35px;
+                            height: 35px;
+                            object-fit: cover;
+                        }
+                        h6.name {
+                            font-weight: 600;
+                        }
+                    }
                 }
             }
         }
@@ -16,7 +26,23 @@ section.leaderboard {
             display: none;
         }
         #leaderboard-table_filter {
+            margin-bottom: 1rem;
             label {
+                position: relative;
+                font-size: 0px;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: -2.3rem;
+                    transform: translateY(-50%);
+                    width: 30px;
+                    height: 30px;
+                    display: inline-block;
+                    cursor: pointer;
+                    background: url('../img/search.png');
+                    background-size: contain;
+                }
                 .darkmode--activated & {
                     color: #fff;
                     input {

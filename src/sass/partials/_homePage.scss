@@ -1,3 +1,65 @@
+.hero {
+  .container {
+    .inner-hero {
+      width: 100%;
+      height: 100%;
+      padding: 5rem;
+      transition: all .6s linear;
+      @media (max-width: 767px) {
+        padding: 4rem 1rem;
+      }
+      h1 {
+        font-size: 5rem;
+        padding: 5rem;
+        line-height: 1;
+        letter-spacing: 25px;
+        color: $mainColor;
+        -webkit-text-stroke-color: transparent;
+        clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
+        transition: all .5s linear;
+        @media (max-width: 767px) {
+          font-size: 2rem;
+        }
+        @media (max-width: 992px) {
+          clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+          padding: 2rem 0;
+          letter-spacing: 5px;
+        }
+        p {
+          line-height: 1;
+          letter-spacing: 8px;
+          font-size: 1rem;
+          font-weight: 600;
+          padding-top: .5rem;
+          color: #414141;
+          transition: all .4s linear;
+          @media (max-width: 992px) {
+            font-size: .8rem;
+          }
+          @media (max-width: 530px) {
+            letter-spacing: 3px;
+          }
+          .darkmode--activated & {
+            color: #fff;
+          }
+        }
+      }
+      &.scrolled {
+        padding: 2rem;
+        h1 {
+          letter-spacing: 5px;
+          font-size: 2.5rem;
+          padding: 1rem 0;
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        }
+        p {
+          letter-spacing: 2px;
+          font-size: .8rem;
+        }
+      }
+    }
+  }
+}
 .banner {
   margin-top: 2.5rem;
   .container {
@@ -176,7 +238,7 @@
         }
         .text--slide {
           display: block !important;
-          h1 {
+          h2 {
             margin-bottom: 1.5rem;
             font-size: 1.7rem;
             animation: fadeOut .2s both;
@@ -230,7 +292,7 @@
           transition: all .3s linear;
           background-size: 100% 0;
         }
-        .slick-active h1 {
+        .slick-active h2 {
           animation: fadeInUp .3s both .8s;
         }
         

@@ -1,6 +1,15 @@
 
 $(document).ready(function(){
 
+  // SCROLL EVENT TO HANDLE HERO SECTION STYLE
+  var $innerHero = $('section.hero').find('.inner-hero');
+  $(window).scroll(function() {
+    if($(this).scrollTop() > 20) {
+      $innerHero.addClass('scrolled')
+    }else {
+      $innerHero.removeClass('scrolled')
+    }
+  })
   // TOGGLE HAMBURGER MENU
   var $header = $('header.header');
   var $hamburger = $header.find('.bars');

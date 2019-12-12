@@ -51,19 +51,18 @@ header.header {
                         &:last-child {
                             border-right: none;
                         }
-                        i {
-                            display: inline-block;
-                            vertical-align: middle;
-                            color: $mainColor;
-                            padding: .6rem;
-                        }
                         a.link {
-                            display: inline-block;
+                            display: inline-flex;
+                            align-items: center;
+                            vertical-align: middle;
                             color: #fff;
                             font: 600 .9rem $mainFont;
-                            padding: 1rem 1rem 1rem 0;
-                            @media (max-width: 991px) {
-                                display: block;
+                            padding: 1.5rem 1rem 1.5rem 0;
+                            i {
+                                display: inline-block;
+                                vertical-align: middle;
+                                color: $mainColor;
+                                padding: 0 .6rem;
                             }
                         }
                         @media (max-width: 991px) {
@@ -82,7 +81,8 @@ header.header {
                                 padding-bottom: 2.5rem;
                             }
                             a.link {
-                                padding: .9rem 1rem;
+                                display: block;
+                                padding: 1.3rem;
                                 font-size: 1rem;
                             }
                         }

@@ -1,3 +1,9 @@
+
+html {
+	text-rendering: optimizeLegibility !important;
+	-webkit-font-smoothing: antialiased !important;
+
+}
 body {
 	height: 100%;
     font-family: $textFont;
@@ -6,6 +12,7 @@ body {
 .container {
 	background: $lightColor;
 	position: relative;
+	margin-top: 2rem;
 }
 .darkmode--activated .container {
 	background: $darkColor !important;

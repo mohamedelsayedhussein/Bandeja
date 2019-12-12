@@ -1,0 +1,34 @@
+- var PageTitle = 'Banjeda - Profile';
+doctype
+html
+    head
+        include partials/head
+    body
+        include components/header
+        section.profile-page.my-5
+            .container.p-3
+                .row
+                    .col-lg-4.mt-5
+                        .profile-card.rounded-0
+                            img(src='https://placehold.it/400x400' class='img-fluid h-100')
+                    .col-lg-4
+                        .profile-card
+                            .header
+                                a(target='_blank' href='#')
+                                    img.hoverZoomLink(src='https://placehold.it/150x150')
+                                h1
+                                    | John Doe
+                                h2
+                                    | Better Visuals
+                            .profile-bio
+                                p
+                                    | It takes monumental improvement for us to change how we live our lives. Design is the way we access that improvement.
+                    .col-lg-4.mt-5
+                        .profile-card.rounded-0
+                            img(src='https://placehold.it/400x400' class='img-fluid h-100')
+
+
+        include components/sponsors
+        include components/footer
+        include partials/footerScripts
+

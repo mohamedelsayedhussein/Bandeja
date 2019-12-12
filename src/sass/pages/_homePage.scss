@@ -9,9 +9,8 @@
         padding: 4rem 1rem;
       }
       h1 {
-        font-size: 5rem;
+        font: 700 5rem/1 $mainFont;
         padding: 5rem;
-        line-height: 1;
         letter-spacing: 25px;
         color: $mainColor;
         -webkit-text-stroke-color: transparent;
@@ -48,7 +47,7 @@
         padding: 2rem;
         h1 {
           letter-spacing: 5px;
-          font-size: 2.5rem;
+          font-size: 3rem;
           padding: 1rem 0;
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
         }

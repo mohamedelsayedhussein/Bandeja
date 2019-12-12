@@ -11,8 +11,9 @@
 @import "partials/variables";
 @import "partials/global";
 @import "partials/helper";
-@import "partials/header";
-@import "partials/homePage";
-@import "partials/login";
-@import "partials/leaderboard";
-@import "partials/footer";
+@import "components/header";
+@import "pages/homePage";
+@import "pages/login";
+@import "pages/leaderboard";
+@import "pages/profile";
+@import "components/footer";

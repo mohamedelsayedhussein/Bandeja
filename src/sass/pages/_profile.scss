@@ -5,6 +5,63 @@ section.profile-page {
   .container {
     width: 100vw;
     min-height: 100vh;
+    .statistics {
+      padding: 1.5rem;
+      background: #fff;
+      margin-top: 100px;
+      opacity: 0;
+      animation: moveIn 1s .2s ease forwards;
+      .darkmode--activated & {
+        background: #333;
+      }
+      h2 {
+        border: 2px solid $mainColor;
+        padding: .2rem 0;
+        text-align: center;
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+        margin-top: 70px;
+        opacity: 0;
+        animation: moveIn 1s .2s ease forwards;
+        .darkmode--activated & {
+          color: #eee;
+        }
+      }
+      ul {
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: .5rem 1rem;
+          border: 1px solid rgba(0,0,0,.1);
+          font-size: .85rem;
+          margin-bottom: -1px;
+          margin-top: 70px;
+          opacity: 0;
+          animation: moveIn 1s .5s ease forwards;
+          &:nth-child(odd) {
+            background: #fff;
+            .darkmode--activated & {
+              background: #333;
+              color: #eee;
+              border-color: rgba(255, 255, 255, 0.1);
+            }
+          }
+          &:nth-child(even) {
+            background: #f7f7f7;
+            color: #333;
+            .darkmode--activated & {
+              background: #1b1b1b;
+              color: #fff;
+              border-color: rgba(255, 255, 255, 0.1);
+            }
+          }
+          i {
+            color: #777777;
+          }
+        }
+      }
+    }
     .profile-card {
       background: $mainColor;
       width: 150px;
@@ -22,45 +79,156 @@ section.profile-page {
         moveDown 1s 0.8s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards,
         moveUp 1s 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards,
         materia 1s 2.7s cubic-bezier(0.86, 0, 0.07, 1) forwards;
-      .header {
-        padding: 1rem;
-        border-right: 2px dashed #eeeeee;
-        background: #ffffff;
-        color: #000000;
-        margin-top: 50px;
+        .darkmode--activated & {
+          background: #333 !important;
+        }
+      .img-profile {
+        margin-top: 70px;
         opacity: 0;
         text-align: center;
-        animation: moveIn 1s 3.1s ease forwards;
+        animation: moveIn 1s 3.3s ease forwards;
         a {
-          display: inline-block;
-          text-align: center;
           position: relative;
-          margin: 25px 30px;
+          display: block;
+          width: 150px;
+          height: 150px;
+          margin: auto;
           &:after {
             position: absolute;
             content: "";
             bottom: 3px;
             right: 3px;
-            width: 20px;
-            height: 20px;
-            border: 4px solid #ffffff;
+            width: 30px;
+            height: 30px;
+            border: 4px solid #fff;
             transform: scale(0);
-            background: linear-gradient(#2196f3 0%, #2196f3 50%, #ffc107 50%, #ffc107 100%);
+            background: $mainColor;
             border-radius: 50%;
             box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
-            animation: scaleIn 0.3s 3.5s ease forwards;
+            animation: scaleIn 0.3s 3.7s ease forwards;
+            .darkmode--activated & {
+              box-shadow: 0px 1px 3px rgba(255, 255, 255, 0.1);
+              border-color: #f2f2f2;
+          }
+          }
+          &:before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 50%;
+            opacity: 0;
+            transition: all .2s linear;
+            z-index: 5;
           }
           & > img {
-            max-width: 100%;
+            position: relative;
+            display: block;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
             border-radius: 50%;
-            transition: box-shadow 0.3s ease;
             box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.06);
+            transition: box-shadow 0.3s ease;
+            .darkmode--activated & {
+              box-shadow: 0px 0px 0px 8px rgba(255, 255, 255, 0.1);
+            }
           }
           &:hover > img {
             box-shadow: 0px 0px 0px 12px rgba(0, 0, 0, 0.1);
+            .darkmode--activated & {
+              box-shadow: 0px 0px 0px 12px rgba(255, 255, 255, 0.3);
+            }
+          }
+          &:hover::before {
+            opacity: 1;
           }
         }
       }
+      h3.player-name {
+        margin-top: 70px;
+        opacity: 0;
+        animation: moveIn 1s 3.7s ease forwards;
+        .darkmode--activated & {
+          color: #fff;
+        }
+      }
+      .edit-profile {
+        margin-top: 70px;
+        opacity: 0;
+        animation: moveIn 1s 3.9s ease forwards;
+        button {
+          background: #ccc;
+          border: none;
+          padding: .5rem 1rem;
+          margin: .5rem 0;
+          float: right;
+          color: #272727;
+          opacity: .7;
+          transition: opacity .2s linear;
+          i {
+            display: inline-block;
+            vertical-align: middle;
+            color: #5e5e5e;
+            margin-right: .5rem;
+            font-size: 1.2rem;
+          }
+          span {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: .85rem;
+          }
+          &:hover {
+            opacity: 1;
+          }
+        }
+        
+      }
+      .player-info {
+        li {
+          margin-top: 70px;
+          opacity: 0;
+          padding: .7rem 1rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: .8rem;
+          color: #313131;
+          border-bottom: 1px solid rgba(0,0,0,.1);
+          animation: moveIn 1s ease forwards;
+          .darkmode--activated & {
+          border-bottom: 1px solid rgba(255,255,255,.1);
+          color: #eee;
+          }
+          span {
+            &:nth-child(1) {
+              i {
+                margin-right: .7rem;
+              }
+            }
+          }
+          &:first-child {
+            animation-delay: 4s;
+          }
+          &:nth-child(2) {
+            animation-delay: 4.3s;
+          }
+          &:nth-child(3) {
+            animation-delay: 4.7s;
+          }
+          &:last-child {
+            border-bottom: 0;
+          }
+        }
+      }
+    }
+    .chart {
+      margin-top: 100px;
+      opacity: 0;
+      animation: moveIn 1s .2s ease forwards;
     }
   }
 }
@@ -69,6 +237,7 @@ section.profile-page {
   0% {
     width: 0px;
     height: 0px;
+    background: transparent;
   }
   100% {
     width: 150px;
@@ -111,7 +280,7 @@ section.profile-page {
   }
   100% {
     width: 100%;
-    height: 70vh;
+    height: 500px;
     background: #ffffff;
     border-radius: 4px;
   }

@@ -1,6 +1,7 @@
 .hero {
   .container {
     .inner-hero {
+      position: relative;
       width: 100%;
       height: 100%;
       padding: 5rem;
@@ -8,21 +9,69 @@
       @media (max-width: 767px) {
         padding: 4rem 1rem;
       }
+      .dots-shape {
+        position: absolute;
+        bottom: 50px;
+        left: 50px;
+        width: 200px;
+        height: 150px;
+        background: url('../img/dots.png') repeat;
+        transition: .3s linear;
+        z-index: 2;
+        @media (max-width: 767px) {
+          display: none !important;
+        }
+      }
       h1 {
+        position: relative;
+        z-index: 3;
         font: 700 5rem/1 $mainFont;
-        padding: 5rem;
+        padding: 6rem 5rem;
+        width: 85%;
         letter-spacing: 25px;
         color: $mainColor;
-        -webkit-text-stroke-color: transparent;
-        clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
-        transition: all .5s linear;
+        background: $lightColor;
+        border: 1px solid rgba(0,0,0,.2);
+        transition: letter-spacing .5s linear,
+                    padding .5s linear,
+                    width .5s linear,
+                    font-size .5s linear;
         @media (max-width: 767px) {
           font-size: 2rem;
+          width: 100%;
         }
         @media (max-width: 992px) {
-          clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
           padding: 2rem 0;
           letter-spacing: 5px;
+        }
+        .darkmode--activated & {
+          border: 1px solid #333;
+          background: $darkColor;
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: -150px;
+          width: 250px;
+          transform: translateY(-50%);
+          height: 200px;
+          background: url('../img/home-pic.jpg') no-repeat center;
+          background-size: cover;
+          box-shadow: 0 0 10px rgba(0,0,0,.2);
+          transition: .3s linear;
+          z-index: 2;
+          @media (max-width: 767px) {
+            display: none !important;
+          }
+          @media (max-width: 1200px) {
+            right: -170px;
+          }
+          @media (max-width: 992px) {
+            width: 150px;
+            height: 120px;
+            right: -120px;
+          }
         }
         p {
           line-height: 1;
@@ -45,11 +94,18 @@
       }
       &.scrolled {
         padding: 2rem;
+        .dots-shape {
+          opacity: 0;
+        }
         h1 {
           letter-spacing: 5px;
           font-size: 3rem;
           padding: 1rem 0;
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+          width: 100%;
+          border-color: transparent;
+          &:after {
+            opacity: 0;
+          }
         }
         p {
           letter-spacing: 2px;

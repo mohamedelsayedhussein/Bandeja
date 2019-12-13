@@ -6,41 +6,74 @@ html
     body
         include components/header
         section.profile-page.my-5
-            .container.p-3
+            .container.py-5.px-3
                 .row
-                    .col-lg-4.mt-5
-                        .profile-card.rounded-0
+                    .col-lg-4.col-md-6.mt-5
+                        .statistics
                             ul.text-capitalize
                                 h2.text-capitalize
                                     | statistics
                                 li
-                                    | sets played : 120
+                                    span
+                                        i.fas.fa-ellipsis-v.mr-2
+                                        | sets played 
+                                    span 120
                                 li
-                                    | sets won : 85
+                                    span
+                                        i.fas.fa-ellipsis-v.mr-2
+                                        | sets won 
+                                    span 85
                                 li
-                                    | sets lost : 15
+                                    span
+                                        i.fas.fa-ellipsis-v.mr-2
+                                        | sets lost 
+                                    span 15
                                 li
-                                    | games won : 65
+                                    span
+                                        i.fas.fa-ellipsis-v.mr-2
+                                        | games won 
+                                    span 65
                                 li
-                                    | games lost : 15
-                    .col-lg-4
-                        .profile-card
-                            .header
+                                    span
+                                        i.fas.fa-ellipsis-v.mr-2
+                                        | games lost 
+                                    span 15
+                    .col-lg-4.col-md-6.mt-md-0.mt-5.order-md-0.order-first
+                        .profile-card.py-5.px-3
+                            .img-profile
                                 a(target='_blank' href='#')
-                                    img.hoverZoomLink(src='https://placehold.it/150x150')
-                                h2.text-capitalize
-                                    | player name
-                                ul.text-capitalize
-                                    li
-                                        | rating : 12
-                                    li
-                                        | player position : right
-                                    li
-                                        | height : 185 cm
-                    .col-lg-4.mt-5
-                        .profile-card.rounded-0
+                                    img.img-fluid(src='img/player.jpg')
+                            h3.player-name.text-center.text-capitalize.py-3
+                                | player name
+                            .edit-profile
+                                button.text-capitalize.rounded
+                                    i.fas.fa-cog
+                                    span edit profile
+                            ul.player-info.text-capitalize.w-100
+                                li.w-100
+                                    span
+                                        i.fas.fa-bars
+                                        | rating 
+                                    span 12
+                                li.w-100
+                                    span
+                                        i.fas.fa-bars
+                                        | player position 
+                                    span right
+                                li.w-100
+                                    span
+                                        i.fas.fa-bars
+                                        | height 
+                                    span 185 cm
+                    .col-lg-4.col-md-6.mt-5
+                        .chart
                             img(src='https://placehold.it/400x400' class='img-fluid h-100')
-                                
+                .row.my-5
+                    .col-12
+                        .match-history.py-5.px-3
+                            h2.text-uppercase.stroked-title
+                                span match history
+                            table.table
 
         include components/sponsors
         include components/footer

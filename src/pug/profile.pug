@@ -46,9 +46,10 @@ html
                             h3.player-name.text-center.text-capitalize.py-3
                                 | player name
                             .edit-profile
-                                button.text-capitalize.rounded
+                                a(href='edit-profile.html').text-capitalize.rounded
                                     i.fas.fa-cog
                                     span edit profile
+
                             ul.player-info.text-capitalize.w-100
                                 li.w-100
                                     span
@@ -68,12 +69,30 @@ html
                     .col-lg-4.col-md-6.mt-5
                         .chart
                             img(src='https://placehold.it/400x400' class='img-fluid h-100')
-                .row.my-5
+
+        .match-history
+            .container.p-5
+                .row
                     .col-12
-                        .match-history.py-5.px-3
-                            h2.text-uppercase.stroked-title
-                                span match history
-                            table.table
+                        h2.text-uppercase.stroked-title.mb-5
+                            span match history
+                        table#history-table.table.table-striped.table-bordered(cellspacing='0' width='100%')
+                            thead.text-capitalize
+                                th match
+                                th result
+                                th Rating before
+                                th Rating after
+                            tbody
+                                tr.text-capitalize
+                                    td Player 1 & player 2 vs player 3 & player 4
+                                    td 6 - 4
+                                    td 5
+                                    td 10
+                                tr.text-capitalize
+                                    td Player 1 & player 2 vs player 3 & player 4
+                                    td 7 - 9
+                                    td 6
+                                    td 8
 
         include components/sponsors
         include components/footer

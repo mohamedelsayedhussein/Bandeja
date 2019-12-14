@@ -10,19 +10,19 @@ section.profile-page {
       background: #fff;
       margin-top: 100px;
       opacity: 0;
-      animation: moveIn 1s .2s ease forwards;
+      animation: moveIn 1s 0.2s ease forwards;
       .darkmode--activated & {
         background: #333;
       }
       h2 {
         border: 2px solid $mainColor;
-        padding: .2rem 0;
+        padding: 0.2rem 0;
         text-align: center;
         margin-bottom: 1.5rem;
         font-weight: 600;
         margin-top: 70px;
         opacity: 0;
-        animation: moveIn 1s .2s ease forwards;
+        animation: moveIn 1s 0.2s ease forwards;
         .darkmode--activated & {
           color: #eee;
         }
@@ -32,13 +32,13 @@ section.profile-page {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          padding: .5rem 1rem;
-          border: 1px solid rgba(0,0,0,.1);
-          font-size: .85rem;
+          padding: 0.5rem 1rem;
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          font-size: 0.85rem;
           margin-bottom: -1px;
           margin-top: 70px;
           opacity: 0;
-          animation: moveIn 1s .5s ease forwards;
+          animation: moveIn 1s 0.5s ease forwards;
           &:nth-child(odd) {
             background: #fff;
             .darkmode--activated & {
@@ -79,9 +79,9 @@ section.profile-page {
         moveDown 1s 0.8s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards,
         moveUp 1s 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards,
         materia 1s 2.7s cubic-bezier(0.86, 0, 0.07, 1) forwards;
-        .darkmode--activated & {
-          background: #333 !important;
-        }
+      .darkmode--activated & {
+        background: #333;
+      }
       .img-profile {
         margin-top: 70px;
         opacity: 0;
@@ -109,7 +109,7 @@ section.profile-page {
             .darkmode--activated & {
               box-shadow: 0px 1px 3px rgba(255, 255, 255, 0.1);
               border-color: #f2f2f2;
-          }
+            }
           }
           &:before {
             position: absolute;
@@ -121,7 +121,7 @@ section.profile-page {
             background: rgba(0, 0, 0, 0.4);
             border-radius: 50%;
             opacity: 0;
-            transition: all .2s linear;
+            transition: all 0.2s linear;
             z-index: 5;
           }
           & > img {
@@ -131,16 +131,16 @@ section.profile-page {
             height: 150px;
             object-fit: cover;
             border-radius: 50%;
-            box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.06);
+            box-shadow: 0px 0px 0px 10px rgba(255, 255, 255, 1);
             transition: box-shadow 0.3s ease;
             .darkmode--activated & {
               box-shadow: 0px 0px 0px 8px rgba(255, 255, 255, 0.1);
             }
           }
           &:hover > img {
-            box-shadow: 0px 0px 0px 12px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 0px 14px rgba(255, 255, 255, 1);
             .darkmode--activated & {
-              box-shadow: 0px 0px 0px 12px rgba(255, 255, 255, 0.3);
+              box-shadow: 0px 0px 0px 14px rgba(255, 255, 255, 0.3);
             }
           }
           &:hover::before {
@@ -152,61 +152,64 @@ section.profile-page {
         margin-top: 70px;
         opacity: 0;
         animation: moveIn 1s 3.7s ease forwards;
-        .darkmode--activated & {
-          color: #fff;
-        }
+        color: #fff;
       }
       .edit-profile {
         margin-top: 70px;
         opacity: 0;
         animation: moveIn 1s 3.9s ease forwards;
-        button {
-          background: #ccc;
+        a {
+          background: #222;
           border: none;
-          padding: .5rem 1rem;
-          margin: .5rem 0;
+          padding: 0.5rem;
+          margin: 0.5rem 0;
           float: right;
-          color: #272727;
-          opacity: .7;
-          transition: opacity .2s linear;
+          color: #fff;
+          opacity: 0.7;
+          transition: opacity 0.2s linear;
+          .darkmode--activated & {
+            color: #272727;
+            background: #ccc;
+          }
           i {
             display: inline-block;
             vertical-align: middle;
-            color: #5e5e5e;
-            margin-right: .5rem;
+            color: #fff;
+            margin-right: 0.5rem;
             font-size: 1.2rem;
+            .darkmode--activated & {
+              color: #5e5e5e;
+            }
           }
           span {
             display: inline-block;
             vertical-align: middle;
-            font-size: .85rem;
+            font-size: 0.85rem;
           }
           &:hover {
             opacity: 1;
           }
         }
-        
       }
       .player-info {
         li {
           margin-top: 70px;
           opacity: 0;
-          padding: .7rem 1rem;
+          padding: 0.7rem 1rem;
           display: flex;
           justify-content: space-between;
           align-items: center;
-          font-size: .8rem;
-          color: #313131;
-          border-bottom: 1px solid rgba(0,0,0,.1);
+          font-size: 0.8rem;
+          color: #fff;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.1);
           animation: moveIn 1s ease forwards;
           .darkmode--activated & {
-          border-bottom: 1px solid rgba(255,255,255,.1);
-          color: #eee;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
           }
           span {
             &:nth-child(1) {
               i {
-                margin-right: .7rem;
+                margin-right: 0.7rem;
               }
             }
           }
@@ -228,7 +231,7 @@ section.profile-page {
     .chart {
       margin-top: 100px;
       opacity: 0;
-      animation: moveIn 1s .2s ease forwards;
+      animation: moveIn 1s 0.2s ease forwards;
     }
   }
 }
@@ -281,7 +284,6 @@ section.profile-page {
   100% {
     width: 100%;
     height: 500px;
-    background: #ffffff;
     border-radius: 4px;
   }
 }
@@ -302,5 +304,240 @@ section.profile-page {
   }
   100% {
     transform: scale(1);
+  }
+}
+
+// MATCH HISTORY STYLE
+.match-history {
+  .stroked-title {
+    .darkmode--activated & {
+      -webkit-text-stroke-color: #fff;
+      span {
+        background: $darkColor;
+      }
+    }
+  }
+  .table {
+    thead {
+      background: $mainColor;
+      color: #fff;
+      th {
+        font-weight: 400;
+        vertical-align: middle;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+        @media (max-width: 767px) {
+          font-size: 0.85rem;
+        }
+      }
+    }
+    tbody {
+      tr:nth-child(even) {
+        background: #fff;
+      }
+      tr:nth-child(odd) {
+        background: #eee;
+      }
+      td {
+        font-size: 0.9rem;
+        vertical-align: middle;
+      }
+    }
+    .darkmode--activated & {
+      border-color: #555;
+      th {
+        color: #fff;
+      }
+      tbody {
+        tr:nth-child(even) {
+          background: #333;
+        }
+        tr:nth-child(odd) {
+          background: #222;
+        }
+        td {
+          color: #eee;
+          border-color: #555;
+        }
+      }
+    }
+  }
+}
+
+// EDIT PROFILE BOX STYLE
+.edit-box {
+  .inner-edit-box {
+    background: #fff;
+    .stroked-title {
+      span {
+        background: #fff;
+      }
+    }
+    .darkmode--activated & {
+      background: #000;
+      .stroked-title {
+        -webkit-text-stroke-color: #ccc;
+        span {
+          background: #000;
+        }
+      }
+    }
+    .edit-image {
+      .avatar {
+        width: 160px;
+        height: 160px;
+        overflow: hidden;
+        margin: auto;
+        background: $mainColor;
+        padding: .15rem;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      input[type=file] {
+        display: none;
+      }
+      label {
+        background: $mainColor;
+        color: #fff;
+        padding: .5rem .7rem;
+        font-size: .85rem;
+        cursor: pointer;
+      }
+    }
+    .edit-personal-info {
+      form {
+        .form-group {
+          input {
+            background: rgba(0, 0, 0, 0.1);
+            &[type='submit'] {
+              background: $mainColor !important;
+              color: #fff;
+            }
+          }
+          .position-of-player {
+            position: relative;
+            background: rgba(0, 0, 0, 0.1);
+            width: 100%;
+            height: 40px;
+            padding: 1rem;
+            color: #fff;
+            cursor: pointer;
+            transition: 0.3s ease;
+            i {
+              position: absolute;
+              top: 50%;
+              right: 20px;
+              transform: translateY(-50%);
+              transform-origin: top center;
+              transform-box: fill-box;
+              transition: all 0.3s linear;
+              &:before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: 0;
+                width: 12px;
+                height: 12px;
+                border-width: 2px;
+                border-style: solid;
+                border-color: #999 #999 transparent transparent;
+                transform: translateY(-50%) rotate(45deg);
+              }
+              &.rotate-angle {
+                transform: rotate(90deg);
+              }
+            }
+            .darkmode--activated & {
+              background: #333;
+            }
+          }
+          .position-submenu {
+            width: 100%;
+            color: #eee;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            li {
+              position: relative;
+              padding: 0.6rem 1rem 0.6rem 3rem;
+              font-size: 0.8rem;
+              letter-spacing: 1px;
+              cursor: pointer;
+              border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+              transition: all 0.2s linear;
+              &:after {
+                content: "";
+                position: absolute;
+                top: 53%;
+                left: 0.8rem;
+                transform: translateY(-50%);
+                width: 22px;
+                height: 16px;
+                display: block;
+                background-size: contain !important;
+                background-repeat: no-repeat !important;
+                background-position: center center !important;
+              }
+              &:first-child {
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+                &:after {
+                  background: url("../img/positionList/right.png");
+                }
+              }
+              &:nth-child(2) {
+                &:after {
+                  background: url("../img/positionList/left.png");
+                }
+              }
+              &:last-child {
+                border-bottom: 0;
+                &:after {
+                  background: url("../img/positionList/both.png");
+                  width: 28px;
+                }
+              }
+              &:hover {
+                background: rgba(0, 0, 0, 0.2);
+              }
+              .darkmode--activated & {
+                background: #555;
+                  &:hover {
+                    background: rgba(0, 0, 0, 0.1);
+                  }
+              }
+            }
+          }
+          &.birthdate-calendar {
+            position: relative;
+            input#datepicker {
+              cursor: pointer !important;
+            }
+            i.birthdate-icon {
+              display: block;
+              position: absolute;
+              top: 53%;
+              right: 20px;
+              pointer-events: none;
+              .darkmode--activated & {
+                path {
+                  stroke: #ccc;
+                }
+              }
+            }
+          }
+        }
+      }
+      .darkmode--activated & {
+        label {
+          color: #ccc;
+        }
+        input {
+          background: #333 !important;
+          color: #ccc;
+        }
+      }
+    }
   }
 }

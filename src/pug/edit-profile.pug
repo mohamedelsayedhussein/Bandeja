@@ -1,0 +1,93 @@
+- var PageTitle = 'Banjeda - Edit Profile';
+doctype
+html
+    head
+        include partials/head
+    body
+        include components/header
+        section.edit-box
+            .container.p-5
+                .inner-edit-box.p-5
+                    h2.stroked-title
+                        span Edit Profile
+                    hr
+                    .row
+                        .col-lg-3
+                            .edit-image.text-center
+                                .avatar.rounded-circle
+                                    img.avatar.rounded-circle.img-fluid(src='img/player.jpg', alt='avatar')
+                                hr
+                                input#ch-img.form-control(type='file')
+                                label.text-capitalize(for='ch-img')
+                                    i.far.fa-edit.mr-2
+                                    | change your image
+                        .col-lg-9.mt-5.mt-lg-0
+                            .edit-personal-info
+                                h3.stroked-title
+                                    span Personal info
+                                hr
+                                form.form(role='form')
+                                    .row
+                                        .col-md-6
+                                            .form-group.text-capitalize
+                                                label.control-label First name :
+                                                input.form-control(type='text', value='')
+                                        .col-md-6
+                                            .form-group.text-capitalize
+                                                label.control-label Last name :
+                                                input.form-control(type='text', value='')
+                                        .col-md-6
+                                            .form-group.text-capitalize
+                                                label.control-label Username :
+                                                input.form-control(type='text', value='')
+                                        .col-md-6
+                                            .form-group.text-capitalize
+                                                label.control-label Email :
+                                                input.form-control(type='text', value='')
+                                        .col-md-6
+                                            .form-group.text-capitalize
+                                                label.control-label(for='tel') tel. number :
+                                                input.form-control(type='text' id='tel')
+                                        .col-md-6
+                                            .form-group.text-capitalize
+                                                label.control-label Height :
+                                                input.form-control(type='text', value='')
+                                        .col-md-6
+                                            .form-group.text-capitalize
+                                                label.control-label Password :
+                                                input.form-control(type='password', value='')
+                                        .col-md-6
+                                            .form-group.text-capitalize
+                                                label.control-label Confirm password :
+                                                input.form-control(type='password', value='')
+                                        .col-md-6
+                                            .form-group.text-capitalize
+                                                label.control-label player position :
+                                                ul.position-of-player
+                                                    li 
+                                                        i
+                                                    li.text-placeholder
+                                                ul.position-submenu
+                                                    li.text-capitalize right
+                                                    li.text-capitalize  left
+                                                    li.text-capitalize  both
+                                        .col-md-6
+                                            .form-group.birthdate-calendar.text-capitalize
+                                                i.birthdate-icon
+                                                    svg(width="25" height="25" viewBox="0 0 53 56" fill="none")
+                                                        path(d="M48 7H5C2.79086 7 1 8.79086 1 11V51C1 53.2091 2.79086 55 5 55H48C50.2091 55 52 53.2091 52 51V11C52 8.79086 50.2091 7 48 7Z" stroke="#555" stroke-width="3")
+                                                        path(d="M0 21H52" stroke="#555" stroke-width="3")
+                                                        path(d="M15 0V12" stroke="#555" stroke-width="4")
+                                                        path(d="M39 0V12" stroke="#555" stroke-width="4")
+                                                        path(d="M15 36L22.5 43.5L39 27" stroke="#555" stroke-width="3")
+                                                label.control-label(for='datepicker') birthdate :
+                                                input#datepicker.form-control(type='text' placeholder="d-m-Y" data-large-mode="true" data-lock="to" data-translate-mode='true')
+                                        .col-12
+                                            .form-group.text-capitalize.mt-4
+                                                input.text-capitalize.btn.rounded-0.mr-2(type='submit', value='save changes')
+                                                input.text-capitalize.btn.rounded-0(type='reset', value='cancel')
+
+        include components/sponsors
+        include components/footer
+        include partials/footerScripts
+        

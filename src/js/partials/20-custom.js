@@ -4,7 +4,7 @@ $(document).ready(function(){
   // SCROLL EVENT TO HANDLE HERO SECTION STYLE
   var $innerHero = $('section.hero').find('.inner-hero');
   $(window).scroll(function() {
-    if($(this).scrollTop() > 20) {
+    if($(this).scrollTop() > 5) {
       $innerHero.addClass('scrolled')
     }else {
       $innerHero.removeClass('scrolled')

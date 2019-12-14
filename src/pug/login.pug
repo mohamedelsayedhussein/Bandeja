@@ -62,9 +62,9 @@ html
                                             input(type='email' id='email')
                                         .form-group.text-capitalize
                                             label.text-white(for='tel') tel. number
-                                            input(type='email' id='tel')
+                                            input(type='text' id='tel')
                                         .form-group.text-capitalize
-                                            label.text-white(for='position') player position
+                                            label.text-white player position
                                             ul.position-of-player
                                                 li 
                                                     i
@@ -81,7 +81,7 @@ html
                                                     path(d="M15 0V12" stroke="white" stroke-width="4")
                                                     path(d="M39 0V12" stroke="white" stroke-width="4")
                                                     path(d="M15 36L22.5 43.5L39 27" stroke="white" stroke-width="3")
-                                            label.text-white(for='birth') birthdate
+                                            label.text-white(for='datepicker') birthdate
                                             input#datepicker(type='text' placeholder="d-m-Y" data-large-mode="true" data-lock="to" data-translate-mode='true')
                                         .form-group.text-capitalize
                                             button.bg-light(type='submit') Register

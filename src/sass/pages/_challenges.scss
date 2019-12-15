@@ -1,5 +1,148 @@
 
+section.challenge {
+    .stroked-title {
+        .darkmode--activated & {
+            -webkit-text-stroke-color: #fff;
+            span {
+                background: $darkColor;
+            }
+        }
+    }
+    form.form-box {
+        .form-group {
+            position: relative;
+            &:after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                right: 1.5rem;
+                transform: translateY(-50%) rotate(-135deg);
+                width: 10px;
+                height: 10px;
+                border-top: 2px solid #333;
+                border-left: 2px solid #333;
+                pointer-events: none;
+                .darkmode--activated & {
+                    border-color: #ccc;
+                }
+            }
+        }
+    }
+    button.calc-result[type='submit'] {
+        background: $mainColor !important;
+        padding: .7rem 1.2rem;
+        border: 1px solid transparent;
+        font-size: .9rem;
+        transition: .2s;
+        &:hover {
+            background: transparent !important;
+            color: $mainColor !important;
+            border-color: $mainColor;
+        }
+        @media (max-width: 350px) {
+            padding: .7rem;
+        }
+    }
+    .result-box {
+        h3 {
+            color: #303030;
+            .darkmode--activated & {
+                background: #333 !important;
+                @media (max-width: 767px) {
+                    background: transparent !important;
+                }
+            }
+            @media (max-width: 992px) {
+                font-size: 1.5rem;
+            }
+            @media (max-width: 767px) {
+                background: transparent !important;
+            }
+            .darkmode--activated & {
+                color: #ccc;
+            }
+        }
+        .result-area {
+            span:not(:nth-child(2)) {
+                display: inline-block;
+                border: 2px solid $mainColor;
+                color: $mainColor;
+                font-family: $mainFont;
+                font-weight: 700;
+                font-size: 1.5rem;
+                padding: .8rem 1.5rem;
+                border-radius: 5px;
+                @media (max-width: 992px) {
+                    font-size: 1rem;
+                    padding: .5rem 1rem;
+                }
+                @media (max-width: 445px) {
+                    padding: .5rem;
+                }
+            }
+            span:nth-child(2) {
+                display: inline-block;
+                color: $mainColor;
+                margin: 0 1.5rem;
+                font-size: 2rem;
+                @media (max-width: 992px) {
+                    font-size: .7rem;
+                    margin: 0 1rem;
+                }
+                @media (max-width: 375px) {
+                    margin: 0 .5rem;
 
+                }
+            }
+        }
+    }
+    .rating-after-match {
+        ul {
+            li {
+                border-bottom: 1px solid rgba(0,0,0,.1);
+                padding: 1rem 2rem;
+                @media (min-width: 767px) and (max-width: 992px) {
+                    padding: 1rem;
+                }
+                @media (max-width: 400px) {
+                    padding: 0;
+                    font-size: .8rem;
+                }
+                img {
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 40px;
+                    height: 40px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    margin-right: .5rem;
+                    box-shadow: 1px 1px 5px rgba(0,0,0,.4);
+                }
+                span.rate {
+                    font-size: .85rem;
+                    background: $mainColor;
+                    color: #fff;
+                    padding: .3rem .6rem;
+                    margin-top: .5rem;
+                    border-radius: 4px;
+                    float: right;
+                    @media (max-width: 400px) {
+                        padding: 0.3rem;
+                    }
+                }
+                .darkmode--activated & {
+                    color: #ccc;
+                    border-color: #222;
+                }
+            }
+        }
+    }
+    hr {
+        .darkmode--activated & {
+            border-color: #222;
+        }
+    }
+}
 
 
 // CUSTOM STYLE FOR SELECT2 PLUGIN
@@ -10,7 +153,6 @@
     padding: 0 .7rem;
     .darkmode--activated & {
         background: #333;
-
     }
 }
 .select2-search.select2-search--inline {
@@ -18,6 +160,7 @@
 }
 .select2-results__option {
     border-bottom: 1px solid rgba(0,0,0,.1);
+    padding: .7rem 2rem;
     .darkmode--activated & {
         background: rgba(0,0,0,.2);
 
@@ -25,6 +168,12 @@
     &.select2-results__option--highlighted[aria-selected] {
         background: rgba(0,0,0,.2);
         color: #000;
+        transition: all .2s linear;
+        .darkmode--activated & {
+            background: #555;
+            color: #fff;
+    
+        }
     }
     img {
         display: inline-block;
@@ -37,7 +186,7 @@
         box-shadow: 1px 1px 5px rgba(0,0,0,.4);
     }
     span.rate {
-        font-size: .7rem;
+        font-size: .85rem;
         background: $mainColor;
         color: #fff;
         padding: .3rem .6rem;
@@ -51,7 +200,7 @@
     padding: 1rem;
     font-size: 0;
     &:after {
-        content: 'You Cant not Select More Than Two Players';
+        content: 'You Can not Select More Than Two Players';
         position: absolute;
         top: 0;
         left: 0;
@@ -76,4 +225,8 @@
 }
 .select2-selection__clear {
     margin-top: 9px !important;
+    margin-right: 2.5rem !important;
+    .darkmode--activated & {
+        color: #ccc;
+    }
 }

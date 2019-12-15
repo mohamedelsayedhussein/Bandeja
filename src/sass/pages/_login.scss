@@ -96,7 +96,13 @@
                     transition: 0.3s ease;
                     &:focus {
                         color: #494949;
-                    }   
+                    }
+                    .darkmode--activated & {
+                        color: #9e9e9e;
+                        &:focus {
+                            color: #fff;
+                        }
+                    }
                 }
                 input[type='checkbox'] {
                     display: none;
@@ -316,7 +322,7 @@
                         }
                     }
                     input {
-                        color: #eee !important;        
+                        color: #e0e0e0 !important;        
                         &:focus {
                         color: #fff !important;
                         }

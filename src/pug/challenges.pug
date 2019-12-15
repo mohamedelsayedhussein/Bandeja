@@ -5,8 +5,51 @@ html
         include partials/head
     body
         include components/header
-
-
+        .container.p-5
+            .row
+                .col-6
+                    h2.stroket-title.text-uppercase team one
+                    .form-group
+                        select#mselected.form-control(multiple)
+                            option(value="0" data-img="img/player.jpg")  player one
+                            option(value="1" data-img="img/player.jpg") player two
+                            option(value="2" data-img="img/player.jpg") player three
+                            option(value="3" data-img="img/player.jpg") player four
+                .col-6
+                    h2.stroket-title.text-uppercase team two
+                    .form-group
+                        select#mselected2.form-control(multiple)
+                            option(value="0" data-img="img/player.jpg")  player one
+                            option(value="1" data-img="img/player.jpg") player two
+                            option(value="2" data-img="img/player.jpg") player three
+                            option(value="3" data-img="img/player.jpg") player four
         include components/sponsors
         include components/footer
         include partials/footerScripts
+        script.
+            function format (option) {
+                    if (!option.id) { return option.text; }
+                        var src = $('#mselected option').attr("data-img");
+                        var ob = '<img src="'+ src +'" />' + option.text + '<span class="rate">Rating : 5</span>';
+                    return ob;
+                };
+            
+            $("#mselected, #mselected2").select2({
+                placeholder: "Select Player !!",
+                width: "100%",
+                allowClear: true,
+                maximumSelectionLength: 2,
+                multiple: true,
+                closeOnSelect: false,
+                templateResult: format,
+                templateSelection: function (option) {
+                    if (option.id.length > 0 ) {
+                        return  option.text;
+                    } else {
+                        return option.text;
+                    }
+                },
+                escapeMarkup: function (m) {
+                        return m;
+                }
+            });

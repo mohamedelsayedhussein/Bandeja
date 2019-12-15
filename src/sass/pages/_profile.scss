@@ -415,6 +415,10 @@ section.profile-page {
             &[type='submit'] {
               background: $mainColor !important;
               color: #fff;
+              font-size: .85rem;
+            }
+            &[type='reset'] {
+              font-size: .85rem;
             }
           }
           .position-of-player {

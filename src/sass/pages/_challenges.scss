@@ -1,0 +1,79 @@
+
+
+
+
+// CUSTOM STYLE FOR SELECT2 PLUGIN
+.select2-selection--multiple,
+.select2-container--default .select2-selection--multiple,
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+    border: 1px solid rgba(0,0,0,.2);
+    padding: 0 .7rem;
+    .darkmode--activated & {
+        background: #333;
+
+    }
+}
+.select2-search.select2-search--inline {
+    margin-top: .25rem;
+}
+.select2-results__option {
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    .darkmode--activated & {
+        background: rgba(0,0,0,.2);
+
+    }
+    &.select2-results__option--highlighted[aria-selected] {
+        background: rgba(0,0,0,.2);
+        color: #000;
+    }
+    img {
+        display: inline-block;
+        vertical-align: middle;
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-right: .5rem;
+        box-shadow: 1px 1px 5px rgba(0,0,0,.4);
+    }
+    span.rate {
+        font-size: .7rem;
+        background: $mainColor;
+        color: #fff;
+        padding: .3rem .6rem;
+        margin-top: .5rem;
+        border-radius: 4px;
+        float: right;
+    }
+}
+.select2-results__option.select2-results__message {
+    position: relative;
+    padding: 1rem;
+    font-size: 0;
+    &:after {
+        content: 'You Cant not Select More Than Two Players';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        font-size: .8rem;
+        padding: .5rem;
+        color: red;
+    }
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+        background: $mainColor;
+        color: #fff;
+        border: none;
+        font-size: .85rem;
+        padding: .3rem .5rem;
+        margin-top: 0.5em;
+}
+.select2-selection__choice__remove {
+    color: #fff !important;
+    padding-right: 0.3rem;
+}
+.select2-selection__clear {
+    margin-top: 9px !important;
+}

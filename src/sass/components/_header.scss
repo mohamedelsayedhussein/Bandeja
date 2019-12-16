@@ -129,6 +129,9 @@ header.header {
             }
             .toggle-fullscreen {
                 cursor: pointer;
+                svg#shrink {
+                    display: none;
+                }
             }    
             .bars {
                 position: relative;

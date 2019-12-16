@@ -26,13 +26,17 @@ header.header
                         a.link(href="login.html" class='text-uppercase')
                             i.fas.fa-sign-in-alt
                             | login
-            i.toggle-fullscreen.d-lg-block.d-none
-                svg(width='20', height='20', viewBox='0 0 24 23', fill='none')
-                    path(d='M15.8732 1.27464H23V8.09154', stroke='white', stroke-width="2")
-                    path(d='M22.8451 15.3732L22.8451 22.5L16.0282 22.5', stroke='white', stroke-width="2")
-                    path(d='M8.12676 22.3451L1 22.3451L1 15.5282', stroke='white', stroke-width="2")
-                    path(d='M1.15493 8.24648L1.15493 1.11971L7.97183 1.11971', stroke='white', stroke-width="2")
-
+            i.toggle-fullscreen.d-lg-block.d-none(title='Show Fullscreen')
+                svg#expand(width='21', height='21', viewBox='0 0 24 23', fill='none')
+                    path(d='M15.8732 1.27464H23V8.09154', stroke='white', stroke-width="3")
+                    path(d='M22.8451 15.3732L22.8451 22.5L16.0282 22.5', stroke='white', stroke-width="3")
+                    path(d='M8.12676 22.3451L1 22.3451L1 15.5282', stroke='white', stroke-width="3")
+                    path(d='M1.15493 8.24648L1.15493 1.11971L7.97183 1.11971', stroke='white', stroke-width="3")
+                svg#shrink(width="21" height="21" viewBox="0 0 21 21" fill="none")
+                    path(d="M12.7826 0V7.30435H21" stroke="white" stroke-width="2")
+                    path(d="M12.7826 20.087V12.7826H21" stroke="white" stroke-width="2")
+                    path(d="M8.21739 20.087V12.7826H7.59959e-07" stroke="white" stroke-width="2")
+                    path(d="M8.21739 0V7.30435H7.59959e-07" stroke="white" stroke-width="2")
             .bars.d-lg-none
                 - for(var i = 0; i <= 2; i++)
                     span.line

@@ -15,9 +15,9 @@ html
                         .col-lg-3
                             .edit-image.text-center
                                 .avatar.rounded-circle
-                                    img.avatar.rounded-circle.img-fluid(src='img/player.jpg', alt='avatar')
+                                    img.avatar.rounded-circle.img-fluid(id="output" src='img/player.jpg', alt='avatar')
                                 hr
-                                input#ch-img.form-control(type='file')
+                                input#ch-img.form-control(type='file' onchange="document.getElementById('output').src = window.URL.createObjectURL(this.files[0])")
                                 label.text-capitalize(for='ch-img')
                                     i.far.fa-edit.mr-2
                                     | change your image

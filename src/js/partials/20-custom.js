@@ -40,11 +40,20 @@ $(document).ready(function(){
   // OPEN / CLOSE PAGE FULLSCREEN
   
   $('.toggle-fullscreen').on('click', function() {
+    var $expand = $(this).find('#expand');
+    var $shrink = $(this).find('#shrink');
+
     $(this).toggleClass('fullscreen');
     if($(this).hasClass('fullscreen')) {
-      openFullscreen()
+      $(this).attr('title', 'Close Fullscreen');
+        openFullscreen();
+        $shrink.show();
+        $expand.hide();
     }else {
-      closeFullscreen()
+      $(this).attr('title', 'Show Fullscreen');
+        closeFullscreen()
+        $shrink.hide();
+        $expand.show();
     }
   })
   
@@ -244,6 +253,8 @@ $(document).ready(function(){
       scrollY: 400,
       scrollX: true
     });
+
+    // 
 
 
 });

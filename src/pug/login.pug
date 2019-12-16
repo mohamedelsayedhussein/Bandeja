@@ -87,7 +87,15 @@ html
                                             button.bg-light(type='submit') Register
                     .col-lg-6.d-lg-block.d-none
                         .bg-form
-
+        #forget-pass.forget-pass
+            .box
+                span.close-forget-pass ×
+                h5.mb-3 Reset Your Password
+                form.form
+                    .form-group.m-0
+                        label(for='') Username Or Email
+                        input.form-control(type='email')
+                        button(type='submit') Send Password
 
         include components/sponsors
         include components/footer
@@ -114,4 +122,28 @@ html
                     $('.form').animate({
                         'height': panelOne
                     }, 200);
-            });
+                });
+
+                var $forgotPassword = $('.forget-pass');
+
+                $('.form-recovery').click(function(e){
+                    e.preventDefault();
+                    $forgotPassword.fadeIn();
+                });
+                $('.close-forget-pass').click(function(){
+                    $forgotPassword.fadeOut();
+                });
+                $('.form-recovery').click(function(e) {
+                    e.stopPropagation();
+                })                
+                $forgotPassword.find('.box').click(function(e) {
+                    e.stopPropagation();
+                })                
+                $(document).click(function() {
+                    $forgotPassword.fadeOut();
+                })                
+                $(document).keydown(function(e){
+                    if (e.keyCode == 27) {
+                    $forgotPassword.fadeOut();
+                    }
+                });

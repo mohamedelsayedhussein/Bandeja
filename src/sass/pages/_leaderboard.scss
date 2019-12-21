@@ -9,13 +9,24 @@ section.leaderboard {
                     font-size: .9rem;
                     vertical-align: middle;
                     &.player-info {
-                        img {
+                        a.avatar-prof {
+                            display: inline-block;
+                            vertical-align: middle;
                             width: 35px;
                             height: 35px;
-                            object-fit: cover;
+                            overflow: hidden;
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
                         }
                         h6.name {
+                            vertical-align: middle;
                             font-weight: 600;
+                            a {
+                                color: inherit;
+                            }
                         }
                     }
                 }

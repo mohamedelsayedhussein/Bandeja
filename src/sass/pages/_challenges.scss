@@ -44,22 +44,85 @@ section.challenge {
         }
     }
     .result-box {
-        h3 {
-            color: #303030;
+        .box {
             .darkmode--activated & {
                 background: #333 !important;
-                @media (max-width: 767px) {
-                    background: transparent !important;
+            }
+            h3 {
+                display: inline-block;
+                padding: .5rem 1rem;
+                border: 1px solid #303030;
+                color: #303030;
+                @media (max-width: 992px) {
+                    font-size: 1.5rem;
+                }
+                @media (max-width: 575px) {
+                    font-size: 1.2rem;
+                }
+                @media (max-width: 350px) {
+                    font-size: 1rem;
+                    padding: .5rem;
+                }
+                .darkmode--activated & {
+                    color: #ccc;
+                    border-color: #ccc;
                 }
             }
-            @media (max-width: 992px) {
-                font-size: 1.5rem;
-            }
-            @media (max-width: 767px) {
-                background: transparent !important;
-            }
-            .darkmode--activated & {
-                color: #ccc;
+            ul {
+                li {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: .8rem;
+                    border-bottom: 1px solid rgba(0,0,0,.1);
+                    padding: 1rem;
+                    @media (max-width: 993px) {
+                        flex-direction: column;
+                    }
+                    @media (max-width: 400px) {
+                        padding: 0;
+                    }
+                    a {
+                        display: block;
+                        color: inherit;
+                        img {
+                            display: inline-block;
+                            width: 35px;
+                            height: 35px;
+                            object-fit: cover;
+                            border-radius: 50%;
+                            margin-right: .5rem;
+                            box-shadow: 1px 1px 5px rgba(0,0,0,.4);
+                            @media (max-width: 575px) {
+                                display: block;
+                                margin: auto;
+                            }
+                        }
+                        span {
+                            color: inherit;
+                        }
+                    }
+                    span.rate {
+                        font-size: .8rem;
+                        background: $mainColor;
+                        color: #fff;
+                        padding: .3rem .6rem;
+                        margin-top: .5rem;
+                        border-radius: 4px;
+                        @media (max-width: 575px) {
+                            padding: 0.3rem;
+                            font-size: .7rem;
+                            border-radius: 0;
+                        }
+                    }
+                    .darkmode--activated & {
+                        color: #ccc;
+                        border-color: #222;
+                    }
+                    &:last-child {
+                        border-bottom: 0;
+                    }
+                }
             }
         }
         .result-area {
@@ -108,15 +171,20 @@ section.challenge {
                     padding: 0;
                     font-size: .8rem;
                 }
-                img {
+                a {
                     display: inline-block;
                     vertical-align: middle;
-                    width: 40px;
-                    height: 40px;
-                    object-fit: cover;
-                    border-radius: 50%;
-                    margin-right: .5rem;
-                    box-shadow: 1px 1px 5px rgba(0,0,0,.4);
+                    color: inherit;
+                    img {
+                        display: inline-block;
+                        vertical-align: middle;
+                        width: 40px;
+                        height: 40px;
+                        object-fit: cover;
+                        border-radius: 50%;
+                        margin-right: .5rem;
+                        box-shadow: 1px 1px 5px rgba(0,0,0,.4);
+                    }
                 }
                 span.rate {
                     font-size: .85rem;

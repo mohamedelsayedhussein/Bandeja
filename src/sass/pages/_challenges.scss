@@ -231,7 +231,10 @@ section.challenge {
     padding: .7rem 2rem;
     .darkmode--activated & {
         background: rgba(0,0,0,.2);
-
+    }
+    @media (max-width: 420px) {
+        font-size: .85rem;
+        padding: .5rem;
     }
     &.select2-results__option--highlighted[aria-selected] {
         background: rgba(0,0,0,.2);
@@ -252,6 +255,10 @@ section.challenge {
         border-radius: 50%;
         margin-right: .5rem;
         box-shadow: 1px 1px 5px rgba(0,0,0,.4);
+        @media (max-width: 420px) {
+            width: 35px;
+            height: 35px;
+        }
     }
     span.rate {
         font-size: .85rem;
@@ -261,6 +268,11 @@ section.challenge {
         margin-top: .5rem;
         border-radius: 4px;
         float: right;
+        @media (max-width: 420px) {
+            padding: .3rem;
+            font-size: .75rem;
+            margin-top: 0;
+    }
     }
 }
 .select2-results__option.select2-results__message {

@@ -254,7 +254,5 @@ $(document).ready(function(){
       scrollX: true
     });
 
-    // 
-
 
 });

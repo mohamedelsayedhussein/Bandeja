@@ -8,26 +8,46 @@ html
         section.challenge
             .container.p-5
                 .row.pt-5
-                    .col-md-6
+                    .col-lg-6
                         h2.stroket-title.text-uppercase.stroked-title
                             span team one
-                        form(action="", class='form-box')
-                            .form-group.mt-3
-                                select#mselected.form-control(multiple)
-                                    option(value="0" data-img="img/player.jpg")  player one
-                                    option(value="1" data-img="img/player.jpg") player two
-                                    option(value="2" data-img="img/player.jpg") player three
-                                    option(value="3" data-img="img/player.jpg") player four
-                    .col-md-6.mt-5.mt-md-0
+                        .row
+                            .col-12
+                                form(action="", class='form-box')
+                                    .form-group.mt-3
+                                        select#mselected.form-control(multiple)
+                                            option(value="0" data-img="img/player.jpg") Player Name
+                                            option(value="1" data-img="img/player.jpg") Player Name
+                                            option(value="2" data-img="img/player.jpg") Player Name
+                                            option(value="3" data-img="img/player.jpg") Player Name
+                            .col-12
+                                form(action="", class='form-box')
+                                    .form-group.mt-3
+                                        select#mselected2.form-control(multiple)
+                                            option(value="0" data-img="img/player.jpg") Player Name
+                                            option(value="1" data-img="img/player.jpg") Player Name
+                                            option(value="2" data-img="img/player.jpg") Player Name
+                                            option(value="3" data-img="img/player.jpg") Player Name
+                    .col-lg-6.mt-5.mt-lg-0
                         h2.stroket-title.text-uppercase.stroked-title
                             span team two
-                        form(action="", class='form-box')
-                            .form-group.mt-3
-                                select#mselected2.form-control(multiple)
-                                    option(value="0" data-img="img/player.jpg")  player one
-                                    option(value="1" data-img="img/player.jpg") player two
-                                    option(value="2" data-img="img/player.jpg") player three
-                                    option(value="3" data-img="img/player.jpg") player four
+                        .row
+                            .col-12
+                                form(action="", class='form-box')
+                                    .form-group.mt-3
+                                        select#mselected3.form-control(multiple)
+                                            option(value="0" data-img="img/player.jpg") Player Name
+                                            option(value="1" data-img="img/player.jpg") Player Name
+                                            option(value="2" data-img="img/player.jpg") Player Name
+                                            option(value="3" data-img="img/player.jpg") Player Name
+                            .col-12
+                                form(action="", class='form-box')
+                                    .form-group.mt-3
+                                        select#mselected4.form-control(multiple)
+                                            option(value="0" data-img="img/player.jpg") Player Name
+                                            option(value="1" data-img="img/player.jpg") Player Name
+                                            option(value="2" data-img="img/player.jpg") Player Name
+                                            option(value="3" data-img="img/player.jpg") Player Name
                 .result-box.mt-5
                     .row
                         .col-12.mb-5.mt-3
@@ -158,23 +178,27 @@ html
                         var ob = '<img src="'+ src +'" />' + option.text + '<span class="rate">Rating : 5</span>';
                     return ob;
                 };
-            
-            $("#mselected, #mselected2").select2({
-                placeholder: "Choose Player !!",
-                width: "100%",
-                allowClear: true,
-                maximumSelectionLength: 2,
-                multiple: true,
-                closeOnSelect: false,
-                templateResult: format,
-                templateSelection: function (option) {
-                    if (option.id.length > 0 ) {
-                        return  option.text;
-                    } else {
-                        return option.text;
+            var selectPlayer = [
+                "#mselected", "#mselected2", "#mselected3", "#mselected4"
+            ]
+            $(selectPlayer).each(function(i,v){
+                $(v).select2({
+                    placeholder: "Choose Player "+ (i % 2 == 0? "One" : "Two"),
+                    width: "100%",
+                    allowClear: false,
+                    maximumSelectionLength: 1,
+                    multiple: true,
+                    closeOnSelect: true,
+                    templateResult: format,
+                    templateSelection: function (option) {
+                        if (option.id.length > 0 ) {
+                            return  option.text;
+                        } else {
+                            return option.text;
+                        }
+                    },
+                    escapeMarkup: function (m) {
+                            return m;
                     }
-                },
-                escapeMarkup: function (m) {
-                        return m;
-                }
-            });
+                });
+            })

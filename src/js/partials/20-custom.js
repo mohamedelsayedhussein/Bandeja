@@ -240,7 +240,7 @@ $(document).ready(function(){
     })
 
     // BIRTHDATE INPUT INIT 
-      $( "#datepicker" ).dateDropper();
+    $( "#datepicker" ).dateDropper();
 
     // datatable script
     $('#leaderboard-table').DataTable({

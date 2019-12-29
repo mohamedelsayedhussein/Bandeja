@@ -58,6 +58,9 @@ header.header {
                             color: #fff;
                             font: 600 .9rem $mainFont;
                             padding: 1.5rem 1rem 1.5rem 0;
+                            &.active {
+                                background: rgba(0,0,0,.3);
+                            }
                             i {
                                 display: inline-block;
                                 vertical-align: middle;

@@ -7,23 +7,23 @@ header.header
             nav.nav
                 ul.links.d-flex.align-items-center
                     li.item
-                        a.link(href="index.html" class='text-uppercase')
+                        a.link.text-uppercase(href='index.html' class= pageTitle == 'Bandeja - Home' ? 'active' : '' )
                             i.fas.fa-home
                             | Home
                     li.item
-                        a.link(href="leaderboard.html" class='text-uppercase')
+                        a.link.text-uppercase(href='leaderboard.html' class= pageTitle == 'Bandeja - Leaderboard' ? 'active' : '' )
                             i.fas.fa-chalkboard
                             | leaderboard
                     li.item
-                        a.link(href="challenges.html" class='text-uppercase')
+                        a.link.text-uppercase(href='challenges.html' class= pageTitle == 'Bandeja - Challenges' ? 'active' : '' )
                             i.fas.fa-chess-board
                             | challenges
                     li.item
-                        a.link(href="profile.html" class='text-uppercase')
+                        a.link.text-uppercase(href='profile.html' class= pageTitle == 'Bandeja - Profile' ? 'active' : '' )
                             i.far.fa-user
                             | my profile
                     li.item
-                        a.link(href="login.html" class='text-uppercase')
+                        a.link.text-uppercase(href='login.html' class= pageTitle == 'Bandeja - Login' ? 'active' : '' )
                             i.fas.fa-sign-in-alt
                             | login
             i.toggle-fullscreen.d-lg-block.d-none(title='Show Fullscreen')

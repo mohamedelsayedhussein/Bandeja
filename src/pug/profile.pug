@@ -41,7 +41,7 @@ html
                     .col-lg-4.col-md-6.mt-md-0.mt-5.order-md-0.order-first
                         .profile-card.py-5.px-3
                             .img-profile
-                                a(target='_blank' href='edit-profile.html' title='Change Your Image')
+                                a(class="venobox" data-gall="myGallery" href="img/player.jpg")
                                     img.img-fluid(src='img/player.jpg' alt='Change Your Image')
                             h3.player-name.text-center.text-capitalize.py-3
                                 | player name
@@ -97,4 +97,8 @@ html
         include components/sponsors
         include components/footer
         include partials/footerScripts
+        script.
+            $(document).ready(function () {
+                $('.venobox').venobox();
+            });
 

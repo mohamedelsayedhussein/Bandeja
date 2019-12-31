@@ -60,12 +60,12 @@ html
                                 ul.mt-4
                                     li
                                         a(href='profile.html')
-                                            img(src="img/player.jpg", alt="")
+                                            img(src="img/player.jpg", alt="image alt")
                                             span player name
                                         span.rate.text-capitalize rating : 5
                                     li
                                         a(href='profile.html')
-                                            img(src="img/player.jpg", alt="")
+                                            img(src="img/player.jpg", alt="image alt")
                                             span player name
                                         span.rate.text-capita rating : 5
                         .col-4.p-0
@@ -79,12 +79,12 @@ html
                                 ul.mt-4
                                     li
                                         a(href='profile.html')
-                                            img(src="img/player.jpg", alt="")
+                                            img(src="img/player.jpg", alt="image alt")
                                             span player name
                                         span.rate.text-capitalize rating : 5
                                     li
                                         a(href='profile.html')
-                                            img(src="img/player.jpg", alt="")
+                                            img(src="img/player.jpg", alt="image alt")
                                             span player name
                                         span.rate.text-capita rating : 5
                 hr.my-5
@@ -100,12 +100,12 @@ html
                                 ul.mt-4
                                     li
                                         a(href='profile.html')
-                                            img(src="img/player.jpg", alt="")
+                                            img(src="img/player.jpg", alt="image alt")
                                             span player name
                                         span.rate.text-capitalize rating : 5
                                     li
                                         a(href='profile.html')
-                                            img(src="img/player.jpg", alt="")
+                                            img(src="img/player.jpg", alt="image alt")
                                             span player name
                                         span.rate.text-capitalize rating : 5
                         .col-4.p-0
@@ -119,12 +119,12 @@ html
                                 ul.mt-4
                                     li
                                         a(href='profile.html')
-                                            img(src="img/player.jpg", alt="")
+                                            img(src="img/player.jpg", alt="image alt")
                                             span player name
                                         span.rate.text-capitalize rating : 5
                                     li
                                         a(href='profile.html')
-                                            img(src="img/player.jpg", alt="")
+                                            img(src="img/player.jpg", alt="image alt")
                                             span player name
                                         span.rate.text-capitalize rating : 5
                 hr.my-5
@@ -139,12 +139,12 @@ html
                             ul.mt-4
                                 li
                                     a(href='profile.html')
-                                        img(src="img/player.jpg", alt="")
+                                        img(src="img/player.jpg", alt="image alt")
                                         span player name
                                     span.rate.text-capitalize rating : 5
                                 li
                                     a(href='profile.html')
-                                        img(src="img/player.jpg", alt="")
+                                        img(src="img/player.jpg", alt="image alt")
                                         span player name
                                     span.rate.text-capitalize rating : 5
                         .col-md-6.mt-5.mt-md-0
@@ -153,12 +153,12 @@ html
                             ul.mt-4
                                 li
                                     a(href='profile.html')
-                                        img(src="img/player.jpg", alt="")
+                                        img(src="img/player.jpg", alt="image alt")
                                         span player name
                                     span.rate.text-capitalize rating : 5
                                 li
                                     a(href='profile.html')
-                                        img(src="img/player.jpg", alt="")
+                                        img(src="img/player.jpg", alt="image alt")
                                         span player name
                                     span.rate.text-capitalize rating : 5
                         .col-12.mt-5
@@ -175,7 +175,7 @@ html
             function format (option) {
                     if (!option.id) { return option.text; }
                         var src = $('#mselected option').attr("data-img");
-                        var ob = '<img src="'+ src +'" />' + option.text + '<span class="rate">Rating : 5</span>';
+                        var ob = '<img src="'+ src +'" alt="image alt" />' + option.text + '<span class="rate">Rating : 5</span>';
                     return ob;
                 };
             var selectPlayer = [

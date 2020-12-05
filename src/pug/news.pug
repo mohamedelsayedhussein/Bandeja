@@ -1,0 +1,86 @@
+- var pageTitle = 'Bandeja - News';
+doctype
+html
+    head
+        include partials/head
+        link(href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp", rel="stylesheet")
+    body
+        include components/header
+        
+        section.news-feed
+            .container.pt-5
+                h2.m-0.text-uppercase.stroked-title
+                    span news
+                .row.mt-5
+                    .col-md-6
+                        .post
+                            .author
+                                .author__img
+                                    a(href="profile.html")
+                                        img(src="img/player.jpg", alt="")
+                                .author__info
+                                    .name
+                                        h5.text-capitalize
+                                            a(href="profile.html") john doe
+                                    .date
+                                        span 5/12/2020
+                            .post__content
+                                .post__content--text
+                                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium autem accusamus sequi exercitationem soluta beatae quaerat eligendi, doloribus, explicabo sunt harum voluptatem. Cum, perferendis quidem!
+                                .post__content--media
+                                    img(src="img/homeSlider/slide01.jpg", alt="")
+                            .post__highlights.parent
+                                .row
+                                    .col-3
+                                        div
+                                            span.icon.material-icons thumb_up
+                                            span 15
+                                    .col-9.text-right
+                                        div
+                                            button.open-comments-box.text-capitalize(data-toggle="collapse" href="#post-comment-1")
+                                                span 55 Comments
+                            .post__actions.parent
+                                button.like
+                                    span.icon.material-icons thumb_up
+                                    | Like
+                                button.comment.open-comments-box(data-toggle="collapse" href="#post-comment-1")
+                                    span.icon.material-icons-outlined mode_comment
+                                    | Comment
+                                button.share
+                                    span.icon.material-icons-outlined share
+                                    | Share
+                            .post__comments.collapse#post-comment-1
+                                ul.post__comments--list
+                                    li
+                                        a(href="profile.html").post__comments--avatar
+                                            img(src="img/player.jpg", alt="")
+                                        
+                                        .post__comments--details.post__comments--input
+                                            input#write-comment(type="text", placeholder="Write a comment...")
+                                    li
+                                        a(href="profile.html").post__comments--avatar
+                                            img(src="img/player.jpg", alt="")
+                                        
+                                        .post__comments--details
+                                            h6.text-capitalize.m-0 john doe
+                                            p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    li
+                                        a(href="profile.html").post__comments--avatar
+                                            img(src="img/player.jpg", alt="")
+                                        
+                                        .post__comments--details
+                                            h6.text-capitalize.m-0 john doe
+                                            p consectetur adipisicing elit.
+
+        include components/sponsors
+        include components/footer
+        include partials/footerScripts
+        script(type="text/javascript").
+            $(".post__comments").on('shown.bs.collapse', function(){
+                $(this).find('input#write-comment').focus();
+            });
+
+            $('.post__actions button.like').click(function() {
+                $(this).toggleClass('clicked');
+            })
+        

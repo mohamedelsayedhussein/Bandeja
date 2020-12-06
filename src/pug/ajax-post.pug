@@ -20,7 +20,7 @@ section.news-feed.ajax-popup
                     .post__content
                         .post__content--text
                             p Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium autem accusamus sequi exercitationem soluta beatae quaerat eligendi, doloribus, explicabo sunt harum voluptatem. Cum, perferendis quidem!
-                    .post__highlights.parent
+                    .post__highlights
                         .row
                             .col-3
                                 div
@@ -28,19 +28,19 @@ section.news-feed.ajax-popup
                                     span 15
                             .col-9.text-right
                                 div
-                                    button.text-capitalize
+                                    button.text-capitalize(data-toggle="collapse" href="#post-comment-3")
                                         span 55 Comments
-                    .post__actions.parent
+                    .post__actions
                         button.like
                             span.icon.material-icons thumb_up
                             | Like
-                        button.comment
+                        button.comment(data-toggle="collapse" href="#post-comment-3")
                             span.icon.material-icons-outlined mode_comment
                             | Comment
                         button.share
                             span.icon.material-icons-outlined share
                             | Share
-                    .post__comments
+                    .post__comments.collapse.show#post-comment-3
                         ul.post__comments--list
                             li
                                 a(href="profile.html").post__comments--avatar
@@ -62,10 +62,14 @@ section.news-feed.ajax-popup
                                 .post__comments--details
                                     h6.text-capitalize.m-0 john doe
                                     p consectetur adipisicing elit.
+                                    
+script(type="text/javascript").
+    $(document).ready(function() {
+        $(".post__comments").on('hidden.bs.collapse', function(){
+            $(this).find('input.write-comment').focus();
+        });
 
-//- script(type="text/javascript").
-//-     $(document).ready(function() {
-//-         $('.post__content--media').magnificPopup({
-//-             type: 'ajax',
-//-         });
-//-     });
+        $('.post__actions button.like').click(function() {
+            $(this).toggleClass('clicked');
+        })
+    });

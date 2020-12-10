@@ -9,8 +9,7 @@ html
         
         section.news-feed
             .container.pt-5
-                h2.m-0.text-uppercase.stroked-title
-                    span news
+
                 .row.mt-5
                     .col-md-6
                         .post
@@ -97,19 +96,19 @@ html
                                             span 15
                                     .col-9.text-right
                                         div
-                                            button.open-comments-box.text-capitalize(data-toggle="collapse" href="#post-comment-1")
+                                            button.open-comments-box.text-capitalize(data-toggle="collapse" href="#post-comment-2")
                                                 span 55 Comments
                             .post__actions
                                 button.like
                                     span.icon.material-icons thumb_up
                                     | Like
-                                button.comment.open-comments-box(data-toggle="collapse" href="#post-comment-1")
+                                button.comment.open-comments-box(data-toggle="collapse" href="#post-comment-2")
                                     span.icon.material-icons-outlined mode_comment
                                     | Comment
                                 button.share
                                     span.icon.material-icons-outlined share
                                     | Share
-                            .post__comments.collapse#post-comment-1
+                            .post__comments.collapse#post-comment-2
                                 ul.post__comments--list
                                     li
                                         a(href="profile.html").post__comments--avatar
@@ -147,7 +146,7 @@ html
                             .post__content
                                 .post__content--text
                                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium autem accusamus sequi exercitationem soluta beatae quaerat eligendi, doloribus, explicabo sunt harum voluptatem. Cum, perferendis quidem!
-                                a(href="ajax-post.html").post__content--media
+                                a(href="#").post__content--media
                                     iframe(src="https://www.youtube.com/embed/xmUEpSrcEao", frameborder="0", allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", allowfullscreen)
                             .post__highlights
                                 .row
@@ -157,19 +156,19 @@ html
                                             span 15
                                     .col-9.text-right
                                         div
-                                            button.open-comments-box.text-capitalize(data-toggle="collapse" href="#post-comment-2")
+                                            button.open-comments-box.text-capitalize(data-toggle="collapse" href="#post-comment-3")
                                                 span 55 Comments
                             .post__actions
                                 button.like
                                     span.icon.material-icons thumb_up
                                     | Like
-                                button.comment.open-comments-box(data-toggle="collapse" href="#post-comment-2")
+                                button.comment.open-comments-box(data-toggle="collapse" href="#post-comment-3")
                                     span.icon.material-icons-outlined mode_comment
                                     | Comment
                                 button.share
                                     span.icon.material-icons-outlined share
                                     | Share
-                            .post__comments.collapse#post-comment-2
+                            .post__comments.collapse#post-comment-3
                                 ul.post__comments--list
                                     li
                                         a(href="profile.html").post__comments--avatar

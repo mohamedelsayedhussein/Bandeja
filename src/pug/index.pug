@@ -4,6 +4,10 @@ html
     head
         include partials/head
     body
+        #splash-screen
+            lottie-player(src="https://assets3.lottiefiles.com/packages/lf20_TQyXE9.json"  speed="1" loop autoplay)
+            .slogan
+                span padel hub
         include components/header
         section.hero
             .container
@@ -75,5 +79,11 @@ html
 
         include components/sponsors
         include components/footer
+        script(src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js")
         include partials/footerScripts
+        script(type="text/javascript").
+            setTimeout(function() {
+                document.getElementById('splash-screen').classList.add("hide");
+            }, 5000)
+
         

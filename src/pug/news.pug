@@ -38,8 +38,13 @@ html
                                 .row
                                     .col-3
                                         div
-                                            span.icon.material-icons thumb_up
-                                            span 15
+                                            button(data-toggle="modal" data-target="#likes-holder").likes-list-btn
+                                                span.icon.material-icons thumb_up
+                                                span 15
+                                                ul.summary-likes
+                                                    li someone no.1
+                                                    li someone no.2
+                                                    li someone no.3
                                     .col-9.text-right
                                         div
                                             button.open-comments-box.text-capitalize(data-toggle="collapse" href="#post-comment-1")
@@ -98,8 +103,13 @@ html
                                 .row
                                     .col-3
                                         div
-                                            span.icon.material-icons thumb_up
-                                            span 15
+                                            button(data-toggle="modal" data-target="#likes-holder").likes-list-btn
+                                                span.icon.material-icons thumb_up
+                                                span 15
+                                                 ul.summary-likes
+                                                    li someone no.1
+                                                    li someone no.2
+                                                    li someone no.3
                                     .col-9.text-right
                                         div
                                             button.open-comments-box.text-capitalize(data-toggle="collapse" href="#post-comment-2")
@@ -158,8 +168,13 @@ html
                                 .row
                                     .col-3
                                         div
-                                            span.icon.material-icons thumb_up
-                                            span 15
+                                            button(data-toggle="modal" data-target="#likes-holder").likes-list-btn
+                                                span.icon.material-icons thumb_up
+                                                span 15
+                                                ul.summary-likes
+                                                    li someone no.1
+                                                    li someone no.2
+                                                    li someone no.3
                                     .col-9.text-right
                                         div
                                             button.open-comments-box.text-capitalize(data-toggle="collapse" href="#post-comment-3")
@@ -225,7 +240,30 @@ html
                                         span(class="icon material-icons") add_a_photo
                                         span.pt-1 Add photo/video to your post
                                 .form-group
-                                    button(type="submit", class="submit") Post
+                                    button(type="submit", class="submit") Post                   
+        .likes-holder.modal.fade#likes-holder
+            .modal-dialog
+                .modal-content
+                    .modal-header
+                        button(type="button", class="close", data-dismiss="modal", aria-label="Close")
+                            span(aria-hidden="true", class="material-icons-outlined") close
+                    .modal-body
+                        ul
+                            li
+                                a.avatar(href="profile.html")
+                                    img(src="img/player.jpg", alt="")
+                                h6.name.text-capitalize
+                                    a(href="profile.html") john doe            
+                            li
+                                a.avatar(href="profile.html")
+                                    img(src="img/player.jpg", alt="")
+                                h6.name.text-capitalize
+                                    a(href="profile.html") john doe            
+                            li
+                                a.avatar(href="profile.html")
+                                    img(src="img/player.jpg", alt="")
+                                h6.name.text-capitalize
+                                    a(href="profile.html") john doe            
 
         include components/sponsors
         include components/footer

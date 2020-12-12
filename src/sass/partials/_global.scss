@@ -13,6 +13,9 @@ body {
 	position: relative;
 	margin-top: 2rem;
 }
+textarea {
+	resize: none;
+}
 .darkmode--activated .container {
 	background: $darkColor !important;
 }

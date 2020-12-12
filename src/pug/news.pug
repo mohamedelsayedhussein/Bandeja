@@ -6,11 +6,16 @@ html
         link(href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp", rel="stylesheet")
     body
         include components/header
-        
+
         section.news-feed
             .container.pt-5
                 .create-post
-                    
+                    .author__img
+                        a(href="profile.html")
+                            img(src="img/player.jpg", alt="")
+                    .post-btn
+                        button(data-toggle="modal" data-target="#post-holder").create-post-btn What's on your mind?
+
                 .row.mt-5
                     .col-md-6
                         .post
@@ -27,7 +32,7 @@ html
                             .post__content
                                 .post__content--text
                                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium autem accusamus sequi exercitationem soluta beatae quaerat eligendi, doloribus, explicabo sunt harum voluptatem. Cum, perferendis quidem!
-                                a(href="ajax-post.html").post__content--media
+                                a(href="ajax-post.html").post__content--media.open-ajax-post
                                     img(src="img/homeSlider/slide01.jpg", alt="")
                             .post__highlights
                                 .row
@@ -87,7 +92,7 @@ html
                             .post__content
                                 .post__content--text
                                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium autem accusamus sequi exercitationem soluta beatae quaerat eligendi, doloribus, explicabo sunt harum voluptatem. Cum, perferendis quidem!
-                                a(href="ajax-post.html").post__content--media
+                                a(href="ajax-post.html").post__content--media.open-ajax-post
                                     img(src="img/homeSlider/slide03.jpg", alt="")
                             .post__highlights
                                 .row
@@ -192,6 +197,36 @@ html
                                             h6.text-capitalize.m-0 john doe
                                             p consectetur adipisicing elit.
 
+        .post-holder.modal.fade#post-holder
+            .modal-dialog
+                .modal-content
+                    .modal-header
+                        h5.modal-title Create Post
+                        button(type="button", class="close", data-dismiss="modal", aria-label="Close")
+                            span(aria-hidden="true", class="material-icons-outlined") close
+                    .modal-body
+                        .create-post.p-0
+                            .author__img
+                                a(href="profile.html")
+                                    img(src="img/player.jpg", alt="")
+                            .author__name
+                                h6.text-capitalize john doe
+                        .post-input.mt-2
+                            form(action="")
+                                .form-group
+                                    textarea.form-control(rows="3", placeholder="What's on your mind?")
+                                .form-group.add-media
+                                    .media
+                                        button.close-preview(onclick="hidePreview(event)")
+                                            span(class="material-icons-outlined") close
+                                        img#preview-media
+                                    input(type="file", id="upload-input", onchange="showPreview(event)")
+                                    label.m-0(for="upload-input") 
+                                        span(class="icon material-icons") add_a_photo
+                                        span.pt-1 Add photo/video to your post
+                                .form-group
+                                    button(type="submit", class="submit") Post
+
         include components/sponsors
         include components/footer
         include partials/footerScripts
@@ -207,7 +242,7 @@ html
             });
         script(type="text/javascript").
             $(document).ready(function() {
-                $('.post__content--media').magnificPopup({
+                $('.open-ajax-post').magnificPopup({
                     type: 'ajax',
                     closeOnBgClick: true,
                       gallery:{
@@ -215,4 +250,22 @@ html
                     },
                 });
             });
-        
+        script(type="text/javascript").
+            let preview = document.getElementById('preview-media');
+            let previewParent = document.querySelector('.add-media .media');
+            
+            function showPreview(e) {
+                if(e.target.files.length > 0) {
+                    let src = URL.createObjectURL(e.target.files[0]);
+                    preview.src = src;
+                    previewParent.style.display = "block";
+                } else {
+                    preview.src = '';
+                    previewParent.style.display = "none";
+                }
+            }
+            function hidePreview(e) {
+                e.preventDefault();
+                preview.src = '';
+                previewParent.style.display = "none";
+            }

@@ -1,0 +1,77 @@
+
+<section class="news-feed ajax-popup">
+  <div class="container">
+    <div class="row py-5 m-0">
+      <div class="col-lg-8 p-0">
+        <div class="media h-100"><img src="img/homeSlider/slide03.jpg"/></div>
+      </div>
+      <div class="col-lg-4 p-0">
+        <div class="post h-100">
+          <div class="author">
+            <div class="author__img"><a href="profile.html"><img src="img/player.jpg" alt=""/></a></div>
+            <div class="author__info">
+              <div class="name">
+                <h5 class="text-capitalize"><a href="profile.html">john doe</a></h5>
+              </div>
+              <div class="date"><span>5/12/2020</span></div>
+            </div>
+          </div>
+          <div class="post__content">
+            <div class="post__content--text">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium autem accusamus sequi exercitationem soluta beatae quaerat eligendi, doloribus, explicabo sunt harum voluptatem. Cum, perferendis quidem!</p>
+            </div>
+          </div>
+          <div class="post__highlights">
+            <div class="row">
+              <div class="col-3">
+                <div><span class="icon material-icons">thumb_up</span><span>15</span></div>
+              </div>
+              <div class="col-9 text-right">
+                <div>
+                  <button class="text-capitalize" data-toggle="collapse" href="#post-comment-3"><span>55 Comments</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="post__actions">
+            <button class="like"><span class="icon material-icons">thumb_up</span>Like</button>
+            <button class="comment" data-toggle="collapse" href="#post-comment-3"><span class="icon material-icons-outlined">mode_comment</span>Comment</button>
+            <button class="share"><span class="icon material-icons-outlined">share</span>Share</button>
+          </div>
+          <div class="post__comments collapse show" id="post-comment-3">
+            <ul class="post__comments--list">
+              <li><a class="post__comments--avatar" href="profile.html"><img src="img/player.jpg" alt=""/></a>
+                <div class="post__comments--details post__comments--input">
+                  <input class="write-comment" type="text" placeholder="Write a comment..."/>
+                </div>
+              </li>
+              <li><a class="post__comments--avatar" href="profile.html"><img src="img/player.jpg" alt=""/></a>
+                <div class="post__comments--details">
+                  <h6 class="text-capitalize m-0">john doe</h6>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+              </li>
+              <li><a class="post__comments--avatar" href="profile.html"><img src="img/player.jpg" alt=""/></a>
+                <div class="post__comments--details">
+                  <h6 class="text-capitalize m-0">john doe</h6>
+                  <p>consectetur adipisicing elit.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script type="text/javascript">
+  $(document).ready(function() {
+      $(".post__comments").on('hidden.bs.collapse', function(){
+          $(this).find('input.write-comment').focus();
+      });
+  
+      $('.post__actions button.like').click(function() {
+          $(this).toggleClass('clicked');
+      })
+  });
+</script>

@@ -77,13 +77,13 @@ html
                                                     li someone no.3
                                     .col-9.text-right
                                         div
-                                            button.open-comments-box.text-capitalize(data-toggle="collapse" href="#post-comment-1")
+                                            button.open-comments-box.text-capitalize(data-toggle="collapse" data-target="#post-comment-5")
                                                 span 55 Comments
                             .post__actions
                                 button.like
                                     span.icon.material-icons thumb_up
                                     | Like
-                                button.comment.open-comments-box(data-toggle="collapse" href="#post-comment-5")
+                                button.comment.open-comments-box(data-toggle="collapse" data-target="#post-comment-5")
                                     span.icon.material-icons-outlined mode_comment
                                     | Comment
                                 button.share
@@ -96,7 +96,8 @@ html
                                             img(src="img/player.jpg", alt="")
                                         
                                         .post__comments--details.post__comments--input
-                                            input.write-comment(type="text", placeholder="Write a comment...")
+                                            form
+                                                input.write-comment(type="text", placeholder="Write a comment...")
                                     li
                                         a(href="profile.html").post__comments--avatar
                                             img(src="img/player.jpg", alt="")
@@ -142,13 +143,13 @@ html
                                                     li someone no.3
                                     .col-9.text-right
                                         div
-                                            button.open-comments-box.text-capitalize(data-toggle="collapse" href="#post-comment-1")
+                                            button.open-comments-box.text-capitalize(data-toggle="collapse" data-target="#post-comment-1")
                                                 span 55 Comments
                             .post__actions
                                 button.like
                                     span.icon.material-icons thumb_up
                                     | Like
-                                button.comment.open-comments-box(data-toggle="collapse" href="#post-comment-1")
+                                button.comment.open-comments-box(data-toggle="collapse" data-target="#post-comment-1")
                                     span.icon.material-icons-outlined mode_comment
                                     | Comment
                                 button.share
@@ -161,7 +162,8 @@ html
                                             img(src="img/player.jpg", alt="")
                                         
                                         .post__comments--details.post__comments--input
-                                            input.write-comment(type="text", placeholder="Write a comment...")
+                                            form
+                                                input.write-comment(type="text", placeholder="Write a comment...")
                                     li
                                         a(href="profile.html").post__comments--avatar
                                             img(src="img/player.jpg", alt="")
@@ -207,13 +209,13 @@ html
                                                     li someone no.3
                                     .col-9.text-right
                                         div
-                                            button.open-comments-box.text-capitalize(data-toggle="collapse" href="#post-comment-2")
+                                            button.open-comments-box.text-capitalize(data-toggle="collapse" data-target="#post-comment-2")
                                                 span 55 Comments
                             .post__actions
                                 button.like
                                     span.icon.material-icons thumb_up
                                     | Like
-                                button.comment.open-comments-box(data-toggle="collapse" href="#post-comment-2")
+                                button.comment.open-comments-box(data-toggle="collapse" data-target="#post-comment-2")
                                     span.icon.material-icons-outlined mode_comment
                                     | Comment
                                 button.share
@@ -226,7 +228,8 @@ html
                                             img(src="img/player.jpg", alt="")
                                         
                                         .post__comments--details.post__comments--input
-                                            input.write-comment(type="text", placeholder="Write a comment...")
+                                            form
+                                                input.write-comment(type="text", placeholder="Write a comment...")
                                     li
                                         a(href="profile.html").post__comments--avatar
                                             img(src="img/player.jpg", alt="")
@@ -272,13 +275,13 @@ html
                                                     li someone no.3
                                     .col-9.text-right
                                         div
-                                            button.open-comments-box.text-capitalize(data-toggle="collapse" href="#post-comment-3")
+                                            button.open-comments-box.text-capitalize(data-toggle="collapse" data-target="#post-comment-3")
                                                 span 55 Comments
                             .post__actions
                                 button.like
                                     span.icon.material-icons thumb_up
                                     | Like
-                                button.comment.open-comments-box(data-toggle="collapse" href="#post-comment-3")
+                                button.comment.open-comments-box(data-toggle="collapse" data-target="#post-comment-3")
                                     span.icon.material-icons-outlined mode_comment
                                     | Comment
                                 button.share
@@ -291,7 +294,8 @@ html
                                             img(src="img/player.jpg", alt="")
                                         
                                         .post__comments--details.post__comments--input
-                                            input.write-comment(type="text", placeholder="Write a comment...")
+                                            form
+                                                input.write-comment(type="text", placeholder="Write a comment...")
                                     li
                                         a(href="profile.html").post__comments--avatar
                                             img(src="img/player.jpg", alt="")
@@ -359,7 +363,7 @@ html
                                     img(src="img/player.jpg", alt="")
                                 h6.name.text-capitalize
                                     a(href="profile.html") john doe            
-
+        
         include components/sponsors
         include components/footer
         include partials/footerScripts
@@ -377,10 +381,13 @@ html
             $(document).ready(function() {
                 $('.open-ajax-post').magnificPopup({
                     type: 'ajax',
-                    closeOnBgClick: true,
+                    alignTop: true,
+                    overflowY: 'scroll',
+                    closeOnBgClick: false,
                       gallery:{
                         enabled: true,
                     },
+                    callbacks : { 'parseAjax' : function(mfpResponse) { mfpResponse.data = $('<div></div>').html(mfpResponse.data); } }
                 });
             });
         script(type="text/javascript").

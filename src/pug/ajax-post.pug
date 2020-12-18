@@ -24,30 +24,36 @@ section.news-feed.ajax-popup
                         .row
                             .col-3
                                 div
-                                    span.icon.material-icons thumb_up
-                                    span 15
+                                    button(data-toggle="modal" data-target="#likes-holder").likes-list-btn
+                                        span.icon.material-icons thumb_up
+                                        span 15
+                                        ul.summary-likes
+                                            li someone no.1
+                                            li someone no.2
+                                            li someone no.3
                             .col-9.text-right
                                 div
-                                    button.text-capitalize(data-toggle="collapse" href="#post-comment-3")
+                                    button.text-capitalize(data-toggle="collapse" data-target="#post-comment-13")
                                         span 55 Comments
                     .post__actions
                         button.like
                             span.icon.material-icons thumb_up
                             | Like
-                        button.comment(data-toggle="collapse" href="#post-comment-3")
+                        button.comment(data-toggle="collapse" data-target="#post-comment-13")
                             span.icon.material-icons-outlined mode_comment
                             | Comment
                         button.share
                             span.icon.material-icons-outlined share
                             | Share
-                    .post__comments.collapse.show#post-comment-3
+                    .post__comments.collapse.show#post-comment-13
                         ul.post__comments--list
                             li
                                 a(href="profile.html").post__comments--avatar
                                     img(src="img/player.jpg", alt="")
                                 
                                 .post__comments--details.post__comments--input
-                                    input.write-comment(type="text", placeholder="Write a comment...")
+                                    form
+                                        input.write-comment(type="text", placeholder="Write a comment...")
                             li
                                 a(href="profile.html").post__comments--avatar
                                     img(src="img/player.jpg", alt="")

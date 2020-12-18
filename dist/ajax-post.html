@@ -24,25 +24,35 @@
           <div class="post__highlights">
             <div class="row">
               <div class="col-3">
-                <div><span class="icon material-icons">thumb_up</span><span>15</span></div>
+                <div>
+                  <button class="likes-list-btn" data-toggle="modal" data-target="#likes-holder"><span class="icon material-icons">thumb_up</span><span>15</span>
+                    <ul class="summary-likes">
+                      <li>someone no.1</li>
+                      <li>someone no.2</li>
+                      <li>someone no.3</li>
+                    </ul>
+                  </button>
+                </div>
               </div>
               <div class="col-9 text-right">
                 <div>
-                  <button class="text-capitalize" data-toggle="collapse" href="#post-comment-3"><span>55 Comments</span></button>
+                  <button class="text-capitalize" data-toggle="collapse" data-target="#post-comment-13"><span>55 Comments</span></button>
                 </div>
               </div>
             </div>
           </div>
           <div class="post__actions">
             <button class="like"><span class="icon material-icons">thumb_up</span>Like</button>
-            <button class="comment" data-toggle="collapse" href="#post-comment-3"><span class="icon material-icons-outlined">mode_comment</span>Comment</button>
+            <button class="comment" data-toggle="collapse" data-target="#post-comment-13"><span class="icon material-icons-outlined">mode_comment</span>Comment</button>
             <button class="share"><span class="icon material-icons-outlined">share</span>Share</button>
           </div>
-          <div class="post__comments collapse show" id="post-comment-3">
+          <div class="post__comments collapse show" id="post-comment-13">
             <ul class="post__comments--list">
               <li><a class="post__comments--avatar" href="profile.html"><img src="img/player.jpg" alt=""/></a>
                 <div class="post__comments--details post__comments--input">
-                  <input class="write-comment" type="text" placeholder="Write a comment..."/>
+                  <form>
+                    <input class="write-comment" type="text" placeholder="Write a comment..."/>
+                  </form>
                 </div>
               </li>
               <li><a class="post__comments--avatar" href="profile.html"><img src="img/player.jpg" alt=""/></a>

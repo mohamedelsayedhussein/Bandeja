@@ -450,6 +450,7 @@ section.news-feed {
             }
             .likes-list-btn {
                 position: relative;
+                white-space: nowrap;
                 .summary-likes {
                     position: absolute;
                     top: calc(100% + 0.3rem);
@@ -528,6 +529,8 @@ section.news-feed {
             }
         }
         &__comments {
+            max-height: 300px;
+            overflow-y: auto;
             &--list li {
                 display: flex;
                 margin-top: 1.5rem;

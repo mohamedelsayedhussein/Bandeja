@@ -17,7 +17,102 @@ html
                         button(data-toggle="modal" data-target="#post-holder").create-post-btn What's on your mind?
 
                 .row.mt-5
-                    .col-md-6
+                    .col-12
+                        .post.post__score--match
+                            .author
+                                .author__img
+                                    a(href="profile.html")
+                                        img(src="img/homeSlider/slide02.jpg", alt="")
+                                .author__info
+                                    .name
+                                        h5.text-capitalize
+                                            a(href="profile.html") john doe
+                                    .date
+                                        span 8/09/2020
+                            table.match-info.table.table-responsive
+                                tr
+                                    td.px-0
+                                        .box
+                                            .team-title
+                                                h3.text-capitalize team one
+                                            ul.mt-3
+                                                li
+                                                    a(href='profile.html')
+                                                        img(src="img/player.jpg", alt="image alt")
+                                                        span player name
+                                                    span.rate.text-capitalize rating : 5
+                                                li
+                                                    a(href='profile.html')
+                                                        img(src="img/player.jpg", alt="image alt")
+                                                        span player name
+                                                    span.rate.text-capitalize rating : 5
+                                    td.result-area
+                                        span 5
+                                        span 8
+                                    td.px-0 
+                                        .box
+                                            .team-title
+                                                h3.text-capitalize team two
+                                            ul.mt-3
+                                                li
+                                                    a(href='profile.html')
+                                                        img(src="img/player.jpg", alt="image alt")
+                                                        span player name
+                                                    span.rate.text-capitalize rating : 5
+                                                li
+                                                    a(href='profile.html')
+                                                        img(src="img/player.jpg", alt="image alt")
+                                                        span player name
+                                                    span.rate.text-capitalize rating : 5
+                            .post__highlights
+                                .row
+                                    .col-3
+                                        div
+                                            button(data-toggle="modal" data-target="#likes-holder").likes-list-btn
+                                                span.icon.material-icons thumb_up
+                                                span 15
+                                                ul.summary-likes
+                                                    li someone no.1
+                                                    li someone no.2
+                                                    li someone no.3
+                                    .col-9.text-right
+                                        div
+                                            button.open-comments-box.text-capitalize(data-toggle="collapse" href="#post-comment-1")
+                                                span 55 Comments
+                            .post__actions
+                                button.like
+                                    span.icon.material-icons thumb_up
+                                    | Like
+                                button.comment.open-comments-box(data-toggle="collapse" href="#post-comment-5")
+                                    span.icon.material-icons-outlined mode_comment
+                                    | Comment
+                                button.share
+                                    span.icon.material-icons-outlined share
+                                    | Share
+                            .post__comments.collapse#post-comment-5
+                                ul.post__comments--list
+                                    li
+                                        a(href="profile.html").post__comments--avatar
+                                            img(src="img/player.jpg", alt="")
+                                        
+                                        .post__comments--details.post__comments--input
+                                            input.write-comment(type="text", placeholder="Write a comment...")
+                                    li
+                                        a(href="profile.html").post__comments--avatar
+                                            img(src="img/player.jpg", alt="")
+                                        
+                                        .post__comments--details
+                                            h6.text-capitalize.m-0 john doe
+                                            p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    li
+                                        a(href="profile.html").post__comments--avatar
+                                            img(src="img/player.jpg", alt="")
+                                        
+                                        .post__comments--details
+                                            h6.text-capitalize.m-0 john doe
+                                            p consectetur adipisicing elit.
+                                            
+                    .col-12
                         .post
                             .author
                                 .author__img
@@ -33,7 +128,7 @@ html
                                 .post__content--text
                                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium autem accusamus sequi exercitationem soluta beatae quaerat eligendi, doloribus, explicabo sunt harum voluptatem. Cum, perferendis quidem!
                                 a(href="ajax-post.html").post__content--media.open-ajax-post
-                                    img(src="img/homeSlider/slide01.jpg", alt="")
+                                    img(src="img/homeSlider/slide02.jpg", alt="")
                             .post__highlights
                                 .row
                                     .col-3
@@ -82,7 +177,7 @@ html
                                             h6.text-capitalize.m-0 john doe
                                             p consectetur adipisicing elit.
                                             
-                    .col-md-6
+                    .col-12
                         .post
                             .author
                                 .author__img
@@ -147,7 +242,7 @@ html
                                             h6.text-capitalize.m-0 john doe
                                             p consectetur adipisicing elit.
 
-                    .col-md-6
+                    .col-12
                         .post
                             .author
                                 .author__img

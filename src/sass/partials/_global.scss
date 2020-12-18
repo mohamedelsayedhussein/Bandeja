@@ -2,6 +2,8 @@
 html {
 	text-rendering: optimizeLegibility !important;
 	-webkit-font-smoothing: antialiased !important;
+	scrollbar-color: #eeeeee #555;
+	scrollbar-width: thin;
 }
 body {
 	height: 100%;
@@ -33,9 +35,10 @@ a, a:active, a:hover {
 :focus {
 	outline: none !important;
 }
+
 ::-webkit-scrollbar { width:5px;}
-::-webkit-scrollbar-thumb { background: #000; border: 1px solid #999; border-radius: 5px  }
-::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #555; border-radius: 5px  }
+::-webkit-scrollbar-track { background: #eeeeee; }
 ::-webkit-selection {
 	background-color: $mainColor;
 	color: #fff;

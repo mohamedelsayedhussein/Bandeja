@@ -237,6 +237,12 @@ section.news-feed {
                 min-height: 70vh;
                 max-height: 100vh;
                 object-fit: cover;
+                @media (max-width: 767px) {
+                    min-height: 100%;
+                    max-height: 100%;
+                    height: auto;
+                    object-fit: contain;
+                }
             }
         }
         .post {
@@ -275,8 +281,8 @@ section.news-feed {
                         white-space: nowrap;
                         span {
                             border: 2px solid $mainColor;
-                            padding: .3rem .5rem;
-                            margin: 0 .2rem;
+                            padding: 0.3rem 0.5rem;
+                            margin: 0 0.2rem;
                             font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
                         }
                     }
@@ -284,7 +290,7 @@ section.news-feed {
                         min-height: 200px;
                         width: 320px;
                         background: #fafafa;
-                        padding: 2rem .7rem;
+                        padding: 2rem 0.7rem;
                         .darkmode--activated & {
                             background: #222;
                         }
@@ -292,7 +298,7 @@ section.news-feed {
                             text-align: center;
                             h3 {
                                 display: inline-block;
-                                padding: .4rem .6rem;
+                                padding: 0.4rem 0.6rem;
                                 border: 2px solid $mainColor;
                                 font-family: "Poppins", sans-serif;
                                 font-size: 1rem;
@@ -311,7 +317,7 @@ section.news-feed {
                                     width: 30px;
                                     height: 30px;
                                     border-radius: 50%;
-                                    margin-right: .4rem;
+                                    margin-right: 0.4rem;
                                 }
                                 span {
                                     font-size: 0.8rem;
@@ -323,7 +329,7 @@ section.news-feed {
                                 font-size: 0.7rem;
                                 font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
                                 color: #fff;
-                                padding: .2rem;
+                                padding: 0.2rem;
                                 font-weight: 300;
                                 border-radius: 5px;
                                 white-space: nowrap;
@@ -391,14 +397,21 @@ section.news-feed {
                 width: 100%;
                 height: 0 !important;
                 padding-bottom: 56.25%;
-                overflow: hidden;
-                img, iframe {
+                img,
+                iframe {
                     position: absolute !important;
                     top: 0 !important;
                     left: 0 !important;
                     width: 100% !important;
                     height: 100% !important;
                     object-fit: cover !important;
+                }
+                img {
+                    @media (max-width: 767px) {
+                        width: 100% !important;
+                        height: auto !important;
+                        object-fit: contain !important;
+                    }
                 }
             }
         }

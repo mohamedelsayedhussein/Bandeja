@@ -9,36 +9,41 @@ html
             .container.py-5.px-3
                 .row
                     .col-lg-4.col-md-6.mt-5
-                        .statistics
+                        .widget-holder
                             ul.text-capitalize
                                 h2.text-capitalize
-                                    | statistics
+                                    | rating/ranking
                                 li
                                     span
                                         i.fas.fa-ellipsis-v.mr-2
-                                        | sets played 
+                                        | rating
                                     span 120
                                 li
                                     span
                                         i.fas.fa-ellipsis-v.mr-2
-                                        | sets won 
-                                    span 85
+                                        | ranking 
+                                    span 5
+                        .widget-holder.wallet.mt-3
+                            ul.text-capitalize
+                                h2.text-capitalize
+                                    | my wallet
                                 li
                                     span
                                         i.fas.fa-ellipsis-v.mr-2
-                                        | sets lost 
-                                    span 15
+                                        | bandeja coins 
+                                    span
+                                        | 145
+                                        img(src="img/bc.png", alt="", class="ml-1")
                                 li
                                     span
                                         i.fas.fa-ellipsis-v.mr-2
-                                        | games won 
-                                    span 65
-                                li
+                                        | gift coins 
                                     span
-                                        i.fas.fa-ellipsis-v.mr-2
-                                        | games lost 
-                                    span 15
-                    .col-lg-4.col-md-6.mt-md-0.mt-5.order-md-0.order-first
+                                        | 75
+                                        img(src="img/gc.png", alt="", class="ml-1")
+                                .transaction-btn
+                                    a(href="#") transactions
+                    .col-lg-4.col-md-6.order-md-0.order-first
                         .profile-card.py-5.px-3
                             .img-profile
                                 a(class="venobox" data-gall="myGallery" href="img/player.jpg")
@@ -67,9 +72,37 @@ html
                                         | height 
                                     span 185 cm
                     .col-lg-4.col-md-6.mt-5
-                        .chart
-                            img(src='https://placehold.it/400x400' class='img-fluid h-100' alt='image alt')
-
+                        .widget-holder
+                            ul.text-capitalize
+                                h2.text-capitalize
+                                    | statistics
+                                li
+                                    span
+                                        i.fas.fa-ellipsis-v.mr-2
+                                        | sets played 
+                                    span 120
+                                li
+                                    span
+                                        i.fas.fa-ellipsis-v.mr-2
+                                        | sets won 
+                                    span 85
+                                li
+                                    span
+                                        i.fas.fa-ellipsis-v.mr-2
+                                        | sets lost 
+                                    span 15
+                                li
+                                    span
+                                        i.fas.fa-ellipsis-v.mr-2
+                                        | games won 
+                                    span 65
+                                li
+                                    span
+                                        i.fas.fa-ellipsis-v.mr-2
+                                        | games lost 
+                                    span 15
+                        .chart.mt-4
+                            img(src='img/player.jpg' class='img-fluid w-100' alt='image alt')
         .match-history
             .container.p-5
                 .row

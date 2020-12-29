@@ -5,7 +5,7 @@ section.profile-page {
   .container {
     width: 100vw;
     min-height: 100vh;
-    .statistics {
+    .widget-holder {
       padding: 1.5rem;
       background: #fff;
       margin-top: 100px;
@@ -60,10 +60,47 @@ section.profile-page {
             color: #777777;
           }
         }
+        .transaction-btn {
+          margin-top: 100px;
+          opacity: 0;
+          animation: moveIn 1s 0.2s ease forwards;
+          a {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background: $mainColor;
+            border-radius: 5px;
+            color: #fff;
+          }
+        }
+      }
+      &.wallet {
+        li {
+          &:nth-child(odd) {
+            background: #f7f7f7;
+            .darkmode--activated & {
+              background: #333;
+              color: #eee;
+              border-color: rgba(255, 255, 255, 0.1);
+            }
+          }
+          &:nth-child(even) {
+            background: #fff;
+            color: #333;
+            .darkmode--activated & {
+              background: #1b1b1b;
+              color: #fff;
+              border-color: rgba(255, 255, 255, 0.1);
+            }
+          }
+          img {
+            width: 35px;
+          }
+        }
       }
     }
     .profile-card {
-      background: $mainColor;
+      background-color: $mainColor;
       width: 150px;
       height: 150px;
       position: relative;
@@ -134,13 +171,13 @@ section.profile-page {
             box-shadow: 0px 0px 0px 10px rgba(255, 255, 255, 1);
             transition: box-shadow 0.3s ease;
             .darkmode--activated & {
-              box-shadow: 0px 0px 0px 8px rgba(255, 255, 255, 0.1);
+              box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.1);
             }
           }
           &:hover > img {
             box-shadow: 0px 0px 0px 14px rgba(255, 255, 255, 1);
             .darkmode--activated & {
-              box-shadow: 0px 0px 0px 14px rgba(255, 255, 255, 0.3);
+              box-shadow: 0px 0px 0px 14px rgba(0, 0, 0, 0.3);
             }
           }
           &:hover::before {
@@ -278,13 +315,18 @@ section.profile-page {
     background: #e0e0e0;
   }
   50% {
-    top: 50%;
+    // top: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
     border-radius: 4px;
   }
   100% {
     width: 100%;
     height: 500px;
     border-radius: 4px;
+    background: $mainColor;
+    top: 0;
+    transform: translate(-50%, 0);
   }
 }
 @keyframes moveIn {
@@ -389,21 +431,21 @@ section.profile-page {
         overflow: hidden;
         margin: auto;
         background: $mainColor;
-        padding: .15rem;
+        padding: 0.15rem;
         img {
           width: 100%;
           height: 100%;
           object-fit: cover;
         }
       }
-      input[type=file] {
+      input[type="file"] {
         display: none;
       }
       label {
         background: $mainColor;
         color: #fff;
-        padding: .5rem .7rem;
-        font-size: .85rem;
+        padding: 0.5rem 0.7rem;
+        font-size: 0.85rem;
         cursor: pointer;
       }
     }
@@ -412,13 +454,13 @@ section.profile-page {
         .form-group {
           input {
             background: rgba(0, 0, 0, 0.1);
-            &[type='submit'] {
+            &[type="submit"] {
               background: $mainColor !important;
               color: #fff;
-              font-size: .85rem;
+              font-size: 0.85rem;
             }
-            &[type='reset'] {
-              font-size: .85rem;
+            &[type="reset"] {
+              font-size: 0.85rem;
             }
           }
           .position-of-player {
@@ -507,9 +549,9 @@ section.profile-page {
               }
               .darkmode--activated & {
                 background: #555;
-                  &:hover {
-                    background: rgba(0, 0, 0, 0.1);
-                  }
+                &:hover {
+                  background: rgba(0, 0, 0, 0.1);
+                }
               }
             }
           }

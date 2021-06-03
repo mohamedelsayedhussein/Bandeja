@@ -1,161 +1,210 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="padel">
-    <title>Bandeja - Home</title>
-    <link rel="shortcut icon" href="img/favicon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/css/select2.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis:400,600,700&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&amp;display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.8.6/venobox.min.css">
-    <link rel="stylesheet" href="css/style.min.css">
-  </head>
-  <body>
-    <div id="splash-screen">
-      <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_TQyXE9.json" speed="1" loop autoplay></lottie-player>
-      <div class="slogan"><span>padel hub</span></div>
-    </div>
-    <header class="header">
-      <div class="container">
-        <div class="nav--bar d-flex align-items-center">
-          <div class="logo"><a href="index.html"><img class="img-fluid" src="img/logo.svg" alt="image alt" draggable="false"></a></div>
-          <nav class="nav">
-            <ul class="links d-flex align-items-center">
-              <li class="item"><a class="link text-uppercase active" href="index.html"><i class="fas fa-home"></i>Home</a></li>
-              <li class="item"><a class="link text-uppercase" href="leaderboard.html"><i class="fas fa-chalkboard"></i>leaderboard</a></li>
-              <li class="item"><a class="link text-uppercase" href="challenges.html"><i class="fas fa-chess-board"></i>challenges</a></li>
-              <li class="item"><a class="link text-uppercase" href="profile.html"><i class="far fa-user"></i>my profile</a></li>
-              <li class="item"><a class="link text-uppercase" href="news.html"><i class="far fa-user"></i>news</a></li>
-              <li class="item"><a class="link text-uppercase" href="login.html"><i class="fas fa-sign-in-alt"></i>login</a></li>
-            </ul>
-          </nav><i class="toggle-fullscreen d-lg-block d-none" title="Show Fullscreen">
-            <svg id="expand" width="21" height="21" viewBox="0 0 24 23" fill="none">
-              <path d="M15.8732 1.27464H23V8.09154" stroke="white" stroke-width="3"></path>
-              <path d="M22.8451 15.3732L22.8451 22.5L16.0282 22.5" stroke="white" stroke-width="3"></path>
-              <path d="M8.12676 22.3451L1 22.3451L1 15.5282" stroke="white" stroke-width="3"></path>
-              <path d="M1.15493 8.24648L1.15493 1.11971L7.97183 1.11971" stroke="white" stroke-width="3"></path>
-            </svg>
-            <svg id="shrink" width="21" height="21" viewBox="0 0 21 21" fill="none">
-              <path d="M12.7826 0V7.30435H21" stroke="white" stroke-width="2"></path>
-              <path d="M12.7826 20.087V12.7826H21" stroke="white" stroke-width="2"></path>
-              <path d="M8.21739 20.087V12.7826H7.59959e-07" stroke="white" stroke-width="2"></path>
-              <path d="M8.21739 0V7.30435H7.59959e-07" stroke="white" stroke-width="2"></path>
-            </svg></i>
-          <div class="bars d-lg-none"><span class="line"></span><span class="line"></span><span class="line"></span>
-          </div>
-        </div>
-      </div>
-    </header>
-    <section class="hero">
-      <div class="container">
-        <div class="inner-hero text-center">
-          <div class="dots-shape"></div>
-          <h1 class="m-0 text-uppercase">bandeja
-            <p class="text-capitalize m-0">community of challenge</p>
-          </h1>
-        </div>
-      </div>
-    </section>
-    <section class="banner">
-      <div class="container">
-        <div class="inner-banner px-md-3">
-          <div class="slider-wrapper">
-            <div class="row align-items-start">
-              <div class="col-lg-7">
-                <div class="image-slider h-100">
-                  <div class="slider--item"><img class="img-fluid" src="img/homeSlider/slide01.jpg" alt="image alt"></div>
-                  <div class="slider--item"><img class="img-fluid" src="img/homeSlider/slide02.jpg" alt="image alt"></div>
-                  <div class="slider--item"><img class="img-fluid" src="img/homeSlider/slide03.jpg" alt="image alt"></div>
-                  <div class="slider--item"><img class="img-fluid" src="img/homeSlider/slide04.jpeg" alt="image alt"></div>
-                  <div class="slider--item"><img class="img-fluid" src="img/homeSlider/slide05.jpg" alt="image alt"></div>
-                </div>
-              </div>
-              <div class="col-lg-5">
-                <div class="text-slider h-100 mt-3 mt-lg-0">
-                  <div class="text--slide">
-                    <h2 class="text-uppercase stroked-title"><span>padel is awesome</span></h2>
-                    <p class="text-capitalize">Lorem ipsum dolor sit amet lorem5 consectetur adipisicing elit. Doloribus blanditiis beatae distinctio quibusdam, quae delectus non saepe. Quisquam aliquam quaerat eos nam quis? Alias nulla fugit eaque ab sequi molestiae mollitia aliquam adipisci tempore facere delectus modi, unde at, corporis minus magnam! Vel iure ab vitae enim, quae possimus explicabo labore aspernatur consequuntur modi aperiam obcaecati omnis quisquam eligendi, assumenda id hic libero suscipit culpa magni? Unde consequatur obcaecati animi architecto esse pariatur adipisci enim. Incidunt tempore voluptates sunt nisi hic sint atque vel excepturi pariatur debitis quo, aperiam velit minus recusandae quia? Id obcaecati nisi dolor voluptate adipisci inventore? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus rem totam obcaecati magnam velit sapiente. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, id.</p>
-                  </div>
-                  <div class="text--slide">
-                    <h2 class="text-uppercase stroked-title"><span>padel is nice sport to do</span></h2>
-                    <p class="text-capitalize">Lorem ipsum dolor, Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, voluptatibus ea nobis ipsa id inventore. adipisicing elit. Autem, laudantium. sit amet consectetur adipisicing elit. Voluptate unde alias necessitatibus molestias nihil eum deserunt eaque minima iste asperiores. Fugit maxime nulla recusandae eos, distinctio reprehenderit temporibus veniam tempore!</p>
-                  </div>
-                  <div class="text--slide">
-                    <h2 class="text-uppercase stroked-title"><span>padel is beautiful</span></h2>
-                    <p class="text-capitalize">Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, voluptatibus ea nobis ipsa id inventore. adipisicing elit. Eos mollitia distinctio voluptatem reprehenderit fugiat. Facilis doloremque repudiandae earum eum explicabo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur dicta velit fugit! sit amet consectetur, adipisicing elit. Ab, vero! Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                  </div>
-                  <div class="text--slide">
-                    <h2 class="text-uppercase stroked-title"><span>padel is unique</span></h2>
-                    <p class="text-capitalize">Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, voluptatibus ea nobis ipsa id inventore. adipisicing elit. Eos mollitia distinctio voluptatem reprehenderit fugiat. Facilis doloremque repudiandae earum eum explicabo. sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. consectetur adipisicing elit. Beatae eaque cumque delectus minus animi. Quaerat cum eveniet voluptatum et minus sequi commodi eius porro accusamus! Suscipit facere quidem vitae eveniet cupiditate. At facilis sunt dolores.</p>
-                  </div>
-                  <div class="text--slide">
-                    <h2 class="text-uppercase stroked-title"><span>padel is amazing</span></h2>
-                    <p class="text-capitalize">Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, voluptatibus ea nobis ipsa id inventore. adipisicing elit. Eos mollitia distinctio voluptatem reprehenderit fugiat. Facilis doloremque repudiandae earum eum explicabo. sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid aperiam soluta ipsa maxime pariatur id! consectetur adipisicing elit. Quos aspernatur voluptates quia labore mollitia tempore maiores hic adipisci!</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="login-corner">
-              <div class="log-btn"><a class="global-btn-style text-capitalize" href="login.html">login</a></div>|  |<a class="btn text-capitalize bg-secondary text-white rounded-0" href="login.html"> <small>register</small></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="text-section mt-5" data-aos="fade" data-aos-offset="0" data-aos-duration="2000">
-      <div class="container p-4">
-        <div class="text-area">
-          <h2 class="text-title text-uppercase stroked-title mb-4"><span>how the rating system works?</span></h2>
-          <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi laudantium dicta voluptates rerum quidem distinctio necessitatibus officiis iure eum est? Perspiciatis assumenda ducimus at eaque temporibus reiciendis sapiente iure minus? Blanditiis esciunt error  uibusdam culpa, minima animi quam accusamus. Unde, rerum.</p>
-          <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat provident at vel aspernatur repellat mollitia.</p>
-          <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ut, enim saepe eveniet nemo tempora dolorem, architecto maxime ab neque quam ducimus facere mollitia! Aliquam sequi cumque quod alias quidem.</p>
-          <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ut, enim saepe eveniet nemo tempora dolorem, architecto maxime ab neque quam ducimus facere mollitia! Aliquam sequi cumque quod alias quidem.</p>
-        </div>
-      </div>
-    </section>
-    <div class="sponsors my-5">
-      <div class="container">
-        <div class="sponsors-slider">
-          <div class="item"><img class="img-fluid" src="img/sponsorsSlider/slide01.png" alt="image alt"></div>
-          <div class="item"><img class="img-fluid" src="img/sponsorsSlider/slide02.png" alt="image alt"></div>
-          <div class="item"><img class="img-fluid" src="img/sponsorsSlider/slide03.png" alt="image alt"></div>
-          <div class="item"><img class="img-fluid" src="img/sponsorsSlider/slide04.jpg" alt="image alt"></div>
-          <div class="item"><img class="img-fluid" src="img/sponsorsSlider/slide02.png" alt="image alt"></div>
-          <div class="item"><img class="img-fluid" src="img/sponsorsSlider/slide05.jpg" alt="image alt"></div>
-          <div class="item"><img class="img-fluid" src="img/sponsorsSlider/slide01.png" alt="image alt"></div>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="padel">
+  <title>Bandeja - Home</title>
+  <link rel="shortcut icon" href="img/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/css/select2.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis:400,600,700&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&amp;display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.8.6/venobox.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div id="splash-screen">
+    <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_TQyXE9.json" speed="1" loop autoplay>
+    </lottie-player>
+    <div class="slogan"><span>padel hub</span></div>
+  </div>
+  <header class="header">
+    <div class="container">
+      <div class="nav--bar d-flex align-items-center">
+        <div class="logo"><a href="index.html"><img class="img-fluid" src="img/logo.svg" alt="image alt"
+              draggable="false"></a></div>
+        <nav class="nav">
+          <ul class="links d-flex align-items-center">
+            <li class="item"><a class="link text-uppercase active" href="index.html"><i class="fas fa-home"></i>Home</a>
+            </li>
+            <li class="item"><a class="link text-uppercase" href="leaderboard.html"><i
+                  class="fas fa-chalkboard"></i>leaderboard</a></li>
+            <li class="item"><a class="link text-uppercase" href="challenges.html"><i
+                  class="fas fa-chess-board"></i>challenges</a></li>
+            <li class="item"><a class="link text-uppercase" href="profile.html"><i class="far fa-user"></i>my
+                profile</a></li>
+            <li class="item"><a class="link text-uppercase" href="news.html"><i class="far fa-user"></i>news</a></li>
+            <li class="item"><a class="link text-uppercase" href="login.html"><i
+                  class="fas fa-sign-in-alt"></i>login</a></li>
+          </ul>
+        </nav><i class="toggle-fullscreen d-lg-block d-none" title="Show Fullscreen">
+          <svg id="expand" width="21" height="21" viewBox="0 0 24 23" fill="none">
+            <path d="M15.8732 1.27464H23V8.09154" stroke="white" stroke-width="3"></path>
+            <path d="M22.8451 15.3732L22.8451 22.5L16.0282 22.5" stroke="white" stroke-width="3"></path>
+            <path d="M8.12676 22.3451L1 22.3451L1 15.5282" stroke="white" stroke-width="3"></path>
+            <path d="M1.15493 8.24648L1.15493 1.11971L7.97183 1.11971" stroke="white" stroke-width="3"></path>
+          </svg>
+          <svg id="shrink" width="21" height="21" viewBox="0 0 21 21" fill="none">
+            <path d="M12.7826 0V7.30435H21" stroke="white" stroke-width="2"></path>
+            <path d="M12.7826 20.087V12.7826H21" stroke="white" stroke-width="2"></path>
+            <path d="M8.21739 20.087V12.7826H7.59959e-07" stroke="white" stroke-width="2"></path>
+            <path d="M8.21739 0V7.30435H7.59959e-07" stroke="white" stroke-width="2"></path>
+          </svg></i>
+        <div class="bars d-lg-none"><span class="line"></span><span class="line"></span><span class="line"></span>
         </div>
       </div>
     </div>
-    <footer class="footer">
-      <div class="container">
-        <div class="text-inner">
-          <p class="text-center text-white m-0">© 2020 <strong>BANDEJA</strong> . All Rights Reserved</p>
+  </header>
+  <section class="hero">
+    <div class="container">
+      <div class="inner-hero text-center">
+        <div class="dots-shape"></div>
+        <h1 class="m-0 text-uppercase">bandeja
+          <p class="text-capitalize m-0">community of challenge</p>
+        </h1>
+      </div>
+    </div>
+  </section>
+  <section class="banner">
+    <div class="container">
+      <div class="inner-banner px-md-3">
+        <div class="slider-wrapper">
+          <div class="row align-items-start">
+            <div class="col-lg-7">
+              <div class="image-slider h-100">
+                <div class="slider--item"><img class="img-fluid" src="img/homeSlider/slide01.jpg" alt="image alt"></div>
+                <div class="slider--item"><img class="img-fluid" src="img/homeSlider/slide02.jpg" alt="image alt"></div>
+                <div class="slider--item"><img class="img-fluid" src="img/homeSlider/slide03.jpg" alt="image alt"></div>
+                <div class="slider--item"><img class="img-fluid" src="img/homeSlider/slide04.jpeg" alt="image alt">
+                </div>
+                <div class="slider--item"><img class="img-fluid" src="img/homeSlider/slide05.jpg" alt="image alt"></div>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <div class="text-slider h-100 mt-3 mt-lg-0">
+                <div class="text--slide">
+                  <h2 class="text-uppercase stroked-title"><span>padel is awesome</span></h2>
+                  <p class="text-capitalize">Lorem ipsum dolor sit amet lorem5 consectetur adipisicing elit. Doloribus
+                    blanditiis beatae distinctio quibusdam, quae delectus non saepe. Quisquam aliquam quaerat eos nam
+                    quis? Alias nulla fugit eaque ab sequi molestiae mollitia aliquam adipisci tempore facere delectus
+                    modi, unde at, corporis minus magnam! Vel iure ab vitae enim, quae possimus explicabo labore
+                    aspernatur consequuntur modi aperiam obcaecati omnis quisquam eligendi, assumenda id hic libero
+                    suscipit culpa magni? Unde consequatur obcaecati animi architecto esse pariatur adipisci enim.
+                    Incidunt tempore voluptates sunt nisi hic sint atque vel excepturi pariatur debitis quo, aperiam
+                    velit minus recusandae quia? Id obcaecati nisi dolor voluptate adipisci inventore? Lorem ipsum
+                    dolor, sit amet consectetur adipisicing elit. Necessitatibus rem totam obcaecati magnam velit
+                    sapiente. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, id.</p>
+                </div>
+                <div class="text--slide">
+                  <h2 class="text-uppercase stroked-title"><span>padel is nice sport to do</span></h2>
+                  <p class="text-capitalize">Lorem ipsum dolor, Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor
+                    sit, amet consectetur adipisicing elit. Quidem, voluptatibus ea nobis ipsa id inventore. adipisicing
+                    elit. Autem, laudantium. sit amet consectetur adipisicing elit. Voluptate unde alias necessitatibus
+                    molestias nihil eum deserunt eaque minima iste asperiores. Fugit maxime nulla recusandae eos,
+                    distinctio reprehenderit temporibus veniam tempore!</p>
+                </div>
+                <div class="text--slide">
+                  <h2 class="text-uppercase stroked-title"><span>padel is beautiful</span></h2>
+                  <p class="text-capitalize">Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor
+                    sit, amet consectetur adipisicing elit. Quidem, voluptatibus ea nobis ipsa id inventore. adipisicing
+                    elit. Eos mollitia distinctio voluptatem reprehenderit fugiat. Facilis doloremque repudiandae earum
+                    eum explicabo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur dicta velit
+                    fugit! sit amet consectetur, adipisicing elit. Ab, vero! Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit.</p>
+                </div>
+                <div class="text--slide">
+                  <h2 class="text-uppercase stroked-title"><span>padel is unique</span></h2>
+                  <p class="text-capitalize">Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor
+                    sit, amet consectetur adipisicing elit. Quidem, voluptatibus ea nobis ipsa id inventore. adipisicing
+                    elit. Eos mollitia distinctio voluptatem reprehenderit fugiat. Facilis doloremque repudiandae earum
+                    eum explicabo. sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. consectetur
+                    adipisicing elit. Beatae eaque cumque delectus minus animi. Quaerat cum eveniet voluptatum et minus
+                    sequi commodi eius porro accusamus! Suscipit facere quidem vitae eveniet cupiditate. At facilis sunt
+                    dolores.</p>
+                </div>
+                <div class="text--slide">
+                  <h2 class="text-uppercase stroked-title"><span>padel is amazing</span></h2>
+                  <p class="text-capitalize">Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor
+                    sit, amet consectetur adipisicing elit. Quidem, voluptatibus ea nobis ipsa id inventore. adipisicing
+                    elit. Eos mollitia distinctio voluptatem reprehenderit fugiat. Facilis doloremque repudiandae earum
+                    eum explicabo. sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid aperiam
+                    soluta ipsa maxime pariatur id! consectetur adipisicing elit. Quos aspernatur voluptates quia labore
+                    mollitia tempore maiores hic adipisci!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="login-corner">
+            <div class="log-btn"><a class="global-btn-style text-capitalize" href="login.html">login</a></div>| |<a
+              class="btn text-capitalize bg-secondary text-white rounded-0" href="login.html">
+              <small>register</small></a>
+          </div>
         </div>
       </div>
-    </footer>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/js/select2.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.3/lib/darkmode-js.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.8.6/venobox.min.js"></script>
-    <script src="js/all.min.js"></script>
-    <script type="text/javascript">
-      setTimeout(function() {
-          document.getElementById('splash-screen').classList.add("hide");
-      }, 5000)
-    </script>
-  </body>
+    </div>
+  </section>
+  <section class="text-section mt-5" data-aos="fade" data-aos-offset="0" data-aos-duration="2000">
+    <div class="container p-4">
+      <div class="text-area">
+        <h2 class="text-title text-uppercase stroked-title mb-4"><span>how the rating system works?</span></h2>
+        <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi laudantium dicta
+          voluptates rerum quidem distinctio necessitatibus officiis iure eum est? Perspiciatis assumenda ducimus at
+          eaque temporibus reiciendis sapiente iure minus? Blanditiis esciunt error uibusdam culpa, minima animi quam
+          accusamus. Unde, rerum.</p>
+        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat provident at vel
+          aspernatur repellat mollitia.</p>
+        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ut, enim saepe eveniet nemo
+          tempora dolorem, architecto maxime ab neque quam ducimus facere mollitia! Aliquam sequi cumque quod alias
+          quidem.</p>
+        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ut, enim saepe eveniet nemo
+          tempora dolorem, architecto maxime ab neque quam ducimus facere mollitia! Aliquam sequi cumque quod alias
+          quidem.</p>
+      </div>
+    </div>
+  </section>
+  <div class="sponsors my-5">
+    <div class="container">
+      <div class="sponsors-slider">
+        <div class="item"><img class="img-fluid" src="img/sponsorsSlider/slide01.png" alt="image alt"></div>
+        <div class="item"><img class="img-fluid" src="img/sponsorsSlider/slide02.png" alt="image alt"></div>
+        <div class="item"><img class="img-fluid" src="img/sponsorsSlider/slide03.png" alt="image alt"></div>
+        <div class="item"><img class="img-fluid" src="img/sponsorsSlider/slide04.jpg" alt="image alt"></div>
+        <div class="item"><img class="img-fluid" src="img/sponsorsSlider/slide02.png" alt="image alt"></div>
+        <div class="item"><img class="img-fluid" src="img/sponsorsSlider/slide05.jpg" alt="image alt"></div>
+        <div class="item"><img class="img-fluid" src="img/sponsorsSlider/slide01.png" alt="image alt"></div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="text-inner">
+        <p class="text-center text-white m-0">© 2021 <strong>BANDEJA</strong> . All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/js/select2.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.3/lib/darkmode-js.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.8.6/venobox.min.js"></script>
+  <script src="js/all.min.js"></script>
+  <script type="text/javascript">
+    setTimeout(function () {
+      document.getElementById('splash-screen').classList.add("hide");
+    }, 5000)
+  </script>
+</body>
+
 </html>

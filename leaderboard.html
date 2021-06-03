@@ -1,189 +1,204 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="padel">
-    <title>Bandeja - Leaderboard</title>
-    <link rel="shortcut icon" href="img/favicon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/css/select2.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis:400,600,700&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&amp;display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.8.6/venobox.min.css">
-    <link rel="stylesheet" href="css/style.min.css">
-  </head>
-  <body>
-    <header class="header">
-      <div class="container">
-        <div class="nav--bar d-flex align-items-center">
-          <div class="logo"><a href="index.html"><img class="img-fluid" src="img/logo.svg" alt="image alt" draggable="false"></a></div>
-          <nav class="nav">
-            <ul class="links d-flex align-items-center">
-              <li class="item"><a class="link text-uppercase" href="index.html"><i class="fas fa-home"></i>Home</a></li>
-              <li class="item"><a class="link text-uppercase active" href="leaderboard.html"><i class="fas fa-chalkboard"></i>leaderboard</a></li>
-              <li class="item"><a class="link text-uppercase" href="challenges.html"><i class="fas fa-chess-board"></i>challenges</a></li>
-              <li class="item"><a class="link text-uppercase" href="profile.html"><i class="far fa-user"></i>my profile</a></li>
-              <li class="item"><a class="link text-uppercase" href="news.html"><i class="far fa-user"></i>news</a></li>
-              <li class="item"><a class="link text-uppercase" href="login.html"><i class="fas fa-sign-in-alt"></i>login</a></li>
-            </ul>
-          </nav><i class="toggle-fullscreen d-lg-block d-none" title="Show Fullscreen">
-            <svg id="expand" width="21" height="21" viewBox="0 0 24 23" fill="none">
-              <path d="M15.8732 1.27464H23V8.09154" stroke="white" stroke-width="3"></path>
-              <path d="M22.8451 15.3732L22.8451 22.5L16.0282 22.5" stroke="white" stroke-width="3"></path>
-              <path d="M8.12676 22.3451L1 22.3451L1 15.5282" stroke="white" stroke-width="3"></path>
-              <path d="M1.15493 8.24648L1.15493 1.11971L7.97183 1.11971" stroke="white" stroke-width="3"></path>
-            </svg>
-            <svg id="shrink" width="21" height="21" viewBox="0 0 21 21" fill="none">
-              <path d="M12.7826 0V7.30435H21" stroke="white" stroke-width="2"></path>
-              <path d="M12.7826 20.087V12.7826H21" stroke="white" stroke-width="2"></path>
-              <path d="M8.21739 20.087V12.7826H7.59959e-07" stroke="white" stroke-width="2"></path>
-              <path d="M8.21739 0V7.30435H7.59959e-07" stroke="white" stroke-width="2"></path>
-            </svg></i>
-          <div class="bars d-lg-none"><span class="line"></span><span class="line"></span><span class="line"></span>
-          </div>
-        </div>
-      </div>
-    </header>
-    <section class="leaderboard my-5">
-      <div class="container p-5">
-        <table class="table table-striped table-bordered" id="leaderboard-table" cellspacing="0" width="100%">
-          <thead>
-            <th>Rank</th>
-            <th>Player</th>
-            <th>Rating</th>
-            <th>Sets Played</th>
-            <th>Sets Won</th>
-            <th>Games Won</th>
-            <th>Games Lost</th>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td class="player-info"><a class="avatar-prof mr-2 rounded-circle" href="profile.html"><img class="img-fluid rounded-circle d-inline-block" src="https://placehold.it/35x35" alt="image alt"></a>
-                <h6 class="name m-0 d-inline-block text-capitalize"><a href="profile.html">player name</a></h6>
-              </td>
-              <td>5</td>
-              <td>6</td>
-              <td>8</td>
-              <td>2</td>
-              <td>2</td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td class="player-info"><a class="avatar-prof mr-2 rounded-circle" href="profile.html"><img class="img-fluid rounded-circle d-inline-block" src="https://placehold.it/35x35" alt="image alt"></a>
-                <h6 class="name m-0 d-inline-block text-capitalize"><a href="profile.html">player name</a></h6>
-              </td>
-              <td>5</td>
-              <td>6</td>
-              <td>8</td>
-              <td>2</td>
-              <td>2</td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td class="player-info"><a class="avatar-prof mr-2 rounded-circle" href="profile.html"><img class="img-fluid rounded-circle d-inline-block" src="https://placehold.it/35x35" alt="image alt"></a>
-                <h6 class="name m-0 d-inline-block text-capitalize"><a href="profile.html">player name</a></h6>
-              </td>
-              <td>5</td>
-              <td>6</td>
-              <td>8</td>
-              <td>2</td>
-              <td>2</td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td class="player-info"><a class="avatar-prof mr-2 rounded-circle" href="profile.html"><img class="img-fluid rounded-circle d-inline-block" src="https://placehold.it/35x35" alt="image alt"></a>
-                <h6 class="name m-0 d-inline-block text-capitalize"><a href="profile.html">player name</a></h6>
-              </td>
-              <td>5</td>
-              <td>6</td>
-              <td>8</td>
-              <td>2</td>
-              <td>2</td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td class="player-info"><a class="avatar-prof mr-2 rounded-circle" href="profile.html"><img class="img-fluid rounded-circle d-inline-block" src="https://placehold.it/35x35" alt="image alt"></a>
-                <h6 class="name m-0 d-inline-block text-capitalize"><a href="profile.html">player name</a></h6>
-              </td>
-              <td>5</td>
-              <td>6</td>
-              <td>8</td>
-              <td>2</td>
-              <td>2</td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td class="player-info"><a class="avatar-prof mr-2 rounded-circle" href="profile.html"><img class="img-fluid rounded-circle d-inline-block" src="https://placehold.it/35x35" alt="image alt"></a>
-                <h6 class="name m-0 d-inline-block text-capitalize"><a href="profile.html">player name</a></h6>
-              </td>
-              <td>5</td>
-              <td>6</td>
-              <td>8</td>
-              <td>2</td>
-              <td>2</td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td class="player-info"><a class="avatar-prof mr-2 rounded-circle" href="profile.html"><img class="img-fluid rounded-circle d-inline-block" src="https://placehold.it/35x35" alt="image alt"></a>
-                <h6 class="name m-0 d-inline-block text-capitalize"><a href="profile.html">player name</a></h6>
-              </td>
-              <td>5</td>
-              <td>6</td>
-              <td>8</td>
-              <td>2</td>
-              <td>2</td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td class="player-info"><a class="avatar-prof mr-2 rounded-circle" href="profile.html"><img class="img-fluid rounded-circle d-inline-block" src="https://placehold.it/35x35" alt="image alt"></a>
-                <h6 class="name m-0 d-inline-block text-capitalize"><a href="profile.html">player name</a></h6>
-              </td>
-              <td>5</td>
-              <td>6</td>
-              <td>8</td>
-              <td>2</td>
-              <td>2</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-    <div class="sponsors my-5">
-      <div class="container">
-        <div class="sponsors-slider">
-          <div class="item"><img class="img-fluid" src="img/sponsorsSlider/slide01.png" alt="image alt"></div>
-          <div class="item"><img class="img-fluid" src="img/sponsorsSlider/slide02.png" alt="image alt"></div>
-          <div class="item"><img class="img-fluid" src="img/sponsorsSlider/slide03.png" alt="image alt"></div>
-          <div class="item"><img class="img-fluid" src="img/sponsorsSlider/slide04.jpg" alt="image alt"></div>
-          <div class="item"><img class="img-fluid" src="img/sponsorsSlider/slide02.png" alt="image alt"></div>
-          <div class="item"><img class="img-fluid" src="img/sponsorsSlider/slide05.jpg" alt="image alt"></div>
-          <div class="item"><img class="img-fluid" src="img/sponsorsSlider/slide01.png" alt="image alt"></div>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="padel">
+  <title>Bandeja - Leaderboard</title>
+  <link rel="shortcut icon" href="img/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/css/select2.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis:400,600,700&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&amp;display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.8.6/venobox.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="nav--bar d-flex align-items-center">
+        <div class="logo"><a href="index.html"><img class="img-fluid" src="img/logo.svg" alt="image alt"
+              draggable="false"></a></div>
+        <nav class="nav">
+          <ul class="links d-flex align-items-center">
+            <li class="item"><a class="link text-uppercase" href="index.html"><i class="fas fa-home"></i>Home</a></li>
+            <li class="item"><a class="link text-uppercase active" href="leaderboard.html"><i
+                  class="fas fa-chalkboard"></i>leaderboard</a></li>
+            <li class="item"><a class="link text-uppercase" href="challenges.html"><i
+                  class="fas fa-chess-board"></i>challenges</a></li>
+            <li class="item"><a class="link text-uppercase" href="profile.html"><i class="far fa-user"></i>my
+                profile</a></li>
+            <li class="item"><a class="link text-uppercase" href="news.html"><i class="far fa-user"></i>news</a></li>
+            <li class="item"><a class="link text-uppercase" href="login.html"><i
+                  class="fas fa-sign-in-alt"></i>login</a></li>
+          </ul>
+        </nav><i class="toggle-fullscreen d-lg-block d-none" title="Show Fullscreen">
+          <svg id="expand" width="21" height="21" viewBox="0 0 24 23" fill="none">
+            <path d="M15.8732 1.27464H23V8.09154" stroke="white" stroke-width="3"></path>
+            <path d="M22.8451 15.3732L22.8451 22.5L16.0282 22.5" stroke="white" stroke-width="3"></path>
+            <path d="M8.12676 22.3451L1 22.3451L1 15.5282" stroke="white" stroke-width="3"></path>
+            <path d="M1.15493 8.24648L1.15493 1.11971L7.97183 1.11971" stroke="white" stroke-width="3"></path>
+          </svg>
+          <svg id="shrink" width="21" height="21" viewBox="0 0 21 21" fill="none">
+            <path d="M12.7826 0V7.30435H21" stroke="white" stroke-width="2"></path>
+            <path d="M12.7826 20.087V12.7826H21" stroke="white" stroke-width="2"></path>
+            <path d="M8.21739 20.087V12.7826H7.59959e-07" stroke="white" stroke-width="2"></path>
+            <path d="M8.21739 0V7.30435H7.59959e-07" stroke="white" stroke-width="2"></path>
+          </svg></i>
+        <div class="bars d-lg-none"><span class="line"></span><span class="line"></span><span class="line"></span>
         </div>
       </div>
     </div>
-    <footer class="footer">
-      <div class="container">
-        <div class="text-inner">
-          <p class="text-center text-white m-0">© 2020 <strong>BANDEJA</strong> . All Rights Reserved</p>
-        </div>
+  </header>
+  <section class="leaderboard my-5">
+    <div class="container p-5">
+      <table class="table table-striped table-bordered" id="leaderboard-table" cellspacing="0" width="100%">
+        <thead>
+          <th>Rank</th>
+          <th>Player</th>
+          <th>Rating</th>
+          <th>Sets Played</th>
+          <th>Sets Won</th>
+          <th>Games Won</th>
+          <th>Games Lost</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td class="player-info"><a class="avatar-prof mr-2 rounded-circle" href="profile.html"><img
+                  class="img-fluid rounded-circle d-inline-block" src="https://placehold.it/35x35" alt="image alt"></a>
+              <h6 class="name m-0 d-inline-block text-capitalize"><a href="profile.html">player name</a></h6>
+            </td>
+            <td>5</td>
+            <td>6</td>
+            <td>8</td>
+            <td>2</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td class="player-info"><a class="avatar-prof mr-2 rounded-circle" href="profile.html"><img
+                  class="img-fluid rounded-circle d-inline-block" src="https://placehold.it/35x35" alt="image alt"></a>
+              <h6 class="name m-0 d-inline-block text-capitalize"><a href="profile.html">player name</a></h6>
+            </td>
+            <td>5</td>
+            <td>6</td>
+            <td>8</td>
+            <td>2</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td class="player-info"><a class="avatar-prof mr-2 rounded-circle" href="profile.html"><img
+                  class="img-fluid rounded-circle d-inline-block" src="https://placehold.it/35x35" alt="image alt"></a>
+              <h6 class="name m-0 d-inline-block text-capitalize"><a href="profile.html">player name</a></h6>
+            </td>
+            <td>5</td>
+            <td>6</td>
+            <td>8</td>
+            <td>2</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td class="player-info"><a class="avatar-prof mr-2 rounded-circle" href="profile.html"><img
+                  class="img-fluid rounded-circle d-inline-block" src="https://placehold.it/35x35" alt="image alt"></a>
+              <h6 class="name m-0 d-inline-block text-capitalize"><a href="profile.html">player name</a></h6>
+            </td>
+            <td>5</td>
+            <td>6</td>
+            <td>8</td>
+            <td>2</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td class="player-info"><a class="avatar-prof mr-2 rounded-circle" href="profile.html"><img
+                  class="img-fluid rounded-circle d-inline-block" src="https://placehold.it/35x35" alt="image alt"></a>
+              <h6 class="name m-0 d-inline-block text-capitalize"><a href="profile.html">player name</a></h6>
+            </td>
+            <td>5</td>
+            <td>6</td>
+            <td>8</td>
+            <td>2</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td class="player-info"><a class="avatar-prof mr-2 rounded-circle" href="profile.html"><img
+                  class="img-fluid rounded-circle d-inline-block" src="https://placehold.it/35x35" alt="image alt"></a>
+              <h6 class="name m-0 d-inline-block text-capitalize"><a href="profile.html">player name</a></h6>
+            </td>
+            <td>5</td>
+            <td>6</td>
+            <td>8</td>
+            <td>2</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td class="player-info"><a class="avatar-prof mr-2 rounded-circle" href="profile.html"><img
+                  class="img-fluid rounded-circle d-inline-block" src="https://placehold.it/35x35" alt="image alt"></a>
+              <h6 class="name m-0 d-inline-block text-capitalize"><a href="profile.html">player name</a></h6>
+            </td>
+            <td>5</td>
+            <td>6</td>
+            <td>8</td>
+            <td>2</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td class="player-info"><a class="avatar-prof mr-2 rounded-circle" href="profile.html"><img
+                  class="img-fluid rounded-circle d-inline-block" src="https://placehold.it/35x35" alt="image alt"></a>
+              <h6 class="name m-0 d-inline-block text-capitalize"><a href="profile.html">player name</a></h6>
+            </td>
+            <td>5</td>
+            <td>6</td>
+            <td>8</td>
+            <td>2</td>
+            <td>2</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <div class="sponsors my-5">
+    <div class="container">
+      <div class="sponsors-slider">
+        <div class="item"><img class="img-fluid" src="img/sponsorsSlider/slide01.png" alt="image alt"></div>
+        <div class="item"><img class="img-fluid" src="img/sponsorsSlider/slide02.png" alt="image alt"></div>
+        <div class="item"><img class="img-fluid" src="img/sponsorsSlider/slide03.png" alt="image alt"></div>
+        <div class="item"><img class="img-fluid" src="img/sponsorsSlider/slide04.jpg" alt="image alt"></div>
+        <div class="item"><img class="img-fluid" src="img/sponsorsSlider/slide02.png" alt="image alt"></div>
+        <div class="item"><img class="img-fluid" src="img/sponsorsSlider/slide05.jpg" alt="image alt"></div>
+        <div class="item"><img class="img-fluid" src="img/sponsorsSlider/slide01.png" alt="image alt"></div>
       </div>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/js/select2.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.3/lib/darkmode-js.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.8.6/venobox.min.js"></script>
-    <script src="js/all.min.js"></script>
-  </body>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="text-inner">
+        <p class="text-center text-white m-0">© 2021 <strong>BANDEJA</strong> . All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/js/select2.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.3/lib/darkmode-js.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.8.6/venobox.min.js"></script>
+  <script src="js/all.min.js"></script>
+</body>
+
 </html>

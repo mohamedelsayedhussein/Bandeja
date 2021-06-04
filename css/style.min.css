@@ -6513,7 +6513,7 @@ screen and (max-height: 300px) {
 }
 
 :root {
-	--brand-color: #8ea946;
+	--brand-color: #7b9435;
 }
 
 html {
@@ -8530,7 +8530,7 @@ section.profile-page .container .widget-holder.wallet li a.coins-btn {
 }
 
 section.profile-page .container .widget-holder.wallet li a.coins-btn:hover {
-	background-color: #7b9435;
+	background-color: #657e1f;
 }
 
 section.profile-page .container .widget-holder.wallet li img {
@@ -10554,9 +10554,10 @@ ul.product__info li span {
 	font-weight: 500;
 }
 
-.product__btn button {
+.product__btn a {
 	display         : block;
 	width           : 100%;
+	text-align      : center;
 	margin-top      : 1rem;
 	text-transform  : uppercase;
 	font-size       : 1.2rem;
@@ -10568,8 +10569,8 @@ ul.product__info li span {
 	background-color: var(--brand-color);
 }
 
-.product__btn button:hover {
-	background-color: #7b9435;
+.product__btn a:hover {
+	background-color: #657e1f;
 }
 
 .pagination {
@@ -10686,46 +10687,46 @@ a.checkout-btn {
 }
 
 a.checkout-btn:hover {
-	background-color: #7b9435;
+	background-color: #657e1f;
 }
 
-/* checkout-status-page */
+/* page-status-page */
 
-.checkout-status .msg,
-.checkout-info {
+.page-status .msg,
+.table__info {
 	width           : 75%;
 	margin          : auto;
 	background-color: #fff;
 	padding         : 1rem;
 }
 
-.darkmode--activated .checkout-status .msg,
-.darkmode--activated .checkout-info {
+.darkmode--activated .page-status .msg,
+.darkmode--activated .table__info {
 	background-color: #222;
 }
 
 @media (max-width: 767px) {
 
-	.checkout-status .msg,
-	.checkout-info {
+	.page-status .msg,
+	.table__info {
 		width: 100%;
 	}
 }
 
-.checkout-status .msg i {
+.page-status .msg i {
 	display  : block;
 	font-size: clamp(2rem, 5vw, 3.5rem);
 }
 
-.checkout-status .success-icon i {
+.page-status .success-icon i {
 	color: #64DB95;
 }
 
-.checkout-status .failure-icon i {
+.page-status .failure-icon i {
 	color: #F24D5D;
 }
 
-.checkout-status .msg p {
+.page-status .msg p {
 	font-family   : "Dosis", sans-serif;
 	font-size     : clamp(1.2rem, 3vw, 1.8rem);
 	margin-bottom : 0;
@@ -10733,29 +10734,42 @@ a.checkout-btn:hover {
 	text-transform: capitalize;
 }
 
-.checkout-status .msg p.success-txt {
+.page-status .msg p.success-txt {
 	color: #4ec27f;
 }
 
-.checkout-status .msg p.failure-txt {
+.page-status .msg p span {
+	display    : block;
+	margin-top : 10px;
+	font-family: "Poppins", sans-serif;
+	font-size  : 1rem;
+	color      : #000;
+}
+
+.darkmode--activated .page-status .msg p span {
+	color: #ccc;
+}
+
+.page-status .msg p.failure-txt {
 	color: #F24D5D;
 }
 
-.darkmode--activated .checkout-info table td {
+.darkmode--activated .table__info table td {
 	color       : #ccc;
 	border-color: #353535;
 }
 
-.checkout-info table td {
-	font-weight: 300;
+.table__info table td {
+	font-weight   : 300;
+	vertical-align: middle;
 }
 
-.checkout-info table td strong {
+.table__info table td strong {
 	font-weight: 500;
 	font-size  : 1.1rem;
 }
 
-.checkout-info button.print-btn {
+.table__info button.print-btn {
 	display         : block;
 	background-color: var(--brand-color);
 	color           : #fff;
@@ -10766,6 +10780,6 @@ a.checkout-btn:hover {
 	text-transform  : uppercase;
 }
 
-.checkout-info button.print-btn:hover {
-	background-color: #7b9435;
+.table__info button.print-btn:hover {
+	background-color: #657e1f;
 }

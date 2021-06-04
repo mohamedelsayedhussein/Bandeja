@@ -6,16 +6,13 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="padel">
-	<title>Bandeja - Profile</title>
+	<title>Bandeja - Payment</title>
 	<link rel="shortcut icon" href="img/favicon.png">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/css/select2.min.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis:400,600,700&amp;display=swap">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&amp;display=swap">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.8.6/venobox.min.css">
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -43,7 +40,8 @@
 						<path d="M15.8732 1.27464H23V8.09154" stroke="white" stroke-width="3"></path>
 						<path d="M22.8451 15.3732L22.8451 22.5L16.0282 22.5" stroke="white" stroke-width="3"></path>
 						<path d="M8.12676 22.3451L1 22.3451L1 15.5282" stroke="white" stroke-width="3"></path>
-						<path d="M1.15493 8.24648L1.15493 1.11971L7.97183 1.11971" stroke="white" stroke-width="3"></path>
+						<path d="M1.15493 8.24648L1.15493 1.11971L7.97183 1.11971" stroke="white" stroke-width="3">
+						</path>
 					</svg>
 					<svg id="shrink" width="21" height="21" viewBox="0 0 21 21" fill="none">
 						<path d="M12.7826 0V7.30435H21" stroke="white" stroke-width="2"></path>
@@ -56,99 +54,55 @@
 			</div>
 		</div>
 	</header>
-	<section class="profile-page my-5">
+	<section class="payment-page my-5">
 		<div class="container py-5 px-3">
+			<h1 class="stroked-title"><span>payment</span></h1>
+			<hr>
 			<div class="row">
-				<div class="col-lg-4 col-md-6 mt-5">
-					<div class="widget-holder">
-						<ul class="text-capitalize">
-							<h2 class="text-capitalize">rating/ranking</h2>
-							<li><span>rating</span><span>120</span></li>
-							<li><span>ranking </span><span>5</span></li>
-						</ul>
-					</div>
-					<div class="widget-holder wallet mt-3">
-						<ul class="text-capitalize">
-							<h2 class="text-capitalize">my wallet</h2>
-							<li>
-								<span>
-									bandeja coins
-									<a href="payment.html" class="coins-btn d-block">Recharge</a>
-								</span>
-								<span class="text-center"><img src="img/bc.svg" alt="">145</span>
-							</li>
-							<li>
-								<span>
-									gift coins
-									<a href="products.html" class="coins-btn d-block">Redeem</a>
-								</span>
-								<span class="text-center"><img src="img/gc.svg" alt="">75</span>
-							</li>
-							<div class="transaction-btn"><a href="#">transactions</a></div>
-						</ul>
+				<div class="col-md-4 mb-md-0 mb-4">
+					<div class="payment-method text-center">
+						<img src="img/fawry-pay.png" alt="">
+						<p class="mb-0 mt-3">Recharge easily with FAWRY</p>
 					</div>
 				</div>
-				<div class="col-lg-4 col-md-6 order-md-0 order-first">
-					<div class="profile-card py-5 px-3">
-						<div class="img-profile"><a class="venobox" data-gall="myGallery" href="img/player.jpg"><img
-									class="img-fluid" src="img/player.jpg" alt="Change Your Image"></a></div>
-						<h3 class="player-name text-center text-capitalize py-3">player name</h3>
-						<div class="edit-profile"><a class="text-capitalize rounded" href="edit-profile.html"><i
-									class="fas fa-cog"></i><span>edit profile</span></a></div>
-						<ul class="player-info text-capitalize w-100">
-							<li class="w-100"><span><i class="fas fa-bars"></i>rating </span><span>12</span></li>
-							<li class="w-100"><span><i class="fas fa-bars"></i>player position </span><span>right</span></li>
-							<li class="w-100"><span><i class="fas fa-bars"></i>height </span><span>185 cm</span></li>
-						</ul>
+				<div class="col-md-8">
+					<div class="payment-table">
+						<table class="table table-bordered">
+							<tbody>
+								<tr>
+									<td class="form-area">
+										<div class="payment-form">
+											<form action="">
+												<div class="form-group mb-0">
+													<label>Enter Your Amount</label>
+													<input class="form-control" type="text" autofocus>
+													<a href="checkout-status.html" class="checkout-btn">checkout</a>
+												</div>
+												<!-- /.form-group -->
+											</form>
+										</div>
+										<!-- /.payment-form -->
+									</td>
+									<td class="bc-area">
+										<div class="bandeja-coins-equivalent">
+											<p class="text-center mb-0">
+												<img src="img/bc.svg" width="40" class="d-inline-block mr-1" alt="">
+												<span>1000</span>
+											</p>
+										</div>
+										<!-- /.bandeja-coins-equivalent -->
+									</td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
+					<!-- /.payment-table -->
 				</div>
-				<div class="col-lg-4 col-md-6 mt-5">
-					<div class="widget-holder">
-						<ul class="text-capitalize">
-							<h2 class="text-capitalize">statistics</h2>
-							<li><span>sets played </span><span>120</span></li>
-							<li><span>sets won </span><span>85</span></li>
-							<li><span>sets lost </span><span>15</span></li>
-							<li><span>games won </span><span>65</span></li>
-							<li><span>games lost </span><span>15</span></li>
-						</ul>
-					</div>
-					<div class="chart mt-4"><img class="img-fluid w-100" src="img/player.jpg" alt="image alt"></div>
-				</div>
+				<!-- /.col-md-6 -->
 			</div>
+			<!-- /.row -->
 		</div>
 	</section>
-	<div class="match-history">
-		<div class="container p-5">
-			<div class="row">
-				<div class="col-12">
-					<h2 class="text-uppercase stroked-title mb-5"><span>match history</span></h2>
-					<table class="table table-striped table-bordered" id="history-table" cellspacing="0" width="100%">
-						<thead class="text-capitalize">
-							<th>match</th>
-							<th>result</th>
-							<th>Rating before</th>
-							<th>Rating after</th>
-						</thead>
-						<tbody>
-							<tr class="text-capitalize">
-								<td>Player 1 & player 2 vs player 3 & player 4</td>
-								<td>6 - 4</td>
-								<td>5</td>
-								<td>10</td>
-							</tr>
-							<tr class="text-capitalize">
-								<td>Player 1 & player 2 vs player 3 & player 4</td>
-								<td>7 - 9</td>
-								<td>6</td>
-								<td>8</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-		</div>
-	</div>
 	<div class="sponsors my-5">
 		<div class="container">
 			<div class="sponsors-slider">
@@ -172,18 +126,11 @@
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/js/select2.min.js"></script>
-	<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-	<script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.3/lib/darkmode-js.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.8.6/venobox.min.js"></script>
 	<script src="js/all.min.js"></script>
-	<script>
-		$(document).ready(function () {
-			$('.venobox').venobox();
-		});
-	</script>
 </body>
 
 </html>

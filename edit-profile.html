@@ -20,6 +20,9 @@
 </head>
 
 <body>
+	<div class="mode-switcher">
+		<button id="toggle-dark-mode">🌓</button>
+	</div>
 	<header class="header">
 		<div class="container">
 			<div class="nav--bar d-flex align-items-center">
@@ -27,14 +30,17 @@
 							draggable="false"></a></div>
 				<nav class="nav">
 					<ul class="links d-flex align-items-center">
-						<li class="item"><a class="link text-uppercase" href="index.html"><i class="fas fa-home"></i>Home</a></li>
+						<li class="item"><a class="link text-uppercase" href="index.html"><i
+									class="fas fa-home"></i>Home</a></li>
 						<li class="item"><a class="link text-uppercase" href="leaderboard.html"><i
 									class="fas fa-chalkboard"></i>leaderboard</a></li>
 						<li class="item"><a class="link text-uppercase" href="challenges.html"><i
 									class="fas fa-chess-board"></i>challenges</a></li>
-						<li class="item"><a class="link text-uppercase" href="profile.html"><i class="far fa-user"></i>my
+						<li class="item"><a class="link text-uppercase" href="profile.html"><i
+									class="far fa-user"></i>my
 								profile</a></li>
-						<li class="item"><a class="link text-uppercase" href="news.html"><i class="far fa-user"></i>news</a></li>
+						<li class="item"><a class="link text-uppercase" href="news.html"><i
+									class="far fa-user"></i>news</a></li>
 						<li class="item"><a class="link text-uppercase" href="login.html"><i
 									class="fas fa-sign-in-alt"></i>login</a></li>
 					</ul>
@@ -43,7 +49,8 @@
 						<path d="M15.8732 1.27464H23V8.09154" stroke="white" stroke-width="3"></path>
 						<path d="M22.8451 15.3732L22.8451 22.5L16.0282 22.5" stroke="white" stroke-width="3"></path>
 						<path d="M8.12676 22.3451L1 22.3451L1 15.5282" stroke="white" stroke-width="3"></path>
-						<path d="M1.15493 8.24648L1.15493 1.11971L7.97183 1.11971" stroke="white" stroke-width="3"></path>
+						<path d="M1.15493 8.24648L1.15493 1.11971L7.97183 1.11971" stroke="white" stroke-width="3">
+						</path>
 					</svg>
 					<svg id="shrink" width="21" height="21" viewBox="0 0 21 21" fill="none">
 						<path d="M12.7826 0V7.30435H21" stroke="white" stroke-width="2"></path>
@@ -51,7 +58,8 @@
 						<path d="M8.21739 20.087V12.7826H7.59959e-07" stroke="white" stroke-width="2"></path>
 						<path d="M8.21739 0V7.30435H7.59959e-07" stroke="white" stroke-width="2"></path>
 					</svg></i>
-				<div class="bars d-lg-none"><span class="line"></span><span class="line"></span><span class="line"></span>
+				<div class="bars d-lg-none"><span class="line"></span><span class="line"></span><span
+						class="line"></span>
 				</div>
 			</div>
 		</div>
@@ -69,7 +77,8 @@
 							<hr>
 							<input class="form-control" id="ch-img" type="file"
 								onchange="document.getElementById('output').src = window.URL.createObjectURL(this.files[0])">
-							<label class="text-capitalize" for="ch-img"><i class="far fa-edit mr-2"></i>change your image</label>
+							<label class="text-capitalize" for="ch-img"><i class="far fa-edit mr-2"></i>change your
+								image</label>
 						</div>
 					</div>
 					<div class="col-lg-9 mt-5 mt-lg-0">
@@ -141,7 +150,8 @@
 										</div>
 									</div>
 									<div class="col-md-6">
-										<div class="form-group birthdate-calendar text-capitalize"><i class="birthdate-icon">
+										<div class="form-group birthdate-calendar text-capitalize"><i
+												class="birthdate-icon">
 												<svg width="25" height="25" viewBox="0 0 53 56" fill="none">
 													<path
 														d="M48 7H5C2.79086 7 1 8.79086 1 11V51C1 53.2091 2.79086 55 5 55H48C50.2091 55 52 53.2091 52 51V11C52 8.79086 50.2091 7 48 7Z"
@@ -149,16 +159,18 @@
 													<path d="M0 21H52" stroke="#555" stroke-width="3"></path>
 													<path d="M15 0V12" stroke="#555" stroke-width="4"></path>
 													<path d="M39 0V12" stroke="#555" stroke-width="4"></path>
-													<path d="M15 36L22.5 43.5L39 27" stroke="#555" stroke-width="3"></path>
+													<path d="M15 36L22.5 43.5L39 27" stroke="#555" stroke-width="3">
+													</path>
 												</svg></i>
 											<label class="control-label" for="datepicker">birthdate :</label>
-											<input class="form-control" id="datepicker" type="text" placeholder="d-m-Y" data-large-mode="true"
-												data-lock="to" data-translate-mode="true">
+											<input class="form-control" id="datepicker" type="text" placeholder="d-m-Y"
+												data-large-mode="true" data-lock="to" data-translate-mode="true">
 										</div>
 									</div>
 									<div class="col-12">
 										<div class="form-group text-capitalize mt-4">
-											<input class="text-capitalize btn rounded-0 mr-2" type="submit" value="save changes">
+											<input class="text-capitalize btn rounded-0 mr-2" type="submit"
+												value="save changes">
 											<input class="text-capitalize btn rounded-0" type="reset" value="cancel">
 										</div>
 									</div>
@@ -197,7 +209,7 @@
 	<script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.3/lib/darkmode-js.min.js"></script>
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.8.6/venobox.min.js"></script>
 	<script src="js/all.min.js"></script>
 </body>

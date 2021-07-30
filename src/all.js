@@ -2204,19 +2204,6 @@ jQuery.easing.jswing = jQuery.easing.swing, jQuery.extend(jQuery.easing, {
 		$(this).toggleClass("fullscreen"), $(this).hasClass("fullscreen") ? ($(this).attr("title", "Close Fullscreen"), a.requestFullscreen ? a.requestFullscreen() : a.mozRequestFullScreen ? a.mozRequestFullScreen() : a.webkitRequestFullscreen ? a.webkitRequestFullscreen() : a.msRequestFullscreen && a.msRequestFullscreen(), t.show(), e.hide()) : ($(this).attr("title", "Show Fullscreen"), document.exitFullscreen ? document.exitFullscreen() : document.mozCancelFullScreen ? document.mozCancelFullScreen() : document.webkitExitFullscreen ? document.webkitExitFullscreen() : document.msExitFullscreen && document.msExitFullscreen(), t.hide(), e.show())
 	});
 	var a = document.documentElement;
-	new Darkmode({
-		bottom: "64px",
-		right: "unset",
-		left: "32px",
-		time: "0.8s",
-		mixColor: "#fff",
-		backgroundColor: "#fff",
-		buttonColorDark: "#242424",
-		buttonColorLight: "#fff",
-		saveInCookies: !0,
-		label: "🌓",
-		autoMatchOsTheme: !0
-	}).showWidget();
 	var r = $(".image-slider"),
 		o = $(".text-slider");
 	r.on("init", function (e) {

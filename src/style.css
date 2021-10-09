@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 .pace {
 	-webkit-pointer-events: none;
 	pointer-events        : none;
@@ -8254,9 +8261,6 @@ section.news-feed.ajax-popup .media img {
 section.news-feed .post__match {
 	background-color: #222;
 	padding  : 1rem;
-	max-width: 600px;
-	width: 100%;
-	margin: auto;
 }
 
 section.news-feed .post__match .logo {
@@ -8341,31 +8345,23 @@ section.news-feed .post__match ul.team-info li:last-child {
 }
 
 section.news-feed .post__match .team-img {
-	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	border  : 1px solid var(--brand-color);
 	border-top: 0;
 	height: 200px;
-	padding-bottom: 1rem;
 }
 
 section.news-feed .post__match .team-img img {
-	position: absolute;
-	bottom: 0;
-	width     : 50%;
+	-ms-flex-negative: 0;
+	    flex-shrink: 0;
 	height    : 100%;
 	-o-object-fit: contain;
 	   object-fit: contain;
-	-webkit-transform: scale(1.1);
-	    -ms-transform: scale(1.1);
-	        transform: scale(1.1);
-}
-
-section.news-feed .post__match .team-img img:nth-child(1) {
-	left:0;
-}
-
-section.news-feed .post__match .team-img img:nth-child(2) {
-	right: 0;
 }
 
 section.news-feed .post__match .match-info ul {
@@ -8383,13 +8379,6 @@ section.news-feed .post__match .match-info ul {
 	}
 }
 
-section.news-feed .post__match .match-info.bottom ul {
-	background-color: transparent;
-	color: var(--brand-color);
-	border: 1px solid var(--brand-color);
-	padding-bottom: 20px;
-}
-
 section.news-feed .post__match .match-info ul li.close-icon {
 	padding: 0 0 0 2px;
 	line-height: 0;
@@ -8405,6 +8394,33 @@ section.news-feed .post__match .match-info ul li {
 
 section.news-feed .post__match .match-info ul li h5 {
 	font-size: .95rem;
+}
+
+section.news-feed .post__match .result-table table{
+	width: auto;
+	margin-block: 0;
+	margin-inline: auto;
+border: none;
+color: #fff;
+background-color: #222;
+}
+
+.post__match .result-table table th	{
+	color: #fff;
+}
+
+.post__match .result-table table th	span{
+	color: var(--brand-color);
+}
+
+.post__match .result-table table th,
+.post__match .result-table table td{
+	border-color: var(--brand-color);
+	font-weight: normal;
+	font-size: 14px;
+	text-transform: uppercase;
+	padding: 5px;
+	line-height: 1;
 }
 
 /*  */

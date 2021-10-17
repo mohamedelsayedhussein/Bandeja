@@ -1,0 +1,191 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+	<title>Invoice Email</title>
+
+	<style>
+		div.email-wrapper {
+			min-height: 500px !important;
+			width: 700px !important;
+			margin: auto !important;
+			background-color: #fff !important;
+			border: 1px solid #ddd !important;
+			font-family: sans-serif !important;
+		}
+
+		table.email-table {
+			color: #333 !important;
+			font-size: 15px !important;
+			border-collapse: separate !important;
+			border-spacing: 0 !important;
+			width: 98% !important;
+			margin: 6px auto !important;
+		}
+
+		table.email-table td {
+			padding: 10px !important;
+		}
+
+		table.email-table td.border-0 {
+			border: 0 !important;
+		}
+
+		table.email-table td.sub {
+			font-size: 13 !important;
+		}
+
+		table.email-head {
+			background-color: #333 !important;
+			color: #ddd !important;
+		}
+
+		table.email-head img {
+			width: 200px !important;
+		}
+
+		table.client-table {
+			margin-bottom: 30px !important;
+		}
+
+		table.item-table td,
+		table.item-table th {
+			border: 1px solid #ddd !important;
+		}
+
+		table.item-table th {
+			padding: 10px !important;
+			border-bottom: 1px solid #000 !important;
+		}
+
+		table.email-footer {
+			background: #333 !important;
+			text-align: center !important;
+			margin-top: 30px !important;
+		}
+
+		table.email-footer p {
+			margin-bottom: 0 !important;
+			font-weight: bold !important;
+			color: #ddd !important;
+			text-transform: capitalize !important;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="email-wrapper">
+
+		<table class="email-table email-head">
+			<tr>
+				<td align="left">
+					<img src="img/logo.svg" />
+				</td>
+				<td align="right">
+					<strong>NAME:</strong> BANDEJA (a subsidiary of Football Hub)<br />
+					<strong>E-MAIL:</strong> mk@footballhub.app<br />
+				</td>
+			</tr>
+		</table>
+
+		<table class="email-table client-table">
+			<tr>
+				<td>
+					<p><strong>NAME:</strong> [Name]</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p><strong>PHONE:</strong> [Number]</p>
+				</td>
+			</tr>
+		</table>
+
+		<table class="email-table">
+			<tr>
+				<td align="left">
+					<strong>INVOICE NO :</strong> #434
+				</td>
+				<td align="right">
+					<strong>DATE :</strong> 25-10-2021
+				</td>
+			</tr>
+		</table>
+
+		<table class="email-table item-table">
+			<thead>
+				<tr>
+					<th align="left">DESCRIPTION</th>
+					<th align="right">QUANTITY</th>
+					<th align="right">AMOUNT (EGP)</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td align="left">Bandeja coins top-up [BCs]</td>
+					<td align="right">1</td>
+					<td align="right">200</td>
+				</tr>
+				<tr>
+					<td align="left">Bandeja coins top-up [BCs]</td>
+					<td align="right">1</td>
+					<td align="right">155</td>
+				</tr>
+				<tr>
+					<td align="left">Bandeja coins top-up [BCs]</td>
+					<td align="right">1</td>
+					<td align="right">99</td>
+				</tr>
+				<tr>
+					<td class="border-0"></td>
+					<td class="sub" align="right">
+						SUBTOTAL
+					</td>
+					<td class="sub" align="right">
+						100.00
+					</td>
+				</tr>
+				<tr>
+					<td class="border-0"></td>
+					<td class="sub" align="right">
+						DISCOUNT
+					</td>
+					<td class="sub" align="right">
+						0
+					</td>
+				</tr>
+				<tr>
+					<td class="border-0"></td>
+					<td class="sub" align="right">
+						TAX
+					</td>
+					<td class="sub" align="right">
+						0
+					</td>
+				</tr>
+				<tr>
+					<td class="border-0"></td>
+					<td align="right">
+						<strong>TOTAL </strong>
+					</td>
+					<td align="right">
+						<strong>100.00</strong>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<table class="email-table email-footer">
+			<tr>
+				<td>
+					<p>Enjoy playing challenges with BANDEJA!</p>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+</body>
+
+</html>

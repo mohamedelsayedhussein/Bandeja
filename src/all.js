@@ -2322,10 +2322,5 @@ jQuery.easing.jswing = jQuery.easing.swing, jQuery.extend(jQuery.easing, {
 		$(this).on("click", function () {
 			s.find(".text-placeholder").text($(this).text()), l.slideUp(), s.find("i").removeClass("rotate-angle")
 		})
-	}), $("#datepicker").dateDropper(), $("#leaderboard-table").DataTable({
-		responsive: !0,
-		scrollCollapse: !0,
-		scrollY: 400,
-		scrollX: !0
-	})
+	}), $("#datepicker").dateDropper()
 });
